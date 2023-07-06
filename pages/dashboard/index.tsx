@@ -23,7 +23,7 @@ const Dashboard = () => {
       .then(response => {
         if (response.ok) {
           console.log("contenido enviado");
-          console.log(response);
+          router.push("/dashboard/success")
         } else {
           throw new Error("Credenciales incorrectas");
         }
@@ -35,13 +35,13 @@ const Dashboard = () => {
   };
   
   return (
-    <>
-      <h1 className="mt-20 text-2xl">
-        Check home
+    <div className="h-screen mx-20">
+      <h1 className="pt-20 text-2xl mb-10">
+        Este es el contenido de la home
       </h1>
       <form onSubmit={handleFile}>
-        <div className="mb-4">
-          <h2>Content</h2>
+        <div className="mb-1">
+          <h2 className="mb-4">Inserte aquí contenido para enviar a imprimir</h2>
           <input
             className="w-full px-4 py-2 border rounded-md"
             type="text"
@@ -53,13 +53,13 @@ const Dashboard = () => {
         {errorMessage && <p>{errorMessage}</p>}
 
         <button
-          className="mt-8 bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white"
+          className="mt-3 bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white"
           type="submit" // Cambiado de onClick a type="submit"
         >
           Enviar contenido a imprimir
         </button>
       </form>
-    </>
+    </div>
   );
 };
 
