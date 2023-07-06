@@ -1,10 +1,8 @@
-import Navbar from "../../../components/navbar/navbar";
-import Link from 'next/link'
+ import Link from 'next/link'
 const opcion2 = () => {
   return (
     <>
-    <Navbar />
-        <h1 className="mt-20 text-2xl">
+         <h1 className="mt-20 text-2xl">
             Check opcion2
         </h1>
     </>
