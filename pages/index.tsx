@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 
 const Home = () => {
 
-const [email, setEmail] = useState("");
+const [usuario, setusuario] = useState("");
 const [password, setPassword] = useState("");
 const [errorMessage, setErrorMessage] = useState("");
 const router = useRouter();
@@ -21,7 +21,7 @@ const handleLogin = (e: React.FormEvent) => {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ email, password }),
+    body: JSON.stringify({ usuario, password }),
   })
     .then(response => {
       if (response.ok) {
@@ -35,7 +35,7 @@ const handleLogin = (e: React.FormEvent) => {
       // console.log("Token:", accessToken);
       console.log(response.authToken);
 
-      Cookies.set('authvalue', response.authToken, cookieOptions); // Crear cookie con el valor del email
+      Cookies.set('authvalue', response.authToken, cookieOptions); // Crear cookie con el valor del usuario
       router.push("/dashboard");
     })
     .catch(error => {
@@ -56,9 +56,9 @@ const handleLogin = (e: React.FormEvent) => {
             <div className="mb-4">
               <input
                 className="w-full px-4 py-2 border rounded-md"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="usuario"
+                value={usuario}
+                onChange={(e) => setusuario(e.target.value)}
               />
             </div>
 
