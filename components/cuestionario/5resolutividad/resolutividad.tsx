@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const Letras: React.FC = () => {
+const Resolutividad: React.FC = () => {
  
   return (
     <div>
@@ -12,4 +12,4 @@ const Letras: React.FC = () => {
   );
 };
 
-export default Letras;
+export default Resolutividad;
