@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from 'next/link';
 
-const Dashboard = () => {
+const cuestionario = () => {
   const [filecontent, setFileContent] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const router = useRouter();
@@ -36,8 +36,9 @@ const Dashboard = () => {
   
   return (
     <div className="h-screen mx-20">
+      <p>TE GUSTARÍA SABER...</p>
       <h1 className="pt-20 text-2xl mb-10">
-        Este es el contenido de la home
+        ¿QUÉ DIOS DEL OLIMPO TE REPRESENTA?
       </h1>
       <form onSubmit={handleFile}>
         <div className="mb-1">
@@ -63,4 +64,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default cuestionario;

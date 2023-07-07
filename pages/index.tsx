@@ -36,7 +36,7 @@ const handleLogin = (e: React.FormEvent) => {
       console.log(response.authToken);
 
       Cookies.set('authvalue', response.authToken, cookieOptions); // Crear cookie con el valor del usuario
-      router.push("/dashboard");
+      router.push("/landing");
     })
     .catch(error => {
       console.error("Ha ocurrido un error:", error);
