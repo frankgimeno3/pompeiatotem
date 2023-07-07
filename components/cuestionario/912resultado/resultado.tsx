@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-interface HorarioProps {
+interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Horario: React.FC<HorarioProps> = ({ setComponenteActual }) => {
+const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -32,4 +32,4 @@ const Horario: React.FC<HorarioProps> = ({ setComponenteActual }) => {
   );
 };
 
-export default Horario;
+export default Resultado;
