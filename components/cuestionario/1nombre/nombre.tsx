@@ -2,9 +2,11 @@ import React, { useState } from "react";
 
 interface NombreProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  nombre: string;
+  setNombre: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Nombre: React.FC<NombreProps> = ({ setComponenteActual }) => {
+const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
   const [inputValue, setInputValue] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -22,9 +24,11 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual }) => {
     }
   };
 
-  const handleSeguirClick = () => {
-    setComponenteActual("conflicto");
-  };
+const handleSeguirClick = () => {
+  setComponenteActual("conflicto");
+  setNombre(inputValue);
+  console.log(inputValue)
+};
 
   return (
     <div>
