@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
-const Nombre: React.FC = () => {
+interface NombreProps {
+  setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Nombre: React.FC<NombreProps> = ({ setComponenteActual }) => {
   const [inputValue, setInputValue] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
 
@@ -16,6 +20,10 @@ const Nombre: React.FC = () => {
       setInputValue(inputValue.slice(0, -1));
       setCharacterCount(characterCount - 1);
     }
+  };
+
+  const handleSeguirClick = () => {
+    setComponenteActual("conflicto");
   };
 
   return (
@@ -134,12 +142,11 @@ const Nombre: React.FC = () => {
       </div>
       <button
         className="mt-2 bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white"
-        onClick={() => setInputValue("")}
+        onClick={handleSeguirClick}
       >
         SEGUIR
       </button>
- 
-     </div>
+    </div>
   );
 };
 

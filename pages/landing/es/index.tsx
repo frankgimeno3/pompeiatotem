@@ -24,13 +24,13 @@ const Cuestionario = () => {
   const [creatividad, setCreatividad] = useState("");
   const [juicio, setJuicio] = useState("");
   const [horario, setHorario] = useState("");
-  const renderComponenteActual = () => {
 
+  const renderComponenteActual = () => {
     switch (componenteactual) {
       case "nombre":
-        return <Nombre />;
+        return <Nombre setComponenteActual={setComponenteActual} />;
       case "conflicto":
-        return <Conflicto />;
+        return <Conflicto setComponenteActual={setComponenteActual}/>;
       case "relaciones":
         return <Relaciones />;
       case "estrategia":
@@ -62,5 +62,3 @@ const Cuestionario = () => {
 };
 
 export default Cuestionario;
-
-
