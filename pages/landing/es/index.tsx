@@ -32,23 +32,23 @@ const Cuestionario = () => {
       case "conflicto":
         return <Conflicto setComponenteActual={setComponenteActual}/>;
       case "relaciones":
-        return <Relaciones />;
+        return <Relaciones setComponenteActual={setComponenteActual}/>;
       case "estrategia":
-        return <Estrategia />;
+        return <Estrategia setComponenteActual={setComponenteActual}/>;
       case "resolutividad":
-        return <Resolutividad />;
+        return <Resolutividad setComponenteActual={setComponenteActual}/>;
       case "trabajo":
-        return <Trabajo />;
+        return <Trabajo setComponenteActual={setComponenteActual}/>;
       case "lugar":
-        return <Lugar />;
+        return <Lugar setComponenteActual={setComponenteActual}/>;
       case "humor":
-        return <Humor />;
+        return <Humor setComponenteActual={setComponenteActual}/>;
       case "creatividad":
-        return <Creatividad />;
+        return <Creatividad setComponenteActual={setComponenteActual}/>;
       case "juicio":
-        return <Juicio />;
+        return <Juicio setComponenteActual={setComponenteActual}/>;
       case "horario":
-        return <Horario />;
+        return <Horario setComponenteActual={setComponenteActual}/>;
       default:
         return null; 
     }
