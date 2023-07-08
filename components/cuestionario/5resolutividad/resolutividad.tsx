@@ -14,9 +14,12 @@ const Resolutividad: React.FC<ResolutividadProps> = ({ setComponenteActual }) =>
   };
 
   const handleSeguirClick = () => {
- 
+    if (!selectedOption) {
+      setShowErrorMessage(true);
+    } else {
       setComponenteActual("trabajo");
-   };
+    }
+  };
 
   return (
      <div className="flex flex-col text-center justify-center">

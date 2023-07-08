@@ -14,9 +14,12 @@ const Horario: React.FC<HorarioProps> = ({ setComponenteActual }) => {
   };
 
   const handleSeguirClick = () => {
-  
+    if (!selectedOption) {
+      setShowErrorMessage(true);
+    } else {
       setComponenteActual("alea");
-   };
+    }
+  };
 
   return (
     <div className="flex flex-col text-center justify-center">

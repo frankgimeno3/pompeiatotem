@@ -10,9 +10,9 @@ const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
  
 
   const handleSeguirClick = () => {
- 
+
       setComponenteActual("resultado");
-   };
+  };
 
   return (
     <div className="flex flex-col text-center justify-center">

@@ -14,9 +14,12 @@ const Relaciones: React.FC<RelacionesProps> = ({ setComponenteActual }) => {
   };
 
   const handleSeguirClick = () => {
- 
+    if (!selectedOption) {
+      setShowErrorMessage(true);
+    } else {
       setComponenteActual("estrategia");
-   };
+    }
+  };
 
   return (
     <div className="flex flex-col text-center justify-center">

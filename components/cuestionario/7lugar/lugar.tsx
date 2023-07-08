@@ -14,9 +14,12 @@ const Lugar: React.FC<LugarProps> = ({ setComponenteActual }) => {
   };
 
   const handleSeguirClick = () => {
- 
+    if (!selectedOption) {
+      setShowErrorMessage(true);
+    } else {
       setComponenteActual("humor");
-   };
+    }
+  };
 
   return (
     <div className="flex flex-col text-center justify-center">
