@@ -10,6 +10,7 @@ import Humor from "../../../components/cuestionario/8humor/humor";
 import Creatividad from "../../../components/cuestionario/9creatividad/creatividad";
 import Juicio from "../../../components/cuestionario/910juicio/juicio";
 import Horario from "../../../components/cuestionario/911horario/horario";
+import Resultado from "../../../components/cuestionario/912resultado/resultado";
 
 const Cuestionario = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");  
@@ -49,6 +50,8 @@ const Cuestionario = () => {
         return <Juicio setComponenteActual={setComponenteActual}/>;
       case "horario":
         return <Horario setComponenteActual={setComponenteActual}/>;
+      case "resultado":
+      return <Resultado setComponenteActual={setComponenteActual}/>;        
       default:
         return null; 
     }
