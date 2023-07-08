@@ -15,6 +15,7 @@ import Horario from "../../../components/cuestionario/911horario/horario";
 import Alea from "../../../components/cuestionario/912alea/alea";
 import Resultado from "../../../components/cuestionario/913resultado/resultado";
 import Enviar from "../../../components/cuestionario/914enviar/enviar";
+import Yapuedes from "../../../components/cuestionario/915yapuedes/yapuedes";
 
 const Cuestionario = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");  
@@ -62,8 +63,10 @@ const Cuestionario = () => {
         return <Alea setComponenteActual={setComponenteActual}/>;   
       case "resultado":
         return <Resultado setComponenteActual={setComponenteActual}/>;   
-      case "enviar":
-        return <Enviar setComponenteActual={setComponenteActual}/>;        
+        case "enviar":
+          return <Enviar setComponenteActual={setComponenteActual}/>; 
+          case "yapuedes":
+            return <Yapuedes setComponenteActual={setComponenteActual}/>;        
       default:
         return null; 
     }
