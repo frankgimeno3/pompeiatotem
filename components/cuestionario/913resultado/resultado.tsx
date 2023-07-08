@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -7,6 +8,7 @@ interface ResultadoProps {
 const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
+  const router = useRouter();
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
@@ -21,6 +23,9 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
     }
   };
 
+  const handleRestart = () => {
+    router.push("/landing");
+  };
   return (
     <div className="flex flex-col text-center justify-center">
       <h1>LAURA</h1>
@@ -28,7 +33,7 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
       <div className="flex flex-row">
         <div className="flex flex-col">
           <p>Imagen</p>
-          <button>IMPRIMIR</button>
+          <button onClick={handleSeguirClick}>IMPRIMIR</button>
         </div>
         <div className="flex flex-col">
           <div className="flex flex-col">
@@ -37,7 +42,7 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
             <p>LAS ARTES PLÁSTICAS</p>
             <p>Y LA MÚSICA</p>
           </div>
-          <button>IMPRIMIR</button>
+          <button onClick={handleRestart}>REINICIAR</button>
         </div>
       </div>
     </div>
