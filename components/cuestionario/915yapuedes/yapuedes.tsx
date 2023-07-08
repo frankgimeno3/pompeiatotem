@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-interface EnviarProps {
+interface YapuedesProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Enviar: React.FC<EnviarProps> = ({ setComponenteActual }) => {
+const Yapuedes: React.FC<YapuedesProps> = ({ setComponenteActual }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -17,23 +17,22 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual }) => {
     if (!selectedOption) {
       setShowErrorMessage(true);
     } else {
-      setComponenteActual("enviar");
+      setComponenteActual("Yapuedes");
     }
   };
 
   return (
     <div className="flex flex-col text-center justify-center">
-       <p>¿QUIERES LLEVARTE A TU DIOS DE RECUERDO?</p>
+       <h1>YA PUEDES RECOGERLO!</h1>
        
-            <p>PIDE TU COPIA EN RECEPCIÓN</p>
-            <p>PRECIO DE VENTA 6€</p>
-            <p>Y LA MÚSICA</p>
-            <button>CONFIRMAR Y RECOGER</button>
+       
+            <p>TICK ICON</p>
+       
         <div className="flex flex-row text-center justify-center">
-            <button>COMENZAR DE NUEVO</button>
+            <button>VUELVE A JUGAR</button>
         </div>
     </div>
   );
 };
 
-export default Enviar;
+export default Yapuedes;
