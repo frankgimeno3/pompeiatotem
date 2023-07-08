@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-interface ResultadoProps {
+interface EnviarProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
+const Enviar: React.FC<EnviarProps> = ({ setComponenteActual }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -23,25 +23,17 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
 
   return (
     <div className="flex flex-col text-center justify-center">
-      <h1>LAURA</h1>
-      <p>TU DIOS ES</p>
-      <div className="flex flex-row">
-        <div className="flex flex-col">
-          <p>Imagen</p>
-          <button>IMPRIMIR</button>
-        </div>
-        <div className="flex flex-col">
-          <div className="flex flex-col">
-            <h2>FEBO</h2>
-            <p>DIOS DE LA BELLEZA,</p>
-            <p>LAS ARTES PLÁSTICAS</p>
+       <p>¿QUIERES LLEVARTE A TU DIOS DE RECUERDO?</p>
+       
+            <p>PIDE TU COPIA EN RECEPCIÓN</p>
+            <p>PRECIO DE VENTA 6€</p>
             <p>Y LA MÚSICA</p>
-          </div>
-          <button>IMPRIMIR</button>
+            <button>CONFIRMAR Y RECOGER</button>
+        <div className="flex flex-row text-center justify-center">
+            <button>COMENZAR DE NUEVO</button>
         </div>
-      </div>
     </div>
   );
 };
 
-export default Resultado;
+export default Enviar;
