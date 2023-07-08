@@ -17,7 +17,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual }) => {
     if (!selectedOption) {
       setShowErrorMessage(true);
     } else {
-      setComponenteActual("yapuedes");
+      setComponenteActual("enviar");
     }
   };
 
