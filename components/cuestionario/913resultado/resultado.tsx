@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-interface CreatividadProps {
+interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual }) => {
+const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -12,12 +12,12 @@ const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual }) => {
     setSelectedOption(option);
     setShowErrorMessage(false);
   };
-
+  
   const handleSeguirClick = () => {
     if (!selectedOption) {
       setShowErrorMessage(true);
     } else {
-      setComponenteActual("juicio");
+      setComponenteActual("resultado");
     }
   };
 
@@ -26,16 +26,16 @@ const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual }) => {
      <h2>ME CONSIDERO:</h2>
      <div className="flex flex-row justify-center my-5">
        <button
-         className={`mr-10 ${selectedOption === "CREATIVO" ? "bg-white" : ""}`}
-         onClick={() => handleOptionClick("CREATIVO")}
+         className={`mr-10 ${selectedOption === "DIURNO" ? "bg-white" : ""}`}
+         onClick={() => handleOptionClick("DIURNO")}
        >
-        CREATIVO
+        DIURNO
        </button>
        <button
-         className={`ml-10 ${selectedOption === "RACIONAL" ? "bg-white" : ""}`}
-         onClick={() => handleOptionClick("RACIONAL")}
+         className={`ml-10 ${selectedOption === "NOCTURNO" ? "bg-white" : ""}`}
+         onClick={() => handleOptionClick("NOCTURNO")}
        >
-        RACIONAL
+        NOCTURNO
        </button>
      </div>
      {showErrorMessage && (
@@ -51,4 +51,4 @@ const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual }) => {
   );
 };
 
-export default Creatividad;
+export default Resultado;

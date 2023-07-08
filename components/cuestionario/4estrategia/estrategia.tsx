@@ -26,14 +26,14 @@ const Estrategia: React.FC<EstrategiaProps> = ({ setComponenteActual }) => {
       <h2>EN MI DÍA SOY:</h2>
       <div className="flex flex-row justify-center my-5">
         <button
-          className={`mr-10 ${selectedOption === "ENAMORADIZO" ? "bg-white" : ""}`}
-          onClick={() => handleOptionClick("ENAMORADIZO")}
+          className={`mr-10 ${selectedOption === "ESTRATEGA" ? "bg-white" : ""}`}
+          onClick={() => handleOptionClick("ESTRATEGA")}
         >
           ESTRATEGA
         </button>
         <button
-          className={`ml-10 ${selectedOption === "FIEL" ? "bg-white" : ""}`}
-          onClick={() => handleOptionClick("FIEL")}
+          className={`ml-10 ${selectedOption === "IMPULSIVO" ? "bg-white" : ""}`}
+          onClick={() => handleOptionClick("IMPULSIVO")}
         >
           IMPULSIVO
         </button>

@@ -10,7 +10,7 @@ import Humor from "../../../components/cuestionario/8humor/humor";
 import Creatividad from "../../../components/cuestionario/9creatividad/creatividad";
 import Juicio from "../../../components/cuestionario/910juicio/juicio";
 import Horario from "../../../components/cuestionario/911horario/horario";
-import Resultado from "../../../components/cuestionario/912resultado/resultado";
+import Resultado from "../../../components/cuestionario/913resultado/resultado";
 
 const Cuestionario = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");  
