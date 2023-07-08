@@ -10,17 +10,9 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const router = useRouter();
 
-  const handleOptionClick = (option: string) => {
-    setSelectedOption(option);
-    setShowErrorMessage(false);
-  };
-
   const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
+   
       setComponenteActual("enviar");
-    }
   };
 
   const handleRestart = () => {

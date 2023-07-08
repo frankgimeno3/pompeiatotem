@@ -33,8 +33,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual }) => {
        
             <p>PIDE TU COPIA EN RECEPCIÓN</p>
             <p>PRECIO DE VENTA 6€</p>
-            <p>Y LA MÚSICA</p>
-            <button
+             <button
                    onClick={handleSeguirClick}
                    >CONFIRMAR Y RECOGER</button>
         <div className="flex flex-row text-center justify-center">
