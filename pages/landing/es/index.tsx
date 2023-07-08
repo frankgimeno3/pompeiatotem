@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Nombre from "../../../components/cuestionario/1nombre/nombre";
+import Nombrehola from "../../../components/cuestionario/1nombrehola/nombrehola";
+import Yahora from "../../../components/cuestionario/1yahora/yahora";
 import Conflicto from "../../../components/cuestionario/2conflicto/conflicto";
 import Relaciones from "../../../components/cuestionario/3relaciones/relaciones";
 import Estrategia from "../../../components/cuestionario/4estrategia/estrategia";
@@ -10,6 +12,7 @@ import Humor from "../../../components/cuestionario/8humor/humor";
 import Creatividad from "../../../components/cuestionario/9creatividad/creatividad";
 import Juicio from "../../../components/cuestionario/910juicio/juicio";
 import Horario from "../../../components/cuestionario/911horario/horario";
+import Alea from "../../../components/cuestionario/912alea/alea";
 import Resultado from "../../../components/cuestionario/913resultado/resultado";
 
 const Cuestionario = () => {
@@ -30,6 +33,10 @@ const Cuestionario = () => {
     switch (componenteactual) {
       case "nombre":
         return <Nombre setComponenteActual={setComponenteActual} nombre={nombre} setNombre={setNombre} />
+      case "nombrehola":
+        return <Nombrehola setComponenteActual={setComponenteActual}/>
+      case "yahora":
+        return <Yahora setComponenteActual={setComponenteActual}/>
       case "conflicto":
         return <Conflicto setComponenteActual={setComponenteActual}/>;
       case "relaciones":
@@ -50,8 +57,10 @@ const Cuestionario = () => {
         return <Juicio setComponenteActual={setComponenteActual}/>;
       case "horario":
         return <Horario setComponenteActual={setComponenteActual}/>;
+      case "alea":
+        return <Alea setComponenteActual={setComponenteActual}/>;   
       case "resultado":
-      return <Resultado setComponenteActual={setComponenteActual}/>;        
+        return <Resultado setComponenteActual={setComponenteActual}/>;        
       default:
         return null; 
     }

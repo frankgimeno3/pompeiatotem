@@ -25,7 +25,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
   };
 
 const handleSeguirClick = () => {
-  setComponenteActual("conflicto");
+  setComponenteActual("nombrehola");
   setNombre(inputValue);
   console.log(inputValue)
 };
