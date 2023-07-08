@@ -14,12 +14,9 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual }) => {
   };
 
   const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
+ 
       setComponenteActual("relaciones");
-    }
-  };
+   };
 
   return (
     <div className="flex flex-col text-center justify-center">

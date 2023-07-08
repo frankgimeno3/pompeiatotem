@@ -14,11 +14,9 @@ const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual }) => {
   };
 
   const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
+ 
       setComponenteActual("yahora");
-    }
+    
   };
 
   return (
@@ -28,6 +26,8 @@ const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual }) => {
             <h1>HOLA,</h1>
             <h2>LAURA!</h2>
         </div>
+        <p className="text-black">HE AQUÍ TODO LOS DIOSES ROMANOS</p>
+
       </div>
 
       <p className="text-black">CUÁL DE ELLOS TE REPRESENTA MEJOR?</p>

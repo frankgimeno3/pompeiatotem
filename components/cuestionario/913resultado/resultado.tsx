@@ -14,12 +14,9 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
   };
 
   const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
+ 
       setComponenteActual("enviar");
-    }
-  };
+   };
 
   return (
     <div className="flex flex-col text-center justify-center">
