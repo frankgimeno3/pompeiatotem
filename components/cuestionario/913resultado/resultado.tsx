@@ -12,7 +12,7 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
     setSelectedOption(option);
     setShowErrorMessage(false);
   };
-  
+
   const handleSeguirClick = () => {
     if (!selectedOption) {
       setShowErrorMessage(true);
@@ -23,31 +23,24 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
 
   return (
     <div className="flex flex-col text-center justify-center">
-     <h2>ME CONSIDERO:</h2>
-     <div className="flex flex-row justify-center my-5">
-       <button
-         className={`mr-10 ${selectedOption === "DIURNO" ? "bg-white" : ""}`}
-         onClick={() => handleOptionClick("DIURNO")}
-       >
-        DIURNO
-       </button>
-       <button
-         className={`ml-10 ${selectedOption === "NOCTURNO" ? "bg-white" : ""}`}
-         onClick={() => handleOptionClick("NOCTURNO")}
-       >
-        NOCTURNO
-       </button>
-     </div>
-     {showErrorMessage && (
-       <p className="text-red-500">POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR</p>
-     )}
-     <button
-       className="mt-2 bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white"
-       onClick={handleSeguirClick}
-     >
-       SEGUIR
-     </button>
-   </div>
+      <h1>LAURA</h1>
+      <p>TU DIOS ES</p>
+      <div className="flex flex-row">
+        <div className="flex flex-col">
+          <p>Imagen</p>
+          <button>IMPRIMIR</button>
+        </div>
+        <div className="flex flex-col">
+          <div className="flex flex-col">
+            <h2>FEBO</h2>
+            <p>DIOS DE LA BELLEZA,</p>
+            <p>LAS ARTES PLÁSTICAS</p>
+            <p>Y LA MÚSICA</p>
+          </div>
+          <button>IMPRIMIR</button>
+        </div>
+      </div>
+    </div>
   );
 };
 
