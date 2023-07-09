@@ -27,8 +27,8 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
           <p>Imagen</p>
           <button onClick={handleSeguirClick}>IMPRIMIR</button>
         </div>
-        <div className="flex flex-col">
-          <div className="flex flex-col">
+        <div className="flex flex-col p-5">
+          <div className="flex flex-col p-2">
             <h2>FEBO</h2>
             <p>DIOS DE LA BELLEZA,</p>
             <p>LAS ARTES PLÁSTICAS</p>
