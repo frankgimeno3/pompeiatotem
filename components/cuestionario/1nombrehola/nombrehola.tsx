@@ -27,11 +27,11 @@ const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual , nombre}) 
             <h1>HOLA,</h1>
             <h2 className="mx-1 font-bold">{nombre}</h2>
         </div>
-        <p className="text-black">HE AQUÍ TODO LOS DIOSES ROMANOS</p>
+        <p className="text-black">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
 
       </div>
 
-      <p className="text-black">CUÁL DE ELLOS TE REPRESENTA MEJOR?</p>
+      <p className="text-black">¿CUÁL DE ELLOS TE REPRESENTA MEJOR?</p>
       <p className="text-black">
         ¡ATRÉVETE A SABER! O COMO DIRÍAN LOS ROMANOS...
       </p>
