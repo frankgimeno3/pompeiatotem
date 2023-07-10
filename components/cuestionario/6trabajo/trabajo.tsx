@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 
 interface TrabajoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setTrabajo: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual }) => {
+const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +19,8 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("lugar");
+      setTrabajo(selectedOption)
+
     }
   };
 
