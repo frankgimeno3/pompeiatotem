@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 interface EstrategiaProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setEstrategia: React.Dispatch<React.SetStateAction<string>>;
+
 }
 
-const Estrategia: React.FC<EstrategiaProps> = ({ setComponenteActual }) => {
+const Estrategia: React.FC<EstrategiaProps> = ({ setComponenteActual, setEstrategia }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +20,7 @@ const Estrategia: React.FC<EstrategiaProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("resolutividad");
+      setEstrategia(selectedOption)
     }
   };
 
