@@ -74,9 +74,9 @@ const Cuestionario = () => {
         juicio={juicio}
         horario={horario}  />;   
         case "enviar":
-          return <Enviar setComponenteActual={setComponenteActual} setNombre={setNombre} />; 
+          return <Enviar setComponenteActual={setComponenteActual}   />; 
           case "yapuedes":
-            return <Yapuedes setComponenteActual={setComponenteActual} setNombre={setNombre} />;        
+            return <Yapuedes setComponenteActual={setComponenteActual} />;        
       default:
         return null; 
     }
