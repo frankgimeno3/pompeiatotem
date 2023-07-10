@@ -33,7 +33,6 @@ function seleccionarDios(criterios) {
     return true;
   }
   
-  // Ejemplo de uso
-  const criterios = ['PACÍFICO', 'ENAMORADIZO', 'ESTRATEGA', 'NEGOCIACIÓN', 'HOLGAZÁN', 'CIUDAD', 'BUENHUMOR', 'RACIONAL', 'JUSTO', 'DIURNO'];
+   const criterios = ['PACÍFICO', 'ENAMORADIZO', 'ESTRATEGA', 'NEGOCIACIÓN', 'HOLGAZÁN', 'CIUDAD', 'BUENHUMOR', 'RACIONAL', 'JUSTO', 'DIURNO'];
   const nombreDios = seleccionarDios(criterios);
-  console.log(nombreDios); // Salida: JÚPITER
+  console.log(nombreDios);  
