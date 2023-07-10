@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 interface JuicioProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setJuicio: React.Dispatch<React.SetStateAction<string>>;
+
 }
 
-const Juicio: React.FC<JuicioProps> = ({ setComponenteActual }) => {
+const Juicio: React.FC<JuicioProps> = ({ setComponenteActual, setJuicio  }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +20,7 @@ const Juicio: React.FC<JuicioProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("horario");
+      setJuicio(selectedOption)      
     }
   };
 
