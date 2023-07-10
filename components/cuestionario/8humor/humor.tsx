@@ -30,14 +30,14 @@ const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
      <h2>ME GUSTA MÁS VIVIR EN:</h2>
      <div className="flex flex-row justify-center my-5">
        <button
-         className={`mr-10 ${selectedOption === "BUEN HUMOR" ? "bg-white" : ""}`}
-         onClick={() => handleOptionClick("BUEN HUMOR")}
+         className={`mr-10 ${selectedOption === "BUENHUMOR" ? "bg-white" : ""}`}
+         onClick={() => handleOptionClick("BUENHUMOR")}
        >
          BUEN HUMOR
        </button>
        <button
-         className={`ml-10 ${selectedOption === "MAL HUMOR" ? "bg-white" : ""}`}
-         onClick={() => handleOptionClick("MAL HUMOR")}
+         className={`ml-10 ${selectedOption === "MALHUMOR" ? "bg-white" : ""}`}
+         onClick={() => handleOptionClick("MALHUMOR")}
        >
          MAL HUMOR
        </button>

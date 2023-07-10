@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 interface HorarioProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setHorario: React.Dispatch<React.SetStateAction<string>>;
+
 }
 
-const Horario: React.FC<HorarioProps> = ({ setComponenteActual }) => {
+const Horario: React.FC<HorarioProps> = ({ setComponenteActual, setHorario }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +20,7 @@ const Horario: React.FC<HorarioProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("alea");
+      setHorario(selectedOption)
     }
   };
 

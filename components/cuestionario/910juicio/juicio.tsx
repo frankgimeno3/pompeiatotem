@@ -29,14 +29,14 @@ const Juicio: React.FC<JuicioProps> = ({ setComponenteActual, setJuicio  }) => {
      <h2>SI TENGO QUE JUZGAR A UNA PERSONA POR SUS ACTOS:</h2>
      <div className="flex flex-row justify-center my-5">
        <button
-         className={`mr-10 ${selectedOption === "ME BASO EN HECHOS" ? "bg-white" : ""}`}
-         onClick={() => handleOptionClick("ME BASO EN HECHOS")}
+         className={`mr-10 ${selectedOption === "MEBASOENHECHOS" ? "bg-white" : ""}`}
+         onClick={() => handleOptionClick("MEBASOENHECHOS")}
        >
         ME BASO EN HECHOS
        </button>
        <button
-         className={`ml-10 ${selectedOption === "ME BASO EN EMOCIONES" ? "bg-white" : ""}`}
-         onClick={() => handleOptionClick("ME BASO EN EMOCIONES")}
+         className={`ml-10 ${selectedOption === "MEBASOENEMOCIONES" ? "bg-white" : ""}`}
+         onClick={() => handleOptionClick("MEBASOENEMOCIONES")}
        >
         ME BASO EN EMOCIONES
        </button>

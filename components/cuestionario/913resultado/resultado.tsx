@@ -3,9 +3,20 @@ import { useRouter } from "next/router";
 
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  nombre : String
+  conflicto : String;
+  relaciones :String;
+  estrategia : String;
+  resolutividad : String;
+  trabajo : String;
+  lugar : String;
+  humor : String;
+  creatividad: String;
+  juicio : String;
+  horario : String;
 }
 
-const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
+const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual, nombre, conflicto, relaciones, estrategia, resolutividad, trabajo, lugar,  humor,  creatividad,  juicio,  horario }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const router = useRouter();
@@ -20,7 +31,7 @@ const Resultado: React.FC<ResultadoProps> = ({ setComponenteActual }) => {
   };
   return (
     <div className="flex flex-col text-center justify-center">
-      <h1>LAURA</h1>
+      <h1>{nombre}</h1>
       <p>TU DIOS ES</p>
       <div className="flex flex-row">
         <div className="flex flex-col">
