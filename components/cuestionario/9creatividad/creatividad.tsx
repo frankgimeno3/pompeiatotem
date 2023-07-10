@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 interface CreatividadProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setCreatividad: React.Dispatch<React.SetStateAction<string>>;
+
 }
 
-const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual }) => {
+const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual, setCreatividad}) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +20,7 @@ const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("juicio");
+      setCreatividad(selectedOption)
     }
   };
 
