@@ -30,16 +30,16 @@ const Resolutividad: React.FC<ResolutividadProps> = ({ setComponenteActual, setR
       <h2>EN UNA SITUACIÓN PROBLEMÁTICA TIENDO A:</h2>
       <div className="flex flex-row justify-center my-5">
         <button
-          className={`mr-10 ${selectedOption === "CONFRONTAR" ? "bg-white" : ""}`}
-          onClick={() => handleOptionClick("CONFRONTAR")}
+          className={`mr-10 ${selectedOption === "CONFRONTACIÓN" ? "bg-white" : ""}`}
+          onClick={() => handleOptionClick("CONFRONTACIÓN")}
         >
-          CONFRONTAR
+          CONFRONTACIÓN
         </button>
         <button
-          className={`ml-10 ${selectedOption === "NEGOCIAR" ? "bg-white" : ""}`}
-          onClick={() => handleOptionClick("NEGOCIAR")}
+          className={`ml-10 ${selectedOption === "NEGOCIACIÓN" ? "bg-white" : ""}`}
+          onClick={() => handleOptionClick("NEGOCIACIÓN")}
         >
-          NEGOCIAR
+          NEGOCIACIÓN
         </button>
       </div>
       {showErrorMessage && (
