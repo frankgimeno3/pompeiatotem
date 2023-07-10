@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 interface NombreholaProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  nombre: String
 }
 
-const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual }) => {
+const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual , nombre}) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -24,7 +25,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual }) => {
       <div className="flex flex-col mb-10">
         <div className="flex flex-row">
             <h1>HOLA,</h1>
-            <h2>LAURA!</h2>
+            <h2 className="mx-1 font-bold">{nombre}</h2>
         </div>
         <p className="text-black">HE AQUÍ TODO LOS DIOSES ROMANOS</p>
 

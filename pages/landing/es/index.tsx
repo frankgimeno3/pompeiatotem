@@ -34,9 +34,9 @@ const Cuestionario = () => {
   const renderComponenteActual = () => {
     switch (componenteactual) {
       case "nombre":
-        return <Nombre setComponenteActual={setComponenteActual} setNombre={setNombre} />
+        return <Nombre setComponenteActual={setComponenteActual}  setNombre={setNombre} />
       case "nombrehola":
-        return <Nombrehola setComponenteActual={setComponenteActual}/>
+        return <Nombrehola setComponenteActual={setComponenteActual} nombre={nombre}/>
       case "yahora":
         return <Yahora setComponenteActual={setComponenteActual}/>
       case "conflicto":
