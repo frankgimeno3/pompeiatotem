@@ -62,9 +62,9 @@ const Cuestionario = () => {
       case "alea":
         return <Alea setComponenteActual={setComponenteActual}   />;   
       case "resultado":
-        return <Resultado setComponenteActual={setComponenteActual} nombre={nombre}
-        conflicto={conflicto}
-        relaciones={relaciones}
+        return ( 
+        <Resultado setComponenteActual={setComponenteActual} nombre={nombre} conflicto={conflicto}
+        relaciones={relaciones} 
         estrategia={estrategia}
         resolutividad={resolutividad}
         trabajo={trabajo}
@@ -72,7 +72,9 @@ const Cuestionario = () => {
         humor={humor}
         creatividad={creatividad}
         juicio={juicio}
-        horario={horario}  />;   
+        horario={horario} 
+         />;
+            )
         case "enviar":
           return <Enviar setComponenteActual={setComponenteActual}   />; 
           case "yapuedes":

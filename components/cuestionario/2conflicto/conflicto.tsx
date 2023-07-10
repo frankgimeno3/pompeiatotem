@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 interface ConflictoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setConflicto: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual }) => {
+const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +19,9 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("relaciones");
+      setConflicto(selectedOption)
+      console.log(selectedOption)
+
     }
   };
 

@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 interface RelacionesProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setRelaciones: React.Dispatch<React.SetStateAction<string>>;
+
 }
 
-const Relaciones: React.FC<RelacionesProps> = ({ setComponenteActual }) => {
+const Relaciones: React.FC<RelacionesProps> = ({ setComponenteActual, setRelaciones }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +20,7 @@ const Relaciones: React.FC<RelacionesProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("estrategia");
+      setRelaciones(selectedOption)
     }
   };
 
