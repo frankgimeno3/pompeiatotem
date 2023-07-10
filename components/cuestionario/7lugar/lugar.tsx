@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 interface LugarProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setLugar: React.Dispatch<React.SetStateAction<string>>;
+
 }
 
-const Lugar: React.FC<LugarProps> = ({ setComponenteActual }) => {
+const Lugar: React.FC<LugarProps> = ({ setComponenteActual, setLugar }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +20,8 @@ const Lugar: React.FC<LugarProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("humor");
+      setLugar(selectedOption)
+
     }
   };
 
