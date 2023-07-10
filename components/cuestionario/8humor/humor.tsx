@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 interface HumorProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setHumor: React.Dispatch<React.SetStateAction<string>>;
+
 }
 
-const Humor: React.FC<HumorProps> = ({ setComponenteActual }) => {
+const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +20,8 @@ const Humor: React.FC<HumorProps> = ({ setComponenteActual }) => {
       setShowErrorMessage(true);
     } else {
       setComponenteActual("creatividad");
+      setHumor(selectedOption)
+
     }
   };
 
