@@ -2,7 +2,6 @@ import React, { useState } from "react";
 
 interface NombreProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
-  nombre: string;
   setNombre: React.Dispatch<React.SetStateAction<string>>;
 }
 
