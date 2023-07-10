@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 
 interface ResolutividadProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setResolutividad: React.Dispatch<React.SetStateAction<string>>;
+
 }
 
-const Resolutividad: React.FC<ResolutividadProps> = ({ setComponenteActual }) => {
+const Resolutividad: React.FC<ResolutividadProps> = ({ setComponenteActual, setResolutividad}) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -18,6 +20,8 @@ const Resolutividad: React.FC<ResolutividadProps> = ({ setComponenteActual }) =>
       setShowErrorMessage(true);
     } else {
       setComponenteActual("trabajo");
+      setResolutividad(selectedOption)
+
     }
   };
 
