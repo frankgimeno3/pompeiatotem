@@ -38,35 +38,45 @@ const Cuestionario = () => {
       case "nombrehola":
         return <Nombrehola setComponenteActual={setComponenteActual} nombre={nombre}/>
       case "yahora":
-        return <Yahora setComponenteActual={setComponenteActual}/>
+        return <Yahora setComponenteActual={setComponenteActual}  />
       case "conflicto":
-        return <Conflicto setComponenteActual={setComponenteActual}/>;
+        return <Conflicto setComponenteActual={setComponenteActual} setConflicto={setConflicto} />;
       case "relaciones":
-        return <Relaciones setComponenteActual={setComponenteActual}/>;
+        return <Relaciones setComponenteActual={setComponenteActual} setRelaciones={setRelaciones} />;
       case "estrategia":
-        return <Estrategia setComponenteActual={setComponenteActual}/>;
+        return <Estrategia setComponenteActual={setComponenteActual} setEstrategia={setEstrategia} />;
       case "resolutividad":
-        return <Resolutividad setComponenteActual={setComponenteActual}/>;
+        return <Resolutividad setComponenteActual={setComponenteActual} setResolutividad={setResolutividad} />;
       case "trabajo":
-        return <Trabajo setComponenteActual={setComponenteActual}/>;
+        return <Trabajo setComponenteActual={setComponenteActual} setTrabajo={setTrabajo} />;
       case "lugar":
-        return <Lugar setComponenteActual={setComponenteActual}/>;
+        return <Lugar setComponenteActual={setComponenteActual} setLugar={setLugar} />;
       case "humor":
-        return <Humor setComponenteActual={setComponenteActual}/>;
+        return <Humor setComponenteActual={setComponenteActual} setHumor={setHumor} />;
       case "creatividad":
-        return <Creatividad setComponenteActual={setComponenteActual}/>;
+        return <Creatividad setComponenteActual={setComponenteActual} setCreatividad={setCreatividad} />;
       case "juicio":
-        return <Juicio setComponenteActual={setComponenteActual}/>;
+        return <Juicio setComponenteActual={setComponenteActual} setJuicio={setJuicio} />;
       case "horario":
-        return <Horario setComponenteActual={setComponenteActual}/>;
+        return <Horario setComponenteActual={setComponenteActual} setHorario={setHorario} />;
       case "alea":
-        return <Alea setComponenteActual={setComponenteActual}/>;   
+        return <Alea setComponenteActual={setComponenteActual}   />;   
       case "resultado":
-        return <Resultado setComponenteActual={setComponenteActual}/>;   
+        return <Resultado setComponenteActual={setComponenteActual} nombre={nombre}
+        conflicto={conflicto}
+        relaciones={relaciones}
+        estrategia={estrategia}
+        resolutividad={resolutividad}
+        trabajo={trabajo}
+        lugar={lugar}
+        humor={humor}
+        creatividad={creatividad}
+        juicio={juicio}
+        horario={horario}  />;   
         case "enviar":
-          return <Enviar setComponenteActual={setComponenteActual}/>; 
+          return <Enviar setComponenteActual={setComponenteActual} setNombre={setNombre} />; 
           case "yapuedes":
-            return <Yapuedes setComponenteActual={setComponenteActual}/>;        
+            return <Yapuedes setComponenteActual={setComponenteActual} setNombre={setNombre} />;        
       default:
         return null; 
     }
