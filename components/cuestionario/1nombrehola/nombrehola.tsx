@@ -25,9 +25,8 @@ const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual , nombre}) 
       <div className="flex flex-col mb-10">
         <div className="flex flex-row text-5xl pb-5">
             <h1>HOLA,</h1>
-            <h2 className="mx-1 font-light underline">{nombre}</h2>
-            <h1>!</h1>
-
+            <h2 className="ml-6 text-5xl underline">_{nombre}_</h2>
+ 
         </div>
         <p className="text-black">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
 

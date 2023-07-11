@@ -25,4 +25,5 @@ body {
     )
     rgb(var(--background-start-rgb));
     font-family: 'Cinzel', serif;
+    color: #b3896d;
   }
