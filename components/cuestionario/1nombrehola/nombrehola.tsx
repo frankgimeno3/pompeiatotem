@@ -23,9 +23,11 @@ const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual , nombre}) 
   return (
     <div className="flex flex-col text-center justify-center">
       <div className="flex flex-col mb-10">
-        <div className="flex flex-row">
+        <div className="flex flex-row text-5xl pb-5">
             <h1>HOLA,</h1>
-            <h2 className="mx-1 font-bold">{nombre}</h2>
+            <h2 className="mx-1 font-light underline">{nombre}</h2>
+            <h1>!</h1>
+
         </div>
         <p className="text-black">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
 
