@@ -74,7 +74,7 @@ const Cuestionario = () => {
   };
 
   return (
-    <div className="h-screen flex py-20 justify-center text-center">
+    <div className="h-screen flex justify-center text-center">
       {renderComponenteActual()}
     </div>
   );
