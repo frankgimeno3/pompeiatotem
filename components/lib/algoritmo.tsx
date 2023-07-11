@@ -169,7 +169,7 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
   return 'No se encontró ningún dios que coincida con los criterios.';
 }
 
-function MyComponent() {
+function Algoritmo() {
   const criterios = [
     'PACÍFICO',
     'ENAMORADIZO',
@@ -182,9 +182,9 @@ function MyComponent() {
     'JUSTO',
     'DIURNO'
   ];
-  const nombreDios = SeleccionarDios({ criterios });
+  const nombreDios = SeleccionarDios({criterios});
 
   return <div>{nombreDios}</div>;
 }
 
-export default MyComponent;
+export default Algoritmo;
