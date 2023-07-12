@@ -28,15 +28,15 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto
   return (
     <div className="flex flex-col text-center justify-center">
       <h2 className="text-black">EN UNA SITUACION DE CONFLICTO SOY:</h2>
-      <div className="flex flex-row justify-center my-10 text-2xl ">
+      <div className="flex flex-row justify-center my-10 text-4xl ">
         <button
-          className={`mr-20 ${selectedOption === "PACÍFICO" ? "bg-white" : ""}`}
+          className={`mr-20 px-5 py-2 ${selectedOption === "PACÍFICO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
           onClick={() => handleOptionClick("PACÍFICO")}
         >
           PACÍFICO
         </button>
         <button
-          className={`ml-20 ${selectedOption === "GUERRERO" ? "bg-white" : ""}`}
+          className={`ml-20 px-5 py-2 ${selectedOption === "GUERRERO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
           onClick={() => handleOptionClick("GUERRERO")}
         >
           GUERRERO
@@ -45,12 +45,14 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto
       {showErrorMessage && (
         <p className="text-red-500">POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR</p>
       )}
-      <button
+      <div className="mx-20">
+        <button
       className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
       onClick={handleSeguirClick}
       >
         SEGUIR
       </button>
+      </div>
     </div>
   );
 };

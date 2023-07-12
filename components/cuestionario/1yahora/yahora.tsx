@@ -18,10 +18,10 @@ const Yahora: React.FC<YahoraProps> = ({ setComponenteActual }) => {
       <div className="flex items-center justify-center">
         <Image src="/romanohablando.png" alt="romano" width={150} height={150} />
       </div>
-      <h1 className="text-3xl my-3">Y AHORA UN PEQUEÑO CUESTIONARIO...</h1>
+      <h1 className="text-3xl mt-5">Y AHORA UN PEQUEÑO CUESTIONARIO...</h1>
       <button
-        className="mt-2 bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white"
-        onClick={handleSeguirClick}
+      className="mt-10 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
+      onClick={handleSeguirClick}
       >
         SÍ, VAMOS!
       </button>

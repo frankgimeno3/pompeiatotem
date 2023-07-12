@@ -3,10 +3,12 @@ import React, { useState, useEffect } from "react";
 interface RelacionesProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
   setRelaciones: React.Dispatch<React.SetStateAction<string>>;
-
 }
 
-const Relaciones: React.FC<RelacionesProps> = ({ setComponenteActual, setRelaciones }) => {
+const Relaciones: React.FC<RelacionesProps> = ({
+  setComponenteActual,
+  setRelaciones,
+}) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -20,36 +22,48 @@ const Relaciones: React.FC<RelacionesProps> = ({ setComponenteActual, setRelacio
       setShowErrorMessage(true);
     } else {
       setComponenteActual("estrategia");
-      setRelaciones(selectedOption)
+      setRelaciones(selectedOption);
     }
   };
 
   return (
     <div className="flex flex-col text-center justify-center">
-      <h2>EN LAS RELACIONES AMOROSAS SOY:</h2>
-      <div className="flex flex-row justify-center my-5">
+      <h2 className="text-black">EN LAS RELACIONES AMOROSAS SOY:</h2>
+      <div className="flex flex-row justify-center my-10 text-4xl ">
         <button
-          className={`mr-10 ${selectedOption === "ENAMORADIZO" ? "bg-white" : ""}`}
+          className={`mr-10 px-5 py-2 ${
+            selectedOption === "ENAMORADIZO"
+              ? "bg-white bg-opacity-40 rounded-full"
+              : ""
+          }`}
           onClick={() => handleOptionClick("ENAMORADIZO")}
         >
           ENAMORADIZO
         </button>
         <button
-          className={`ml-10 ${selectedOption === "FIEL" ? "bg-white" : ""}`}
+          className={`ml-10 px-5 py-2 ${
+            selectedOption === "FIEL"
+              ? "bg-white bg-opacity-40 rounded-full"
+              : ""
+          }`}
           onClick={() => handleOptionClick("FIEL")}
         >
           FIEL
         </button>
       </div>
       {showErrorMessage && (
-        <p className="text-red-500">POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR</p>
+        <p className="text-red-500">
+          POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR
+        </p>
       )}
-      <button
-        className="mt-2 bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white"
-        onClick={handleSeguirClick}
-      >
-        SEGUIR
-      </button>
+      <div className="mx-20">
+        <button
+          className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
+          onClick={handleSeguirClick}
+        >
+          SEGUIR
+        </button>
+      </div>
     </div>
   );
 };
