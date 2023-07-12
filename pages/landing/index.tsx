@@ -31,7 +31,7 @@ const landing = () => {
           </div>
         </Link>
         <Link href="/landing/es">
-          <div className="flex flex-col text-black">
+          <div className="flex flex-col text-black ml-20">
             <div className="rounded-full overflow-hidden">
               <Image src="/icon/flor.png" alt="flor" width={40} height={40} />
             </div>

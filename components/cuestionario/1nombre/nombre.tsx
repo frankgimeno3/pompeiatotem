@@ -30,14 +30,15 @@ const handleSeguirClick = () => {
 };
 
   return (
-    <div className="px-10 py-6">
+    <div className="px-10 py-6 pt-20">
       <div>
-        <input
+        <div className="border-b border-gray-400 mb-2 mx-10">
+          <input
           type="text"
           value={inputValue}
           readOnly
-          className="border-b border-gray-400 px-3   py-1 mb-2 bg-transparent text-black" 
-          />
+          className=" px-3 mt-5 text-center bg-transparent text-black" 
+          /></div>
         <h2 className="text-black">Escribe tu nombre</h2>
         {characterCount < 10 && (
           <p className="text-black text-xs font-light">(10 CARACTERES MAX)</p>
@@ -46,7 +47,7 @@ const handleSeguirClick = () => {
           <p className="text-red-500 text-xs font-bold">(10 CARACTERES MAX)</p>
         )}
       </div>
-      <div className="mx-15 my-7 text-5xl ">
+      <div className="mx-15 my-7 text-6xl ">
         <div>
         <button onClick={() => handleButtonClick("Q")} className="bg-transparent px-3  my-1 hover:bg-white hover:text-orange">
           Q 
@@ -144,7 +145,7 @@ const handleSeguirClick = () => {
 
       </div>
       <button
-        className=" bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white"
+      className="mt-2 px-10 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
         onClick={handleSeguirClick}
       >
         SEGUIR
