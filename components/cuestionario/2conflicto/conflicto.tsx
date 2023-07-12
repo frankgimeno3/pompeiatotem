@@ -27,16 +27,16 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto
 
   return (
     <div className="flex flex-col text-center justify-center">
-      <h2>EN UNA SITUACION DE CONFLICTO SOY:</h2>
-      <div className="flex flex-row justify-center my-5">
+      <h2 className="text-black">EN UNA SITUACION DE CONFLICTO SOY:</h2>
+      <div className="flex flex-row justify-center my-10 text-2xl ">
         <button
-          className={`mr-10 ${selectedOption === "PACÍFICO" ? "bg-white" : ""}`}
+          className={`mr-20 ${selectedOption === "PACÍFICO" ? "bg-white" : ""}`}
           onClick={() => handleOptionClick("PACÍFICO")}
         >
           PACÍFICO
         </button>
         <button
-          className={`ml-10 ${selectedOption === "GUERRERO" ? "bg-white" : ""}`}
+          className={`ml-20 ${selectedOption === "GUERRERO" ? "bg-white" : ""}`}
           onClick={() => handleOptionClick("GUERRERO")}
         >
           GUERRERO
