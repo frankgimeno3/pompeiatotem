@@ -26,16 +26,16 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
 
   return (
     <div className="flex flex-col text-center justify-center">
-     <h2>ME CONSIDERO:</h2>
-     <div className="flex flex-row justify-center my-5">
+     <h2 className="text-black">ME CONSIDERO:</h2>
+     <div className="flex flex-row justify-center my-5 text-4xl">
        <button
-         className={`mr-10 ${selectedOption === "TRABAJADOR" ? "bg-white" : ""}`}
+         className={`mr-10 ${selectedOption === "TRABAJADOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("TRABAJADOR")}
        >
          TRABAJADOR
        </button>
        <button
-         className={`ml-10 ${selectedOption === "HOLGAZÁN" ? "bg-white" : ""}`}
+         className={`ml-10 ${selectedOption === "HOLGAZÁN" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("HOLGAZÁN")}
        >
          HOLGAZÁN

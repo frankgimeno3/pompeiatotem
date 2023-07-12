@@ -26,16 +26,16 @@ const Juicio: React.FC<JuicioProps> = ({ setComponenteActual, setJuicio  }) => {
 
   return (
     <div className="flex flex-col text-center justify-center">
-     <h2>SI TENGO QUE JUZGAR A UNA PERSONA POR SUS ACTOS:</h2>
-     <div className="flex flex-row justify-center my-5">
+     <h2 className="text-black">SI TENGO QUE JUZGAR A UNA PERSONA POR SUS ACTOS:</h2>
+     <div className="flex flex-row justify-center my-5 text-4xl">
        <button
-         className={`mr-10 ${selectedOption === "JUSTO" ? "bg-white" : ""}`}
+         className={`mr-10 ${selectedOption === "JUSTO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("JUSTO")}
        >
         ME BASO EN HECHOS
        </button>
        <button
-         className={`ml-10 ${selectedOption === "INJUSTO" ? "bg-white" : ""}`}
+         className={`ml-10 ${selectedOption === "INJUSTO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("INJUSTO")}
        >
         ME BASO EN EMOCIONES

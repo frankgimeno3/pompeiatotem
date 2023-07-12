@@ -27,16 +27,16 @@ const Resolutividad: React.FC<ResolutividadProps> = ({ setComponenteActual, setR
 
   return (
      <div className="flex flex-col text-center justify-center">
-      <h2>EN UNA SITUACIÓN PROBLEMÁTICA TIENDO A:</h2>
-      <div className="flex flex-row justify-center my-5">
+      <h2 className="text-black">EN UNA SITUACIÓN PROBLEMÁTICA TIENDO A:</h2>
+      <div className="flex flex-row justify-center my-5 text-4xl">
         <button
-          className={`mr-10 ${selectedOption === "CONFRONTACIÓN" ? "bg-white" : ""}`}
+          className={`mr-10 ${selectedOption === "CONFRONTACIÓN" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
           onClick={() => handleOptionClick("CONFRONTACIÓN")}
         >
           CONFRONTACIÓN
         </button>
         <button
-          className={`ml-10 ${selectedOption === "NEGOCIACIÓN" ? "bg-white" : ""}`}
+          className={`ml-10 ${selectedOption === "NEGOCIACIÓN" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
           onClick={() => handleOptionClick("NEGOCIACIÓN")}
         >
           NEGOCIACIÓN
