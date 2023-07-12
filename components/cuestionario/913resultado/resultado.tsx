@@ -92,23 +92,29 @@ const Resultado: React.FC<ResultadoProps> = ({
 
   return (
     <div className="flex flex-col mb-20 text-center justify-center">
-      <h1 className="text-3xl">{nombre}</h1>
-      <p className="text-black text-xs">TU DIOS ES</p>
-      <div className="flex flex-row" style={{ height: "30", width: "40" }}>
-        <div className="flex flex-col items-center " style={{ flex: 1 }}>
-          <Image src="/romanohablando.png" alt="romano" width={120} height={120} />
-          <button className="mt-3 text-xs text-black bg-cyan-600 px-5 rounded opacity-75" onClick={handleSeguirClick}>IMPRIMIR</button>
+      <h1 className="text-6xl mt-10 ">{nombre}</h1>
+      <p className="text-black text-xs mt-2">TU DIOS ES</p>
+      <div className="flex flex-row  " style={{ height: "30" }}>
+        <div className="flex flex-col items-center pr-20 pt-5" style={{ flex: 2 }}>
+          <Image src="/romanohablando.png" alt="romano" width={140} height={140} />
+          <button 
+                    className="mt-2 px-6 py-0.5   text-md text-black bg-cyan-700 rounded bg-opacity-40"
+                    onClick={handleSeguirClick}>IMPRIMIR</button>
         </div>
-        <div className="flex flex-col p-5 text-black " style={{ flex: 1 }}>
-          <div className="flex flex-col p-2">
-            <h2 className="font-bold text-xl">{tuDios}</h2>
-            <div className="text-xs ">
+        <div className="flex flex-col pt-5 text-black" style={{ flex: 4 }}>
+          <div className="flex flex-col  ">
+            <h2 className="font-bold text-xl mt-10 mb-2">{tuDios}</h2>
+            <div className="text-md mb-1">
               <p>DIOS DE LA BELLEZA,</p>
               <p>LAS ARTES PLÁSTICAS</p>
               <p>Y LA MÚSICA</p>
             </div>
           </div>
-          <button className="mt-11 text-xs text-black bg-cyan-600  rounded opacity-75 " onClick={handleRestart}>REINICIAR</button>
+          <div className="mt-7">
+          <button
+          className=" px-6 py-0.5 mt-3 text-md text-black bg-cyan-700 rounded bg-opacity-40"
+           onClick={handleRestart}>REINICIAR</button>
+        </div>
         </div>
       </div>
   

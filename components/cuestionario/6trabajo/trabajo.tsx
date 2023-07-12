@@ -29,13 +29,13 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
      <h2 className="text-black">ME CONSIDERO:</h2>
      <div className="flex flex-row justify-center my-5 text-4xl">
        <button
-         className={`mr-10 ${selectedOption === "TRABAJADOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
+         className={`mr-10 px-5 py-2  ${selectedOption === "TRABAJADOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("TRABAJADOR")}
        >
          TRABAJADOR
        </button>
        <button
-         className={`ml-10 ${selectedOption === "HOLGAZÁN" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
+         className={`ml-10 px-5 py-2  ${selectedOption === "HOLGAZÁN" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("HOLGAZÁN")}
        >
          HOLGAZÁN
