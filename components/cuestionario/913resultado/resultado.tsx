@@ -5,6 +5,7 @@ import Image from "next/image";
 
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  setmidios: React.Dispatch<React.SetStateAction<string>>;
   nombre: string;
   conflicto: string;
   relaciones: string;
@@ -67,7 +68,7 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
 }
 
 const Resultado: React.FC<ResultadoProps> = ({
-  setComponenteActual,   nombre, conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, 
+  setComponenteActual, setmidios,  nombre, conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, 
 }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -79,7 +80,7 @@ const Resultado: React.FC<ResultadoProps> = ({
   });
 
   const handleSeguirClick = () => {
-
+    setmidios(tuDios)
   // const handleSeguirClick = useReactToPrint({
     setComponenteActual("enviar");
 

@@ -30,6 +30,7 @@ const Cuestionario = () => {
   const [creatividad, setCreatividad] = useState("");
   const [juicio, setJuicio] = useState("");
   const [horario, setHorario] = useState("");
+  const [midios, setmidios] = useState("");
 
   const renderComponenteActual = () => {
     switch (componenteactual) {
@@ -62,10 +63,10 @@ const Cuestionario = () => {
       case "alea":
         return <Alea setComponenteActual={setComponenteActual}   />;   
       case "resultado":
-        return         <Resultado setComponenteActual={setComponenteActual} nombre={nombre} conflicto={conflicto} relaciones={relaciones} estrategia={estrategia} resolutividad={resolutividad} trabajo={trabajo} lugar={lugar} humor={humor} creatividad={creatividad} juicio={juicio} horario={horario}  />;
+        return         <Resultado setComponenteActual={setComponenteActual} setmidios={setmidios} nombre={nombre} conflicto={conflicto} relaciones={relaciones} estrategia={estrategia} resolutividad={resolutividad} trabajo={trabajo} lugar={lugar} humor={humor} creatividad={creatividad} juicio={juicio} horario={horario}  />;
 
         case "enviar":
-          return <Enviar setComponenteActual={setComponenteActual}   />; 
+          return <Enviar setComponenteActual={setComponenteActual} nombre={nombre} midios={midios}  />; 
           case "yapuedes":
             return <Yapuedes setComponenteActual={setComponenteActual} />;        
       default:

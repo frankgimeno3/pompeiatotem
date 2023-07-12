@@ -4,29 +4,43 @@ import Image from "next/image";
 
 interface EnviarProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
+  midios: string;
+  nombre: string;
+
 }
 
-const Enviar: React.FC<EnviarProps> = ({ setComponenteActual }) => {
+const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const router = useRouter();
-
-  const handleOptionClick = (option: string) => {
-    setSelectedOption(option);
-    setShowErrorMessage(false);
-  };
+ 
 
   const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
-      setComponenteActual("yapuedes");
-    }
-  };
+    fetch("http://localhost:5000/files/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ nombre, midios }),
+    })
+      .then((response) => {
+        if (response.ok) {
+          console.log(response);
+          setComponenteActual("yapuedes");        
+        } else {
+          throw new Error("Credenciales incorrectas");
+        }
+      }) 
+      .catch((error) => {
+        console.error("Ha ocurrido un error:", error);
+       });
+   };
 
   const handleRestart = () => {
     router.push("/landing");
   };
+
+  
 
   return (
     <div className="flex flex-col text-center  items-center justify-center">
