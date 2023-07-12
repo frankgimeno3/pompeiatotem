@@ -136,8 +136,7 @@ const Resultado: React.FC<ResultadoProps> = ({
           ref={componentRef}
           nombre={nombre}
           tuDios={tuDios}
-          handleSeguirClick={handleSeguirClick}
-          handleRestart={handleRestart}
+ 
         />
       </div>
     </div>
@@ -148,13 +147,11 @@ const ComponentToPrint = React.forwardRef(function ComponentToPrint(
   {
     nombre,
     tuDios,
-    handleSeguirClick,
-    handleRestart
+ 
   }: {
     nombre: string;
     tuDios: string;
-    handleSeguirClick: any;
-    handleRestart: () => void;
+ 
   },
   ref: React.Ref<HTMLDivElement>
 ) {
@@ -166,7 +163,7 @@ const ComponentToPrint = React.forwardRef(function ComponentToPrint(
         <div className="flex flex-row" style={{ height: "30", width: "40" }}>
           <div className="flex flex-col items-center " style={{ flex: 1 }}>
             <Image src="/romanohablando.png" alt="romano" width={120} height={120} />
-            <button className="mt-3 text-xs text-black bg-cyan-600 px-5 rounded opacity-75" onClick={handleSeguirClick}>IMPRIMIR</button>
+            <button className="mt-3 text-xs text-black bg-cyan-600 px-5 rounded opacity-75"  >IMPRIMIR</button>
           </div>
           <div className="flex flex-col p-5 text-black " style={{ flex: 1 }}>
             <div className="flex flex-col p-2">
@@ -177,7 +174,7 @@ const ComponentToPrint = React.forwardRef(function ComponentToPrint(
                 <p>Y LA MÚSICA</p>
               </div>
             </div>
-            <button className="mt-11 text-xs text-black bg-cyan-600  rounded opacity-75 " onClick={handleRestart}>REINICIAR</button>
+            <button className="mt-11 text-xs text-black bg-cyan-600  rounded opacity-75 "  >REINICIAR</button>
           </div>
         </div>
       </div>
