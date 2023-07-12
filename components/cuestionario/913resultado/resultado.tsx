@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { useReactToPrint } from 'react-to-print';
+// import { useReactToPrint } from 'react-to-print';
 
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -19,7 +19,6 @@ interface ResultadoProps {
 }
 
 function SeleccionarDios({ criterios }: { criterios: string[] }) {
-  
   if (criterios[0] == "PACÍFICO") {
     if (criterios[1] == "ENAMORADIZO") {
       if (criterios[2] == "ESTRATEGA") {
@@ -68,18 +67,7 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
 }
 
 const Resultado: React.FC<ResultadoProps> = ({
-  setComponenteActual,
-  nombre,
-  conflicto,
-  relaciones,
-  estrategia,
-  resolutividad,
-  trabajo,
-  lugar,
-  humor,
-  creatividad,
-  juicio,
-  horario,
+  setComponenteActual,   nombre, conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, 
 }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
@@ -87,27 +75,22 @@ const Resultado: React.FC<ResultadoProps> = ({
   const componentRef = React.useRef<HTMLDivElement>(null);
 
   const tuDios = SeleccionarDios({
-    criterios: [
-      conflicto,
-      relaciones,
-      estrategia,
-      resolutividad,
-      trabajo,
-      lugar,
-      humor,
-      creatividad,
-      juicio,
-      horario,
-    ],
+    criterios: [ conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, ],
   });
 
-  const handleSeguirClick = useReactToPrint({
-    content: () => componentRef.current,
-    pageStyle: '@page { size: landscape; }',
-   });
+  const handleSeguirClick = () => {
+
+  // const handleSeguirClick = useReactToPrint({
+    setComponenteActual("enviar");
+
+    // content: () => componentRef.current,
+    // pageStyle: '@page { size: landscape; }',
+
+   };
 
   const handleRestart = () => {
     router.push("/landing");
+
   };
 
   return (
@@ -131,57 +114,41 @@ const Resultado: React.FC<ResultadoProps> = ({
           <button className="mt-11 text-xs text-black bg-cyan-600  rounded opacity-75 " onClick={handleRestart}>REINICIAR</button>
         </div>
       </div>
-      <div style={{ display: 'none' }}>
-        <ComponentToPrint
-          ref={componentRef}
-          nombre={nombre}
-          tuDios={tuDios}
- 
-        />
-      </div>
+      {/* <div style={{ display: 'none' }}>
+        <ComponentToPrint ref={componentRef} nombre={nombre } tuDios={tuDios}/>
+      </div> */}
     </div>
   );
 };
 
-const ComponentToPrint = React.forwardRef(function ComponentToPrint(
-  {
-    nombre,
-    tuDios,
- 
-  }: {
-    nombre: string;
-    tuDios: string;
- 
-  },
-  ref: React.Ref<HTMLDivElement>
-) {
-  return (
-    <div ref={ref}>
-      <div className="flex flex-col mb-20 text-center justify-center m-20">
-        <h1 className="text-3xlvmt-20">{nombre}</h1>
-        <p className="text-black text-xs">TU DIOS ES</p>
-        <div className="flex flex-row" style={{ height: "30", width: "40" }}>
-          <div className="flex flex-col items-center " style={{ flex: 1 }}>
-            <Image src="/romanohablando.png" alt="romano" width={120} height={120} />
-            <button className="mt-3 text-xs text-black bg-cyan-600 px-5 rounded opacity-75"  >IMPRIMIR</button>
-          </div>
-          <div className="flex flex-col p-5 text-black " style={{ flex: 1 }}>
-            <div className="flex flex-col p-2">
-              <h2 className="font-bold text-xl">{tuDios}</h2>
-              <div className="text-xs ">
-                <p>DIOS DE LA BELLEZA,</p>
-                <p>LAS ARTES PLÁSTICAS</p>
-                <p>Y LA MÚSICA</p>
-              </div>
-            </div>
-            <button className="mt-11 text-xs text-black bg-cyan-600  rounded opacity-75 "  >REINICIAR</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-});
+// const ComponentToPrint = React.forwardRef(function ComponentToPrint( { nombre, tuDios, }: { nombre: string ; tuDios: string}, ref: React.Ref<HTMLDivElement> ) {
+//   return (
+//     <div ref={ref}>
+//       <div className="flex flex-col mb-20 text-center justify-center m-20">
+//         <h1 className="text-3xlvmt-20">{nombre}</h1>
+//         <p className="text-black text-xs">TU DIOS ES</p>
+//         <div className="flex flex-row" style={{ height: "30", width: "40" }}>
+//           <div className="flex flex-col items-center " style={{ flex: 1 }}>
+//             <Image src="/romanohablando.png" alt="romano" width={120} height={120} />
+//             <button className="mt-3 text-xs text-black bg-cyan-600 px-5 rounded opacity-75"  >IMPRIMIR</button>
+//           </div>
+//           <div className="flex flex-col p-5 text-black " style={{ flex: 1 }}>
+//             <div className="flex flex-col p-2">
+//               <h2 className="font-bold text-xl">{tuDios}</h2>
+//               <div className="text-xs ">
+//                 <p>DIOS DE LA BELLEZA,</p>
+//                 <p>LAS ARTES PLÁSTICAS</p>
+//                 <p>Y LA MÚSICA</p>
+//               </div>
+//             </div>
+//             <button className="mt-11 text-xs text-black bg-cyan-600  rounded opacity-75 "  >REINICIAR</button>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// });
  
 
-ComponentToPrint.displayName = 'ComponentToPrint';
+// ComponentToPrint.displayName = 'ComponentToPrint';
 export default Resultado;

@@ -5,8 +5,7 @@ interface AleaProps {
 }
 
 const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
-  const [selectedOption, setSelectedOption] = useState("");
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
+ 
  
 
   const handleSeguirClick = () => {
