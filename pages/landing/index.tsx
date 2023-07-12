@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const landing = () => {
   return (
-    <div className="flex flex-col h-screen mx-auto   pt-20 text-center">
-      <p className="pt-3 mt-5 text-xs text-black mr-10">TE GUSTARÍA SABER...</p>
+    <div className="flex flex-col h-screen mx-auto  pt-20 text-center">
+      <p className="pt-10 mt-20 text-xs text-black mr-10 ">TE GUSTARÍA SABER...</p>
       <h1 className="pt-6 text-6xl  mx-20">
         ¿QUÉ DIOS DEL OLIMPO  
       </h1>
