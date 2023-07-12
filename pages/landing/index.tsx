@@ -5,32 +5,37 @@ import Image from "next/image";
 
 const landing = () => {
   return (
-    <div className="h-screen mx-20 pt-6 text-center">
-      <p className="pt-5 text-xs text-black">TE GUSTARÍA SABER...</p>
-      <h1 className="pt-10 text-5xl mb-10">
-        ¿QUÉ DIOS DEL OLIMPO TE REPRESENTA?
+    <div className="flex flex-col h-screen mx-auto   pt-20 text-center">
+      <p className="pt-3 mt-5 text-xs text-black mr-10">TE GUSTARÍA SABER...</p>
+      <h1 className="pt-6 text-6xl  mx-20">
+        ¿QUÉ DIOS DEL OLIMPO  
       </h1>
-      <p className="text-xs text-black">UNA AVENTURA QUE NOS ENSEÑA LAS CUALIDADES DE CADA DIOS ROMANO</p>
+      <h1 className="pt-4 text-6xl mb-5 mx-20">
+        TE REPRESENTA?
+      </h1>
+      <p className="text-xs text-black">
+        UNA AVENTURA QUE NOS ENSEÑA LAS CUALIDADES DE CADA DIOS ROMANO
+      </p>
       <Link href="/landing/es">
-        <button className="mt-2 bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white">
-          JUGAR{" "}
+        <button className="mt-6 px-10 py-1 mr-10 text-md text-black bg-cyan-700 rounded bg-opacity-40">
+          JUGAR
         </button>
       </Link>
-      <div className="flex flex-row justify-center mt-10 mb-10">
+      <div className="flex justify-center items-center mt-10 mb-10 mr-10">
         <Link href="/landing/en">
-          <div className="flex flex-col mr-20 pr-10 text-black">
+          <div className="flex flex-col text-black mr-20">
             <div className="rounded-full overflow-hidden">
               <Image src="/icon/flor.png" alt="flor" width={40} height={40} />
             </div>
-            <button> EN</button>
+            <button>EN</button>
           </div>
         </Link>
         <Link href="/landing/es">
-          <div className="flex flex-col ml-20 pl-10 text-black">
+          <div className="flex flex-col text-black">
             <div className="rounded-full overflow-hidden">
               <Image src="/icon/flor.png" alt="flor" width={40} height={40} />
             </div>
-            <button> ES</button>
+            <button>ES</button>
           </div>
         </Link>
       </div>
