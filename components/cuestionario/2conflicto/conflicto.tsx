@@ -46,8 +46,8 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto
         <p className="text-red-500">POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR</p>
       )}
       <button
-        className="mt-2 bg-white text-gray-800 rounded-full py-2 px-4 border-b-2 border-gray-500 hover:bg-gray-600 hover:text-white"
-        onClick={handleSeguirClick}
+      className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
+      onClick={handleSeguirClick}
       >
         SEGUIR
       </button>
