@@ -6,6 +6,7 @@ import Image from "next/image";
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
   setmidios: React.Dispatch<React.SetStateAction<string>>;
+
   nombre: string;
   conflicto: string;
   relaciones: string;
@@ -73,7 +74,7 @@ const Resultado: React.FC<ResultadoProps> = ({
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const router = useRouter();
-  const componentRef = React.useRef<HTMLDivElement>(null);
+  // const componentRef = React.useRef<HTMLDivElement>(null);
 
   const tuDios = SeleccionarDios({
     criterios: [ conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, ],
