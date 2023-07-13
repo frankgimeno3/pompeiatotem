@@ -33,6 +33,7 @@ const Cuestionario = () => {
   const [midios, setmidios] = useState("");
 
   const renderComponenteActual = () => {
+    
     switch (componenteactual) {
       case "nombre":
         return <Nombre setComponenteActual={setComponenteActual}  setNombre={setNombre} />
@@ -75,7 +76,11 @@ const Cuestionario = () => {
   };
 
   return (
-    <div className="h-screen flex justify-center text-center">
+    <div className="h-screen flex justify-center text-center"  style={{
+      backgroundImage: `url("/fondo2.png")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
       {renderComponenteActual()}
     </div>
   );
