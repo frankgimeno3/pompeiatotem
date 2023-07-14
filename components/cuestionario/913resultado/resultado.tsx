@@ -24,7 +24,7 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
   if (criterios[0] == "PACÍFICO") {
     if (criterios[1] == "ENAMORADIZO") {
       if (criterios[2] == "ESTRATEGA") {
-        return "JÚPITER";
+        return "JUPITER";
       } else {
         if (criterios[9] == "DIURNO") {
           return "FEBOS";
