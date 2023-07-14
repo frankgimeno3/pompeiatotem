@@ -90,13 +90,15 @@ const Resultado: React.FC<ResultadoProps> = ({
 
   };
 
+const imagendios = `/dioses/${tuDios}.png`
+
   return (
     <div className="flex flex-col mb-20 text-center justify-center">
       <h1 className="text-6xl mt-10 ">{nombre}</h1>
       <p className="text-black text-xs mt-2">TU DIOS ES</p>
       <div className="flex flex-row  " style={{ height: "30" }}>
         <div className="flex flex-col items-center pr-20 pt-5" style={{ flex: 2 }}>
-          <Image src="/romanohablando.png" alt="romano" width={140} height={140} />
+          <Image src={imagendios} alt={tuDios} width={140} height={140} />
           <button 
                     className="mt-2 px-6 py-0.5   text-md text-black bg-cyan-700 rounded bg-opacity-40"
                     onClick={handleSeguirClick}>IMPRIMIR</button>

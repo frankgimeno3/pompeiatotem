@@ -11,7 +11,6 @@ const Landing = () => {
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}>
- 
       <p className="pt-10 mt-20 text-xs text-black mr-10">TE GUSTARÍA SABER...</p>
       <h1 className="pt-6 text-6xl mx-20">¿QUÉ DIOS DEL OLIMPO</h1>
       <h1 className="pt-4 text-6xl mb-5 mx-20">TE REPRESENTA?</h1>
