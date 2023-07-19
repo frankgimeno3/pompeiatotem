@@ -39,7 +39,7 @@ const Relaciones: React.FC<RelacionesProps> = ({
           }`}
           onClick={() => handleOptionClick("FIEL")}
         >
-          FIEL
+          COMPROMETIDO
         </button>
       </div>
  
