@@ -10,21 +10,14 @@ const Estrategia: React.FC<EstrategiaProps> = ({
   setEstrategia,
 }) => {
   const [selectedOption, setSelectedOption] = useState("");
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-
+ 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setShowErrorMessage(false);
-  };
+    setEstrategia(selectedOption);
+    setComponenteActual("resolutividad");
 
-  const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
-      setComponenteActual("resolutividad");
-      setEstrategia(selectedOption);
-    }
   };
+ 
 
   return (
     <div className="flex flex-col text-center justify-center">
@@ -47,19 +40,7 @@ const Estrategia: React.FC<EstrategiaProps> = ({
           IMPULSIVO
         </button>
       </div>
-      {showErrorMessage && (
-        <p className="text-red-500">
-          POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR
-        </p>
-      )}
-      <div className="mx-20">
-        <button
-          className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
-          onClick={handleSeguirClick}
-        >
-          SEGUIR
-        </button>
-      </div>
+      
     </div>
   );
 };

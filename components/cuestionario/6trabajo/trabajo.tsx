@@ -11,18 +11,11 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setShowErrorMessage(false);
+    setTrabajo(selectedOption);
+    setComponenteActual("lugar");
   };
 
-  const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
-      setComponenteActual("lugar");
-      setTrabajo(selectedOption)
 
-    }
-  };
 
   return (
     <div className="flex flex-col text-center justify-center">
@@ -41,17 +34,7 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
          HOLGAZÁN
        </button>
      </div>
-     {showErrorMessage && (
-       <p className="text-red-500">POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR</p>
-     )}
-      <div className="mx-20">
-        <button
-          className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
-          onClick={handleSeguirClick}
-        >
-          SEGUIR
-        </button>
-      </div>
+ 
    </div>
  );
 };
