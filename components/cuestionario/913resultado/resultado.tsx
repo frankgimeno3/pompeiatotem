@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Contenido from "../../../lib/slogans.json"
 // import { useReactToPrint } from 'react-to-print';
 
 interface ResultadoProps {
@@ -27,7 +28,7 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
         return "JUPITER";
       } else {
         if (criterios[9] == "DIURNO") {
-          return "FEBOS";
+          return "FEBO";
         } else {
           return "VENUS";
         }
@@ -71,9 +72,7 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
 const Resultado: React.FC<ResultadoProps> = ({
   setComponenteActual, setmidios,  nombre, conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, 
 }) => {
-  const [selectedOption, setSelectedOption] = useState("");
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-  const router = useRouter();
+    const router = useRouter();
  
   const tuDios = SeleccionarDios({
     criterios: [ conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, ],
@@ -92,36 +91,38 @@ const Resultado: React.FC<ResultadoProps> = ({
 
 const imagendios = `/dioses/${tuDios}.png`
 
-  return (
-    <div className="flex flex-col mb-20 text-center justify-center">
-      <h1 className="text-6xl mt-10 ">{nombre}</h1>
-      <p className="text-black text-xs mt-2">TU DIOS ES</p>
-      <div className="flex flex-row  " style={{ height: "30" }}>
-        <div className="flex flex-col items-center pr-20 pt-5" style={{ flex: 2 }}>
-          <Image src={imagendios} alt={tuDios} width={140} height={140} />
-          <button 
-                    className="mt-2 px-6 py-0.5   text-md text-black bg-cyan-700 rounded bg-opacity-40"
-                    onClick={handleSeguirClick}>IMPRIMIR</button>
+return (
+  <div className="flex flex-col mb-20 text-center justify-center">
+    <h1 className="text-6xl mt-10 ">{nombre}</h1>
+    <p className="text-black text-xs mt-2">TU DIOS ES</p>
+    <div className="flex flex-row" style={{ height: "30" }}>
+      <div className="flex flex-col items-center pr-20 pt-5" style={{ flex: 2 }}>
+        <Image src={imagendios} alt={tuDios} width={140} height={140} />
+        <button
+          className="mt-2 px-6 py-0.5 text-md text-black bg-cyan-700 rounded bg-opacity-40"
+          onClick={handleSeguirClick}
+        >
+          IMPRIMIR
+        </button>
+      </div>
+      <div className="flex flex-col pt-5 text-black" style={{ flex: 4 }}>
+        <div className="flex flex-col">
+          <h2 className="font-bold text-xl mt-10 mb-2">{tuDios}</h2>
+          {/* Use bracket notation to access the value from "contenido" */}
+          <div className="text-md mb-1">{Contenido[tuDios]}</div>
         </div>
-        <div className="flex flex-col pt-5 text-black" style={{ flex: 4 }}>
-          <div className="flex flex-col  ">
-            <h2 className="font-bold text-xl mt-10 mb-2">{tuDios}</h2>
-            <div className="text-md mb-1">
-              <p>DIOS DE LA BELLEZA,</p>
-              <p>LAS ARTES PLÁSTICAS</p>
-              <p>Y LA MÚSICA</p>
-            </div>
-          </div>
-          <div className="mt-7">
+        <div className="mt-7">
           <button
-          className=" px-6 py-0.5 mt-3 text-md text-black bg-cyan-700 rounded bg-opacity-40"
-           onClick={handleRestart}>REINICIAR</button>
-        </div>
+            className="px-6 py-0.5 mt-3 text-md text-black bg-cyan-700 rounded bg-opacity-40"
+            onClick={handleRestart}
+          >
+            FINALIZAR SIN IMPRIMIR
+          </button>
         </div>
       </div>
-  
     </div>
-  );
+  </div>
+);
 };
  
 export default Resultado;
