@@ -191,7 +191,7 @@ const Cuestionario = () => {
       }}
     >
       {loadingvisible && (
-        <div className="flex flex-col align-center mt-20 pt-20">
+        <div className="flex flex-col align-center mt-14 pt-14">
         <Image
           src="/gif/GIF1.gif"
           alt="loading"
