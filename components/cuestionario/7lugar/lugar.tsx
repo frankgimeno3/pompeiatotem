@@ -8,22 +8,13 @@ interface LugarProps {
 
 const Lugar: React.FC<LugarProps> = ({ setComponenteActual, setLugar }) => {
   const [selectedOption, setSelectedOption] = useState("");
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-
+ 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setShowErrorMessage(false);
+    setLugar(selectedOption);
+    setComponenteActual("humor");
   };
-
-  const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
-      setComponenteActual("humor");
-      setLugar(selectedOption)
-
-    }
-  };
+ 
 
   return (
     <div className="flex flex-col text-center justify-center">
@@ -42,17 +33,7 @@ const Lugar: React.FC<LugarProps> = ({ setComponenteActual, setLugar }) => {
          CIUDAD
        </button>
      </div>
-     {showErrorMessage && (
-       <p className="text-red-500">POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR</p>
-     )}
-      <div className="mx-20">
-        <button
-          className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
-          onClick={handleSeguirClick}
-        >
-          SEGUIR
-        </button>
-      </div>
+     
    </div>
   );
 };

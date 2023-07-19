@@ -8,21 +8,14 @@ interface CreatividadProps {
 
 const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual, setCreatividad}) => {
   const [selectedOption, setSelectedOption] = useState("");
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-
+ 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setShowErrorMessage(false);
-  };
+    setCreatividad(selectedOption);
+    setComponenteActual("juicio");
 
-  const handleSeguirClick = () => {
-    if (!selectedOption) {
-      setShowErrorMessage(true);
-    } else {
-      setComponenteActual("juicio");
-      setCreatividad(selectedOption)
-    }
   };
+ 
 
   return (
     <div className="flex flex-col text-center justify-center">
@@ -41,17 +34,7 @@ const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual, setCreat
         RACIONAL
        </button>
      </div>
-     {showErrorMessage && (
-       <p className="text-red-500">POR FAVOR, SELECCIONA UNA OPCIÓN ANTES DE SEGUIR</p>
-     )}
-      <div className="mx-20">
-        <button
-          className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
-          onClick={handleSeguirClick}
-        >
-          SEGUIR
-        </button>
-      </div>
+      
    </div>
   );
 };
