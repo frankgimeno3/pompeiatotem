@@ -10,8 +10,7 @@ const Conflicto: React.FC<ConflictoProps> = ({
   setConflicto,
 }) => {
   const [selectedOption, setSelectedOption] = useState("");
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-
+ 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
     setConflicto(selectedOption);
