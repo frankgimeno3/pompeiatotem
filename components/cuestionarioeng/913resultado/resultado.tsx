@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import Contenido from "../../../lib/slogans.json"
+import Contenido from "../../../lib/sloganseng.json"
 // import { useReactToPrint } from 'react-to-print';
 
 interface ResultadoProps {
@@ -28,7 +28,7 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
         return "JUPITER";
       } else {
         if (criterios[9] == "DIURNO") {
-          return "FEBO";
+          return "PHOEBUS";
         } else {
           return "VENUS";
         }
@@ -37,12 +37,12 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
       if (criterios[5] == "CAMPO") {
         if (criterios[4] == "TRABAJADOR") {
           if (criterios[7] == "CREATIVO") {
-            return "VULCANO";
+            return "VULCAN";
           } else {
             return "CERES";
           }
         } else {
-          return "MERCURIO";
+          return "MERCURY";
         }
       } else {
         if (criterios[3] == "CONFRONTACIÓN") {
@@ -55,9 +55,9 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
   } else {
     if (criterios[1] == "ENAMORADIZO") {
       if (criterios[2] == "CAMPO") {
-        return "NEPTUNO";
+        return "NEPTUNE";
       } else {
-        return "MARTE";
+        return "MARS";
       }
     } else {
       if (criterios[2] == "ESTRATEGA") {
@@ -94,7 +94,7 @@ const imagendios = `/dioses/${tuDios}.png`
 return (
   <div className="flex flex-col mb-20 text-center justify-center">
     <h1 className="text-6xl mt-10 ">{nombre}</h1>
-    <p className="text-black text-xs mt-2">TU DIOS ES</p>
+    <p className="text-black text-xs mt-2">YOUR GOD IS</p>
     <div className="flex flex-row" style={{ height: "30" }}>
       <div className="flex flex-col items-center pr-20 pt-5" style={{ flex: 2 }}>
         <Image src={imagendios} alt={tuDios} width={140} height={140} />
@@ -102,7 +102,7 @@ return (
           className="mt-2 px-6 py-0.5 text-md text-black bg-cyan-700 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
-          IMPRIMIR
+          PRINT
         </button>
       </div>
       <div className="flex flex-col pt-5 text-black" style={{ flex: 4 }}>
@@ -116,7 +116,7 @@ return (
             className="px-6 py-0.5 mt-3 text-md text-black bg-cyan-700 rounded bg-opacity-40"
             onClick={handleRestart}
           >
-            FINALIZAR SIN IMPRIMIR
+            FINISH WITHOUT PRINTING
           </button>
         </div>
       </div>

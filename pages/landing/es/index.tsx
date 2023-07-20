@@ -19,6 +19,7 @@ import Enviar from "../../../components/cuestionario/914enviar/enviar";
 import Yapuedes from "../../../components/cuestionario/915yapuedes/yapuedes";
 import Image from "next/image";
 
+
 const Cuestionario = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");
   const [nombre, setNombre] = useState("");
@@ -34,6 +35,8 @@ const Cuestionario = () => {
   const [horario, setHorario] = useState("");
   const [midios, setmidios] = useState("");
   const [loadingvisible, setloadingvisible] = useState(false);
+
+
 
   const renderComponenteActual = () => {
     while(!loadingvisible)
@@ -179,6 +182,7 @@ const Cuestionario = () => {
     // Aquí puedes agregar cualquier otra lógica que desees ejecutar al cambiar componenteactual
 
   }, [componenteactual]);
+
 
 
   return (

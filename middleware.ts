@@ -8,8 +8,8 @@ interface JWTPayload {
 export async function middleware(request: NextRequest) {
   const jwt = request.cookies.get("authvalue") as string | undefined;
   if (!jwt) {
-    console.log("esto se activa si middleware NO encuentra cookie");
-    return NextResponse.redirect(new URL("/", request.url));
+    // console.log("esto se activa si middleware NO encuentra cookie");
+    return NextResponse.redirect(new URL("http://localhost:3000", request.url));
   }  
 
   try {
@@ -18,11 +18,11 @@ export async function middleware(request: NextRequest) {
       return NextResponse.next();
     }
   } catch (error) {
-    return NextResponse.redirect(new URL("/", request.url));
+    return NextResponse.redirect(new URL("http://localhost:3000/landing", request.url));
   }
   
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: ["/landing/:path*"],
 };

@@ -45,25 +45,25 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
   return (
     <div className="flex flex-col text-center  items-center justify-center">
       <p className="mb-8 text-black">
-        ¿QUIERES LLEVARTE A TU DIOS DE RECUERDO?
+      DO YOU WANT TO TAKE YOUR GOD AS A SOUVENIR?
       </p>
       <Image src="/miniatura.png" alt="miniatura" width={250} height={250} />
 
-      <p className="mt-6 text-black text-xs">PIDE TU COPIA EN RECEPCIÓN</p>
-      <p className="mt-2 text-black text-xs">PRECIO DE VENTA 6€</p>
+      <p className="mt-6 text-black text-xs">ASK FOR YOUR COPY AT RECEPTION</p>
+      <p className="mt-2 text-black text-xs">SELLING PRICE 6€</p>
 
       <div className="flex flex-row text-center justify-center">
         <button
           className="mt-11 px-2 py-1 mr-10 text-xs text-black bg-cyan-700 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
-          CONFIRMAR Y RECOGER
+          CONFIRM AND PRINT
         </button>
         <button
           className="mt-11 px-2 py-1 text-xs text-black bg-green-700  rounded bg-opacity-30 "
           onClick={handleRestart}
         >
-          COMENZAR DE NUEVO
+          START AGAIN
         </button>
       </div>
     </div>

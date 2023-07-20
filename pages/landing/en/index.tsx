@@ -1,25 +1,25 @@
 import React, { useState, useEffect} from "react";
 
-import Nombre from "../../../components/cuestionario/1nombre/nombre";
-import Nombrehola from "../../../components/cuestionario/1nombrehola/nombrehola";
-import Yahora from "../../../components/cuestionario/1yahora/yahora";
-import Conflicto from "../../../components/cuestionario/2conflicto/conflicto";
-import Relaciones from "../../../components/cuestionario/3relaciones/relaciones";
-import Estrategia from "../../../components/cuestionario/4estrategia/estrategia";
-import Resolutividad from "../../../components/cuestionario/5resolutividad/resolutividad";
-import Trabajo from "../../../components/cuestionario/6trabajo/trabajo";
-import Lugar from "../../../components/cuestionario/7lugar/lugar";
-import Humor from "../../../components/cuestionario/8humor/humor";
-import Creatividad from "../../../components/cuestionario/9creatividad/creatividad";
-import Juicio from "../../../components/cuestionario/910juicio/juicio";
-import Horario from "../../../components/cuestionario/911horario/horario";
-import Alea from "../../../components/cuestionario/912alea/alea";
-import Resultado from "../../../components/cuestionario/913resultado/resultado";
-import Enviar from "../../../components/cuestionario/914enviar/enviar";
-import Yapuedes from "../../../components/cuestionario/915yapuedes/yapuedes";
+import Nombre from "../../../components/cuestionarioeng/1nombre/nombre";
+import Nombrehola from "../../../components/cuestionarioeng/1nombrehola/nombrehola";
+import Yahora from "../../../components/cuestionarioeng/1yahora/yahora";
+import Conflicto from "../../../components/cuestionarioeng/2conflicto/conflicto";
+import Relaciones from "../../../components/cuestionarioeng/3relaciones/relaciones";
+import Estrategia from "../../../components/cuestionarioeng/4estrategia/estrategia";
+import Resolutividad from "../../../components/cuestionarioeng/5resolutividad/resolutividad";
+import Trabajo from "../../../components/cuestionarioeng/6trabajo/trabajo";
+import Lugar from "../../../components/cuestionarioeng/7lugar/lugar";
+import Humor from "../../../components/cuestionarioeng/8humor/humor";
+import Creatividad from "../../../components/cuestionarioeng/9creatividad/creatividad";
+import Juicio from "../../../components/cuestionarioeng/910juicio/juicio";
+import Horario from "../../../components/cuestionarioeng/911horario/horario";
+import Alea from "../../../components/cuestionarioeng/912alea/alea";
+import Resultado from "../../../components/cuestionarioeng/913resultado/resultado";
+import Enviar from "../../../components/cuestionarioeng/914enviar/enviar";
+import Yapuedes from "../../../components/cuestionarioeng/915yapuedes/yapuedes";
 import Image from "next/image";
 
-const Cuestionario = () => {
+const Cuestionarioeng = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");
   const [nombre, setNombre] = useState("");
   const [conflicto, setConflicto] = useState("");
@@ -206,4 +206,4 @@ const Cuestionario = () => {
   );
 };
 
-export default Cuestionario;
+export default Cuestionarioeng;

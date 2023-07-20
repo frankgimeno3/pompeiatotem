@@ -19,7 +19,7 @@ const Conflicto: React.FC<ConflictoProps> = ({
 
   return (
     <div className="flex flex-col text-center justify-center">
-      <h2 className="text-black">EN UNA SITUACION DE CONFLICTO SOY:</h2>
+      <h2 className="text-black">IN A CONFLICT SITUATION I AM:</h2>
       <div className="flex flex-row justify-center my-10 text-4xl ">
         <button
           className={`mr-20 px-5 py-2 ${
@@ -29,7 +29,7 @@ const Conflicto: React.FC<ConflictoProps> = ({
           }`}
           onClick={() => handleOptionClick("PACÍFICO")}
         >
-          PACÍFICO
+          PACIFIC
         </button>
         <button
           className={`ml-20 px-5 py-2 ${
@@ -39,7 +39,7 @@ const Conflicto: React.FC<ConflictoProps> = ({
           }`}
           onClick={() => handleOptionClick("GUERRERO")}
         >
-          GUERRERO
+          WARRIOR
         </button>
       </div>
        

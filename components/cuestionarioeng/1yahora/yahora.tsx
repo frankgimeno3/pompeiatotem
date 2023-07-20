@@ -18,13 +18,12 @@ const Yahora: React.FC<YahoraProps> = ({ setComponenteActual }) => {
       <div className="flex items-center justify-center">
         <Image src="/romanohablando.png" alt="romano" width={150} height={150} />
       </div>
-      <h1 className="text-3xl mt-5">Y AHORA UN PEQUEÑO CUESTIONARIO...</h1>
+      <h1 className="text-3xl mt-5">AND NOW, A BRIEF QUESTIONNAIRE...</h1>
       <button
       className="mt-10 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
       onClick={handleSeguirClick}
-      >
-        SÍ, VAMOS!
-      </button>
+      // eslint-disable-next-line react/no-unescaped-entities
+      >LET'S GO!</button>
     </div>
   );
 };
