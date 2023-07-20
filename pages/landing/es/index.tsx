@@ -164,7 +164,7 @@ const Cuestionario = () => {
   };
 
   const loadingHandler = () => {
-    if (!loadingvisible) {
+    if (!loadingvisible || componenteactual === "resultado") {
       return "hidden"; // Clase CSS para ocultar la imagen
     } else {
       return "text-center mt-20 pt-20"; // Clase CSS para agregar sombra
