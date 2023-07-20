@@ -93,7 +93,7 @@ const Resultado: React.FC<ResultadoProps> = ({
   // Configuring the spring animation
   const springAnimation = useSpring({
     opacity: isVisible ? 1 : 0, // Set the opacity to 1 when isVisible is true, otherwise 0
-    config: { duration: 1000 }, // Duration of 1 second
+    config: { duration: 500 }, // Duration of 1 second
     onRest: () => {
       // After the animation ends, set isVisible to true to display the content
       if (!isVisible) {
