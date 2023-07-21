@@ -69,7 +69,6 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
   }
 }
 
- 
 const Resultado: React.FC<ResultadoProps> = ({
   setComponenteActual,
   setmidios,
@@ -135,37 +134,48 @@ const Resultado: React.FC<ResultadoProps> = ({
 
   return (
     <animated.div
-      className="flex flex-col mb-20 text-center justify-center"
+      className="flex flex-col mb-10 text-center justify-center p-24 mx-24 w-screen"
       style={springAnimation} // Apply the spring animation style to the component
     >
-      <h1 className="text-6xl mt-10 ">{nombre}</h1>
-      <p className="text-black text-xs mt-2">TU DIOS ES</p>
-      <div className="flex flex-row" style={{ height: "30" }}>
-        <div
-          className="flex flex-col items-center pr-20 pt-5"
-          style={{ flex: 2 }}
-        >
-          <Image src={imagendios} alt={tuDios} width={140} height={140} />
+      <div className="flex flex-row text-center justify-center align-center  px-24 mx-14">
+        <div className="flex-1 flex items-center justify-center pl-5">
+          <Image
+            src={imagendios}
+            alt={tuDios}
+            width={200}
+            height={200}
+           />
+        </div>
+
+        <div className="flex-1 flex flex-col  align-center">
+          <h1 className="text-6xl mt-10 ">{nombre}</h1>
+          <p className="text-black text-lg mt-5   text-black">
+            TU DIOS ES
+          </p>
+          <h2 className="  text-4xl  mb-5   ">
+            {tuDios}
+          </h2>
+          <div className="text-black">
+            <div className="text-lg mb-10 px-10">{Contenido[tuDios]}</div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-row justify-center px-24 mx-16">
+        <div className="flex-1 ml-5">
           <button
-            className="mt-2 px-6 py-0.5 text-md text-black bg-cyan-700 rounded bg-opacity-40"
+            className="mt-2 px-6 py-0.5 text-lg text-black bg-cyan-700 rounded bg-opacity-40 mr-4"
             onClick={handleSeguirClick}
           >
             IMPRIMIR
           </button>
         </div>
-        <div className="flex flex-col pt-5 text-black" style={{ flex: 4 }}>
-          <div className="flex flex-col">
-            <h2 className="font-bold text-xl mt-10 mb-2">{tuDios}</h2>
-            <div className="text-md mb-1">{Contenido[tuDios]}</div>
-          </div>
-          <div className="mt-7">
-            <button
-              className="px-6 py-0.5 mt-3 text-md text-black bg-cyan-700 rounded bg-opacity-40"
-              onClick={handleRestart}
-            >
-              FINALIZAR SIN IMPRIMIR
-            </button>
-          </div>
+        <div className="flex-1">
+          <button
+            className="px-6 py-0.5 mt-3 text-lg text-black bg-cyan-700 rounded bg-opacity-40 ml-4"
+            onClick={handleRestart}
+          >
+            FINALIZAR SIN IMPRIMIR
+          </button>
         </div>
       </div>
     </animated.div>

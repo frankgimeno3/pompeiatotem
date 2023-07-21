@@ -34,7 +34,7 @@ const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
 
       <div className="mx-20">
         <button
-          className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
+          className="mt-2 px-6 py-1   text-lg text-black bg-cyan-700 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
           VER

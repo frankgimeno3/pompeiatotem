@@ -15,14 +15,14 @@ const Yapuedes: React.FC<YapuedesProps> = ({ setComponenteActual }) => {
     router.push("/landing");
   }
   return (
-    <div className="flex flex-col text-center align-center justify-center text-4xl">
+    <div className="flex flex-col text-center align-center justify-center text-5xl">
       <h1 className="mt-10">YA PUEDES RECOGERLO!</h1>
       <div className="mx-auto my-10">
 
       <Image src="/tick.png" alt="tick" width={120} height={120} />
       </div>
 
-      <div className="mx-20 text-xs">
+      <div className="mx-20 text-lg">
         <button className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40" onClick={handleRestart}>VUELVE A JUGAR</button>
       </div>
     </div>

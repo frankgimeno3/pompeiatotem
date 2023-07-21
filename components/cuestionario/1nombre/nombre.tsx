@@ -41,10 +41,10 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
             type="text"
             value={inputValue}
             readOnly
-            className=" px-3 mt-5 text-center bg-transparent text-black text-lg"
+            className=" px-3 mt-5 text-center bg-transparent text-black text-2xl"
           />
         </div>
-        <h2 className="text-black text-lg">Escribe tu nombre</h2>
+        <h2 className="text-black text-2xl">Escribe tu nombre</h2>
         {characterCount < 10 && (
           <p className="text-black text-sm font-light">(10 CARACTERES MAX)</p>
         )}
