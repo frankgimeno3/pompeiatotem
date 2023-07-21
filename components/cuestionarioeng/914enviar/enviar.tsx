@@ -44,23 +44,23 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
 
   return (
     <div className="flex flex-col text-center  items-center justify-center">
-      <p className="mb-8 text-black">
+      <p className="mb-8 text-black text-xl">
       DO YOU WANT TO TAKE YOUR GOD AS A SOUVENIR?
       </p>
       <Image src="/miniatura.png" alt="miniatura" width={250} height={250} />
 
-      <p className="mt-6 text-black text-xs">ASK FOR YOUR COPY AT RECEPTION</p>
-      <p className="mt-2 text-black text-xs">SELLING PRICE 6€</p>
+      <p className="mt-6 text-black text-lg">ASK FOR YOUR COPY AT RECEPTION</p>
+      <p className="mt-2 text-black text-lg">SELLING PRICE 6€</p>
 
       <div className="flex flex-row text-center justify-center">
         <button
-          className="mt-11 px-2 py-1 mr-10 text-xs text-black bg-cyan-700 rounded bg-opacity-40"
+          className="mt-11 px-2 py-1 mr-10 text-lg text-black bg-cyan-700 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
           CONFIRM AND PRINT
         </button>
         <button
-          className="mt-11 px-2 py-1 text-xs text-black bg-green-700  rounded bg-opacity-30 "
+          className="mt-11 px-2 py-1 text-lg text-black bg-green-700  rounded bg-opacity-30 "
           onClick={handleRestart}
         >
           START AGAIN

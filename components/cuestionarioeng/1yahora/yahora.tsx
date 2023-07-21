@@ -14,16 +14,16 @@ const Yahora: React.FC<YahoraProps> = ({ setComponenteActual }) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center text-center">
+    <div className="flex flex-col items-center justify-center text-center mb-20">
       <div className="flex items-center justify-center">
-        <Image src="/romanohablando.png" alt="romano" width={150} height={150} />
+        <Image src="/romanohablando.png" alt="romano" width={200} height={200} />
       </div>
-      <h1 className="text-3xl mt-5">AND NOW, A BRIEF QUESTIONNAIRE...</h1>
+      <h1 className="text-5xl mt-5">AND NOW, A BRIEF QUESTIONNAIRE...</h1>
       <button
-      className="mt-10 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
+      className="mt-10 px-6 py-1   text-lg text-black bg-cyan-700 rounded bg-opacity-40"
       onClick={handleSeguirClick}
-      // eslint-disable-next-line react/no-unescaped-entities
-      >LET'S GO!</button>
+            // eslint-disable-next-line react/no-unescaped-entities
+      >LET'S GO!      </button>
     </div>
   );
 };

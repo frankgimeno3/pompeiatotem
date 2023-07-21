@@ -23,26 +23,26 @@ const Nombrehola: React.FC<NombreholaProps> = ({ setComponenteActual , nombre}) 
   return (
     <div className="flex flex-col text-center justify-center">
       <div className="flex flex-col mb-20 text-center">
-        <div className="flex flex-row text-5xl pb-1 justify-center ">
+        <div className="flex flex-row text-7xl pb-1 justify-center align-end ">
             <h1 >GREETINGS,</h1>
-            <div className="border-b border-gray-400 mb-2 mx-5 px-5">
-                <h2 className="text-4xl ">{nombre}</h2>
+            <div className="flex flex-col border-b border-gray-400 mb-2 justify-end mx-5 px-5 ">
+                <h2 className="text-5xl ">{nombre}</h2>
  
             </div>
             </div>
-        <p className="text-black text-xs ">HERE, THE ROMAN GODS</p>
+        <p className="text-black text-lg ">HERE, THE ROMAN GODS</p>
 
       </div>
       <div className="mt-20">
-      <p className="text-black text-xs">¿WHICH OF THEM MATCHES BEST WITH YOUR PERSONALITY?</p>
-      <p className="text-black text-xs">
-        ¡DARE TO KNOW! OR AS ROMANS WOULD SAY...
-      </p>
+      <p className="text-black text-lg">¿WHICH OF THEM MATCHES BEST WITH YOUR PERSONALITY?</p>
+      <p className="text-black text-lg">
+      ¡DARE TO KNOW! OR AS ROMANS WOULD SAY...
+            </p>
       </div>
       <div className="mx-20">
 
       <button
-      className="mt-2 px-6 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
+      className="mt-2 px-6 py-1   text-lg text-black bg-cyan-700 rounded bg-opacity-40"
       onClick={handleSeguirClick}
       >
         ¡SAPERE AUDE!

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import Contenido from "../../../lib/sloganseng.json"
-// import { useReactToPrint } from 'react-to-print';
+import { useSpring, animated } from "react-spring";
 
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -70,59 +70,115 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
 }
 
 const Resultado: React.FC<ResultadoProps> = ({
-  setComponenteActual, setmidios,  nombre, conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, 
+  setComponenteActual,
+  setmidios,
+  nombre,
+  conflicto,
+  relaciones,
+  estrategia,
+  resolutividad,
+  trabajo,
+  lugar,
+  humor,
+  creatividad,
+  juicio,
+  horario,
 }) => {
-    const router = useRouter();
- 
+  const router = useRouter();
+
+  // State to manage the visibility of the component
+  const [isVisible, setIsVisible] = useState(false);
+
+  // Configuring the spring animation
+  const springAnimation = useSpring({
+    opacity: isVisible ? 1 : 0, // Set the opacity to 1 when isVisible is true, otherwise 0
+    config: { duration: 500 }, // Duration of 1 second
+    onRest: () => {
+      // After the animation ends, set isVisible to true to display the content
+      if (!isVisible) {
+        setIsVisible(true);
+      }
+    },
+  });
+
+  useEffect(() => {
+    // Once the component is mounted, set isVisible to true to start the animation
+    setIsVisible(true);
+  }, []);
+
   const tuDios = SeleccionarDios({
-    criterios: [ conflicto, relaciones, estrategia, resolutividad, trabajo, lugar, humor, creatividad, juicio, horario, ],
+    criterios: [
+      conflicto,
+      relaciones,
+      estrategia,
+      resolutividad,
+      trabajo,
+      lugar,
+      humor,
+      creatividad,
+      juicio,
+      horario,
+    ],
   });
 
   const handleSeguirClick = () => {
-    setmidios(tuDios)
-     setComponenteActual("enviar");
- 
-   };
+    setmidios(tuDios);
+    setComponenteActual("enviar");
+  };
 
   const handleRestart = () => {
     router.push("/landing");
-
   };
 
-const imagendios = `/dioses/${tuDios}.png`
+  const imagendios = `/dioses/${tuDios}.png`;
 
-return (
-  <div className="flex flex-col mb-20 text-center justify-center">
-    <h1 className="text-6xl mt-10 ">{nombre}</h1>
-    <p className="text-black text-xs mt-2">YOUR GOD IS</p>
-    <div className="flex flex-row" style={{ height: "30" }}>
-      <div className="flex flex-col items-center pr-20 pt-5" style={{ flex: 2 }}>
-        <Image src={imagendios} alt={tuDios} width={140} height={140} />
-        <button
-          className="mt-2 px-6 py-0.5 text-md text-black bg-cyan-700 rounded bg-opacity-40"
-          onClick={handleSeguirClick}
-        >
-          PRINT
-        </button>
-      </div>
-      <div className="flex flex-col pt-5 text-black" style={{ flex: 4 }}>
-        <div className="flex flex-col">
-          <h2 className="font-bold text-xl mt-10 mb-2">{tuDios}</h2>
-          {/* Use bracket notation to access the value from "contenido" */}
-          <div className="text-md mb-1">{Contenido[tuDios]}</div>
+  return (
+    <animated.div
+      className="flex flex-col mb-10 text-center justify-center p-24 mx-24 w-screen"
+      style={springAnimation} // Apply the spring animation style to the component
+    >
+      <div className="flex flex-row text-center justify-center align-center  px-24 mx-14">
+        <div className="flex-1 flex items-center justify-center pl-5">
+          <Image
+            src={imagendios}
+            alt={tuDios}
+            width={200}
+            height={200}
+           />
         </div>
-        <div className="mt-7">
+
+        <div className="flex-1 flex flex-col  align-center">
+          <h1 className="text-6xl mt-10 ">{nombre}</h1>
+          <p className="text-black text-lg mt-5   text-black">
+          YOUR GOD IS          </p>
+          <h2 className="  text-4xl  mb-5   ">
+            {tuDios}
+          </h2>
+          <div className="text-black">
+            <div className="text-lg mb-10 px-10">{Contenido[tuDios]}</div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-row justify-center px-24 mx-16">
+        <div className="flex-1 ml-5">
           <button
-            className="px-6 py-0.5 mt-3 text-md text-black bg-cyan-700 rounded bg-opacity-40"
+            className="mt-2 px-6 py-0.5 text-lg text-black bg-cyan-700 rounded bg-opacity-40 mr-4"
+            onClick={handleSeguirClick}
+          >
+          PRINT
+          </button>
+        </div>
+        <div className="flex-1">
+          <button
+            className="px-6 py-0.5 mt-3 text-lg text-black bg-cyan-700 rounded bg-opacity-40 ml-4"
             onClick={handleRestart}
           >
             FINISH WITHOUT PRINTING
           </button>
         </div>
       </div>
-    </div>
-  </div>
-);
+    </animated.div>
+  );
 };
- 
+
 export default Resultado;

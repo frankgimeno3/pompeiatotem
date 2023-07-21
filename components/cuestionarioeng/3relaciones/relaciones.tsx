@@ -19,8 +19,8 @@ const Relaciones: React.FC<RelacionesProps> = ({
  
    return (
     <div className="flex flex-col text-center justify-center">
-      <h2 className="text-black">IN LOVE AFFAIRS I AM:</h2>
-      <div className="flex flex-row justify-center my-10 text-4xl ">
+      <h2 className="text-black text-xl">IN LOVE AFFAIRS I AM:</h2>
+      <div className="flex flex-row justify-center my-10 text-5xl ">
         <button
           className={`mr-10 px-5 py-2 ${
             selectedOption === "ENAMORADIZO"

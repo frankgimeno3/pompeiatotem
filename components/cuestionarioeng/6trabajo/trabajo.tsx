@@ -19,19 +19,19 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
 
   return (
     <div className="flex flex-col text-center justify-center">
-     <h2 className="text-black">I SEE MYSELF AS:</h2>
-     <div className="flex flex-row justify-center my-5 text-4xl">
+     <h2 className="text-black text-xl">I SEE MYSELF AS:</h2>
+     <div className="flex flex-row justify-center my-5 text-5xl">
        <button
          className={`mr-10 px-5 py-2  ${selectedOption === "TRABAJADOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("TRABAJADOR")}
        >
-        A HARDWORKER
+         A HARDWORKER
        </button>
        <button
          className={`ml-10 px-5 py-2  ${selectedOption === "HOLGAZÁN" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("HOLGAZÁN")}
        >
-        AN IDLER
+         AN IDLER
        </button>
      </div>
  

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col h-screen mx-auto pt-10 text-center" 
+    <div className="flex flex-col h-screen mx-auto pt-24 text-center" 
     style={{
       backgroundImage: `url("/fondo1.png")`,
       backgroundSize: "cover",

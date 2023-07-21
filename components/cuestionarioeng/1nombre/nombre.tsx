@@ -41,18 +41,18 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
             type="text"
             value={inputValue}
             readOnly
-            className=" px-3 mt-5 text-center bg-transparent text-black text-lg"
+            className=" px-3 mt-5 text-center bg-transparent text-black text-2xl"
           />
         </div>
-        <h2 className="text-black">Type your name here</h2>
+        <h2 className="text-black text-2xl">Type your name here</h2>
         {characterCount < 10 && (
-          <p className="text-black text-xs font-light">(10 CHARACTERS MAX)</p>
+          <p className="text-black text-sm font-light">(10 CHARACTERS MAX)</p>
         )}
         {characterCount === 10 && (
           <p className="text-red-500 text-xs font-bold">(10 CHARACTERS MAX)</p>
         )}
       </div>
-      <div className="mx-15 my-7 text-6xl ">
+      <div className="mx-15 my-7 text-7xl ">
         <div>
           <button
             onClick={() => handleButtonClick("Q")}
@@ -229,7 +229,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
         </div>
       </div>
       <button
-        className="mt-2 px-10 py-1   text-md text-black bg-cyan-700 rounded bg-opacity-40"
+        className="mt-2 px-10 py-1   text-lg text-black bg-cyan-700 rounded bg-opacity-40"
         onClick={handleSeguirClick}
       >
         CONTINUE
