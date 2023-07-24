@@ -28,8 +28,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
       if(inputValue != ''){
         setComponenteActual("nombrehola");
         setNombre(inputValue);
-        console.log(inputValue);
-      }
+       }
     }
   };
 

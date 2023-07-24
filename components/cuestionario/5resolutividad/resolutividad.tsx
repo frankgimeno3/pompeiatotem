@@ -11,7 +11,7 @@ const Resolutividad: React.FC<ResolutividadProps> = ({ setComponenteActual, setR
  
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setResolutividad(selectedOption);
+    setResolutividad(option);
     setComponenteActual("trabajo");
   };
 

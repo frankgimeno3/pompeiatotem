@@ -16,7 +16,10 @@ const Yahora: React.FC<YahoraProps> = ({ setComponenteActual }) => {
   return (
     <div className="flex flex-col items-center justify-center text-center mb-20">
       <div className="flex items-center justify-center">
-        <Image src="/romanohablando.png" alt="romano" width={200} height={200} />
+        <Image src="/romanohablando.png" alt="romano" width={200} height={200} 
+                        style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+
+/>
       </div>
       <h1 className="text-5xl mt-5">Y AHORA UN PEQUEÑO CUESTIONARIO...</h1>
       <button

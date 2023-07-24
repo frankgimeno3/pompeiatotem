@@ -10,10 +10,10 @@ const Conflicto: React.FC<ConflictoProps> = ({
   setConflicto,
 }) => {
   const [selectedOption, setSelectedOption] = useState("");
- 
+
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setConflicto(selectedOption);
+    setConflicto(option);
     setComponenteActual("relaciones");
   };
 
@@ -42,8 +42,6 @@ const Conflicto: React.FC<ConflictoProps> = ({
           GUERRERO
         </button>
       </div>
-       
-       
     </div>
   );
 };

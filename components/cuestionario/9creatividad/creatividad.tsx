@@ -11,7 +11,7 @@ const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual, setCreat
  
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setCreatividad(selectedOption);
+    setCreatividad(option);
     setComponenteActual("juicio");
 
   };

@@ -11,7 +11,7 @@ const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
  
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setHumor(selectedOption);
+    setHumor(option);
     setComponenteActual("creatividad");
 
   };

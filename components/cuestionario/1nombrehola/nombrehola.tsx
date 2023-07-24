@@ -10,13 +10,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
   setComponenteActual,
   nombre,
 }) => {
-  const [selectedOption, setSelectedOption] = useState("");
-  const [showErrorMessage, setShowErrorMessage] = useState(false);
-
-  const handleOptionClick = (option: string) => {
-    setSelectedOption(option);
-    setShowErrorMessage(false);
-  };
+ 
 
   const handleSeguirClick = () => {
     setComponenteActual("yahora");
@@ -35,11 +29,12 @@ const Nombrehola: React.FC<NombreholaProps> = ({
         <div className="flex flex-col">
           <div className="flex flex-row  ">
             <div className="flex flex-col justify-center text-center px-12 py-1">
-              <Image
+            <Image
                 src="/dioses/JUPITER.png"
                 alt="jupiter"
                 width={95}
                 height={95}
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
               <p>JUPITER</p>
             </div>
@@ -49,15 +44,20 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="midiosfoto"
                 width={83}
                 height={83}
+                 
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
               <p>JUNO</p>
             </div>
+            {/* Add "layout" property and CSS styles to other Image components similarly */}
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
                 src="/dioses/MARTE.png"
                 alt="marte"
                 width={99}
                 height={99}
+                 
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
               <p>MARTE</p>
             </div>
@@ -67,17 +67,21 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="VESTA"
                 width={90}
                 height={90}
+                 
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
               <p>VESTA</p>
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/AFRODITA.png"
-                alt="afrodita"
+                src="/dioses/VENUS.png"
+                alt="VENUS"
                 width={80}
                 height={80}
+                 
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
-              <p>AFRODITA</p>
+              <p>VENUS</p>
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
@@ -85,6 +89,8 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="ceres"
                 width={105}
                 height={105}
+                 
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
               <p>CERES</p>
             </div>
@@ -96,17 +102,21 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="diana"
                 width={87}
                 height={87}
+                 
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
               <p>DIANA</p>
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/EFESTO.png"
-                alt="efesto"
+                src="/dioses/VULCANO.png"
+                alt="vulcano"
                 width={95}
                 height={95}
+                 
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
-              <p>EFESTO</p>
+              <p>VULCANO</p>
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
@@ -114,6 +124,9 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="febo"
                 width={93}
                 height={93}
+                  
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+
               />
               <p>FEBO</p>
             </div>
@@ -123,6 +136,9 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="MINERVA"
                 width={80}
                 height={80}
+                  
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+
               />
               <p>MINERVA</p>
             </div>
@@ -132,6 +148,9 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="MERCURIO"
                 width={95}
                 height={95}
+                  
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+
               />
               <p>MERCURIO</p>
             </div>
@@ -141,6 +160,9 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="NEPTUNO"
                 width={105}
                 height={105}
+                  
+                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+
               />
               <p>NEPTUNO</p>
             </div>

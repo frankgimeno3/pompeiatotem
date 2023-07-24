@@ -121,16 +121,17 @@ const Resultado: React.FC<ResultadoProps> = ({
     ],
   });
 
-  const handleSeguirClick = () => {
+  const handleSeguirClick = ( ) => {
     setmidios(tuDios);
-    setComponenteActual("enviar");
+    console.log("se imprime", tuDios)
+     setComponenteActual("enviar");
   };
 
   const handleRestart = () => {
     router.push("/landing");
   };
 
-  const imagendios = `/dioses/${tuDios}.png`;
+  const imagendios = `/gods/${tuDios}.png`;
 
   return (
     <animated.div
@@ -150,7 +151,7 @@ const Resultado: React.FC<ResultadoProps> = ({
         <div className="flex-1 flex flex-col  align-center">
           <h1 className="text-6xl mt-10 ">{nombre}</h1>
           <p className="text-black text-lg mt-5   text-black">
-          YOUR GOD IS          </p>
+          YOUR GOD IS </p>
           <h2 className="  text-4xl  mb-5   ">
             {tuDios}
           </h2>

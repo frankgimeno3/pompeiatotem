@@ -7,7 +7,6 @@ import { useSpring, animated } from "react-spring";
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
   setmidios: React.Dispatch<React.SetStateAction<string>>;
-
   nombre: string;
   conflicto: string;
   relaciones: string;
@@ -19,54 +18,6 @@ interface ResultadoProps {
   creatividad: string;
   juicio: string;
   horario: string;
-}
-
-function SeleccionarDios({ criterios }: { criterios: string[] }) {
-  if (criterios[0] == "PACÍFICO") {
-    if (criterios[1] == "ENAMORADIZO") {
-      if (criterios[2] == "ESTRATEGA") {
-        return "JUPITER";
-      } else {
-        if (criterios[9] == "DIURNO") {
-          return "FEBO";
-        } else {
-          return "VENUS";
-        }
-      }
-    } else {
-      if (criterios[5] == "CAMPO") {
-        if (criterios[4] == "TRABAJADOR") {
-          if (criterios[7] == "CREATIVO") {
-            return "VULCANO";
-          } else {
-            return "CERES";
-          }
-        } else {
-          return "MERCURIO";
-        }
-      } else {
-        if (criterios[3] == "CONFRONTACIÓN") {
-          return "JUNO";
-        } else {
-          return "VESTA";
-        }
-      }
-    }
-  } else {
-    if (criterios[1] == "ENAMORADIZO") {
-      if (criterios[2] == "CAMPO") {
-        return "NEPTUNO";
-      } else {
-        return "MARTE";
-      }
-    } else {
-      if (criterios[2] == "ESTRATEGA") {
-        return "MINERVA";
-      } else {
-        return "DIANA";
-      }
-    }
-  }
 }
 
 const Resultado: React.FC<ResultadoProps> = ({
@@ -86,10 +37,55 @@ const Resultado: React.FC<ResultadoProps> = ({
 }) => {
   const router = useRouter();
 
-  // State to manage the visibility of the component
   const [isVisible, setIsVisible] = useState(false);
 
-  // Configuring the spring animation
+  function SeleccionarDios({ criterios }: { criterios: string[] }) {
+    if (criterios[0] == "PACÍFICO") {
+      if (criterios[1] == "ENAMORADIZO") {
+        if (criterios[2] == "ESTRATEGA") {
+          return "JUPITER";
+        } else {
+          if (criterios[9] == "DIURNO") {
+            return "FEBO";
+          } else {
+            return "VENUS";
+          }
+        }
+      } else {
+        if (criterios[5] == "CAMPO") {
+          if (criterios[4] == "TRABAJADOR") {
+            if (criterios[7] == "CREATIVO") {
+              return "VULCANO";
+            } else {
+              return "CERES";
+            }
+          } else {
+            return "MERCURIO";
+          }
+        } else {
+          if (criterios[3] == "CONFRONTACIÓN") {
+            return "JUNO";
+          } else {
+            return "VESTA";
+          }
+        }
+      }
+    } else {
+      if (criterios[1] == "ENAMORADIZO") {
+        if (criterios[2] == "CAMPO") {
+          return "NEPTUNO";
+        } else {
+          return "MARTE";
+        }
+      } else {
+        if (criterios[2] == "ESTRATEGA") {
+          return "MINERVA";
+        } else {
+          return "DIANA";
+        }
+      }
+    }
+  }
   const springAnimation = useSpring({
     opacity: isVisible ? 1 : 0, // Set the opacity to 1 when isVisible is true, otherwise 0
     config: { duration: 500 }, // Duration of 1 second
@@ -139,22 +135,16 @@ const Resultado: React.FC<ResultadoProps> = ({
     >
       <div className="flex flex-row text-center justify-center align-center  px-24 mx-14">
         <div className="flex-1 flex items-center justify-center pl-5">
-          <Image
-            src={imagendios}
-            alt={tuDios}
-            width={200}
-            height={200}
-           />
+          <Image src={imagendios} alt={tuDios} width={200} height={200} 
+                          style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+
+/>
         </div>
 
         <div className="flex-1 flex flex-col  align-center">
           <h1 className="text-6xl mt-10 ">{nombre}</h1>
-          <p className="text-black text-lg mt-5   text-black">
-            TU DIOS ES
-          </p>
-          <h2 className="  text-4xl  mb-5   ">
-            {tuDios}
-          </h2>
+          <p className="text-black text-lg mt-5   text-black">TU DIOS ES</p>
+          <h2 className="  text-4xl  mb-5   ">{tuDios}</h2>
           <div className="text-black">
             <div className="text-lg mb-10 px-10">{Contenido[tuDios]}</div>
           </div>

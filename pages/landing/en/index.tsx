@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import Nombre from "../../../components/cuestionarioeng/1nombre/nombre";
 import Nombrehola from "../../../components/cuestionarioeng/1nombrehola/nombrehola";
@@ -160,25 +160,30 @@ const Cuestionarioeng = () => {
     }}
   };
 
-  const loadingHandler = () => {
+  const loadingHandler = useCallback(() => {
     if (!loadingvisible) {
       return "hidden"; // Clase CSS para ocultar la imagen
     } else {
       return "text-center mt-20 pt-20"; // Clase CSS para agregar sombra
     }
-  };
+  }, [loadingvisible]); // Specify loadingvisible as the only dependency for loadingHandler
+
 
   useEffect(() => {
-    setloadingvisible(true); // Mostrar imagen de carga al cambiar componenteactual
+    // setloadingvisible(true); // Mostrar imagen de carga al cambiar componenteactual
 
     setTimeout(() => {
-      setloadingvisible(false); // Ocultar imagen de carga después de 2 segundos
-      loadingHandler(); // Volver a llamar a loadingHandler después de 2 segundos
+      // setloadingvisible(false); // Ocultar imagen de carga después de 2 segundos
+      // loadingHandler(); // Volver a llamar a loadingHandler después de 2 segundos
+      if(conflicto){console.log(conflicto)}
+      else{console.log("Está vacío")}
     }, 1100);
 
     // Aquí puedes agregar cualquier otra lógica que desees ejecutar al cambiar componenteactual
 
-  }, [componenteactual]);
+  }, [componenteactual, conflicto, 
+    // loadingHandler
+  ]);
 
 
   return (
@@ -190,17 +195,18 @@ const Cuestionarioeng = () => {
         backgroundPosition: "center",
       }}
     >
-      {loadingvisible && (
+      {/* {loadingvisible && (
         <div className="flex flex-col align-center mt-14 pt-14">
         <Image
           src="/gif/GIF1.gif"
           alt="loading"
           width={200}
           height={50}
+          style={{ width: "auto", height: "auto" }} 
           className={loadingHandler()}
         />
         </div>
-      )}
+      )} */}
       {renderComponenteActual()}
     </div>
   );

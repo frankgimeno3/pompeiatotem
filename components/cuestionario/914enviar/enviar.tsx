@@ -6,14 +6,14 @@ interface EnviarProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
   midios: string;
   nombre: string;
-
+  lang: string;
 }
 
 const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const router = useRouter();
- 
+  let lang = "es"
 
   const handleSeguirClick = () => {
     fetch("http://localhost:5000/files/", {
@@ -21,7 +21,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nombre, midios }),
+      body: JSON.stringify({ nombre, midios, lang }),
     })
       .then((response) => {
         if (response.ok) {

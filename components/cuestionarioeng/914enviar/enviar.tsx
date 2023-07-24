@@ -6,7 +6,6 @@ interface EnviarProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
   midios: string;
   nombre: string;
-
 }
 
 const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) => {
@@ -14,14 +13,15 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const router = useRouter();
  
-
+  
   const handleSeguirClick = () => {
+    let lang = "en"
     fetch("http://localhost:5000/files/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ nombre, midios }),
+      body: JSON.stringify({ nombre, midios, lang }),
     })
       .then((response) => {
         if (response.ok) {

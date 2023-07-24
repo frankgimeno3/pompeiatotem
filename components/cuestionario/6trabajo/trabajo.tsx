@@ -11,7 +11,7 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
 
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setTrabajo(selectedOption);
+    setTrabajo(option);
     setComponenteActual("lugar");
   };
 
