@@ -145,6 +145,7 @@ const Resultado: React.FC<ResultadoProps> = ({
             alt={tuDios}
             width={200}
             height={200}
+            style={{ width: "auto", height: "auto" }} 
            />
         </div>
 

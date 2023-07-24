@@ -40,6 +40,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="jupiter"
                 width={95}
                 height={95}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>JUPITER</p>
             </div>
@@ -49,6 +50,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="midiosfoto"
                 width={83}
                 height={83}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>JUNO</p>
             </div>
@@ -58,6 +60,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="MARS"
                 width={99}
                 height={99}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>MARS</p>
             </div>
@@ -67,6 +70,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="VESTA"
                 width={90}
                 height={90}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>VESTA</p>
             </div>
@@ -76,6 +80,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="VENUS"
                 width={80}
                 height={80}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>VENUS</p>
             </div>
@@ -85,6 +90,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="ceres"
                 width={105}
                 height={105}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>CERES</p>
             </div>
@@ -96,6 +102,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="diana"
                 width={87}
                 height={87}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>DIANA</p>
             </div>
@@ -105,6 +112,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="VULCAN"
                 width={95}
                 height={95}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>VULCAN</p>
             </div>
@@ -114,6 +122,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="PHOEBUS"
                 width={93}
                 height={93}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>PHOEBUS</p>
             </div>
@@ -123,6 +132,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="MINERVA"
                 width={80}
                 height={80}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>MINERVA</p>
             </div>
@@ -132,6 +142,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="MERCURY"
                 width={95}
                 height={95}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>MERCURY</p>
             </div>
@@ -141,6 +152,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 alt="NEPTUNE"
                 width={105}
                 height={105}
+                   style={{ width: "auto", height: "auto" }} 
               />
               <p>NEPTUNE</p>
             </div>
