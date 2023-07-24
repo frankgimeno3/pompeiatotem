@@ -13,7 +13,7 @@ const Estrategia: React.FC<EstrategiaProps> = ({
  
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setEstrategia(selectedOption);
+    setEstrategia(option);
     setComponenteActual("resolutividad");
 
   };

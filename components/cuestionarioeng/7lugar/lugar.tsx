@@ -11,7 +11,7 @@ const Lugar: React.FC<LugarProps> = ({ setComponenteActual, setLugar }) => {
  
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setLugar(selectedOption);
+    setLugar(option);
     setComponenteActual("humor");
   };
  

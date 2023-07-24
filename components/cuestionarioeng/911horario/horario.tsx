@@ -11,7 +11,7 @@ const Horario: React.FC<HorarioProps> = ({ setComponenteActual, setHorario }) =>
  
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setHorario(selectedOption);
+    setHorario(option);
     setComponenteActual("alea");
   };
 

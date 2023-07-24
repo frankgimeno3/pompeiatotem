@@ -13,7 +13,7 @@ const Relaciones: React.FC<RelacionesProps> = ({
  
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setRelaciones(selectedOption);
+    setRelaciones(option);
     setComponenteActual("estrategia");
   };
  

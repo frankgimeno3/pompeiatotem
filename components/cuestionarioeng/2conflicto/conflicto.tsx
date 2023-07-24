@@ -8,14 +8,9 @@ interface ConflictoProps {
 const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto }) => {
   const [selectedOption, setSelectedOption] = useState("");
 
-  const handleOptionClick = async (option: string) => {
+  const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    console.log(selectedOption);
-    setConflicto(selectedOption);
-
-    // Add a 0.5-second delay using async/await
-    await new Promise((resolve) => setTimeout(resolve, 500));
-
+    setConflicto(option);
     setComponenteActual("relaciones");
   };
 

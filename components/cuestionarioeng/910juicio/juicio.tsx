@@ -11,7 +11,7 @@ const Juicio: React.FC<JuicioProps> = ({ setComponenteActual, setJuicio  }) => {
  
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
-    setJuicio(selectedOption);
+    setJuicio(option);
     setComponenteActual("horario");
   };
  
