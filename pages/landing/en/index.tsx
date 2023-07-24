@@ -1,3 +1,4 @@
+ 
 import React, { useState, useEffect, useCallback } from "react";
 
 import Nombre from "../../../components/cuestionarioeng/1nombre/nombre";
@@ -19,7 +20,8 @@ import Enviar from "../../../components/cuestionarioeng/914enviar/enviar";
 import Yapuedes from "../../../components/cuestionarioeng/915yapuedes/yapuedes";
 import Image from "next/image";
 
-const Cuestionarioeng = () => {
+
+const Cuestionario = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");
   const [nombre, setNombre] = useState("");
   const [conflicto, setConflicto] = useState("");
@@ -35,8 +37,11 @@ const Cuestionarioeng = () => {
   const [midios, setmidios] = useState("");
   const [loadingvisible, setloadingvisible] = useState(false);
 
+
+
   const renderComponenteActual = () => {
     while(!loadingvisible)
+   
     {switch (componenteactual) {
       case "nombre":
         return (
@@ -150,8 +155,7 @@ const Cuestionarioeng = () => {
           <Enviar
             setComponenteActual={setComponenteActual}
             nombre={nombre}
-            midios={midios}
-          />
+            midios={midios}            />
         );
       case "yapuedes":
         return <Yapuedes setComponenteActual={setComponenteActual} />;
@@ -160,30 +164,26 @@ const Cuestionarioeng = () => {
     }}
   };
 
-  const loadingHandler = useCallback(() => {
-    if (!loadingvisible) {
+  const loadingHandler = () => {
+    if (!loadingvisible || componenteactual === "resultado") {
       return "hidden"; // Clase CSS para ocultar la imagen
     } else {
       return "text-center mt-20 pt-20"; // Clase CSS para agregar sombra
     }
-  }, [loadingvisible]); // Specify loadingvisible as the only dependency for loadingHandler
-
+  };
 
   useEffect(() => {
-    // setloadingvisible(true); // Mostrar imagen de carga al cambiar componenteactual
+    setloadingvisible(true); // Mostrar imagen de carga al cambiar componenteactual
 
     setTimeout(() => {
-      // setloadingvisible(false); // Ocultar imagen de carga después de 2 segundos
-      // loadingHandler(); // Volver a llamar a loadingHandler después de 2 segundos
-      if(conflicto){console.log(conflicto)}
-      else{console.log("Está vacío")}
+      setloadingvisible(false); // Ocultar imagen de carga después de 2 segundos
+      loadingHandler(); // Volver a llamar a loadingHandler después de 2 segundos
     }, 1100);
 
     // Aquí puedes agregar cualquier otra lógica que desees ejecutar al cambiar componenteactual
 
-  }, [componenteactual, conflicto, 
-    // loadingHandler
-  ]);
+  }, [componenteactual]);
+
 
 
   return (
@@ -195,21 +195,20 @@ const Cuestionarioeng = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* {loadingvisible && (
+      {loadingvisible && (
         <div className="flex flex-col align-center mt-14 pt-14">
         <Image
           src="/gif/GIF1.gif"
           alt="loading"
           width={200}
           height={50}
-          style={{ width: "auto", height: "auto" }} 
           className={loadingHandler()}
         />
         </div>
-      )} */}
+      )}
       {renderComponenteActual()}
     </div>
   );
 };
 
-export default Cuestionarioeng;
+export default Cuestionario;

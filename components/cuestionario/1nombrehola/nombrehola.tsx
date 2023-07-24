@@ -17,12 +17,12 @@ const Nombrehola: React.FC<NombreholaProps> = ({
   };
 
   return (
-    <div className="flex flex-col text-center justify-center align-center pb-14">
-      <div className="flex flex-col text-center ">
-        <div className="flex flex-row text-7xl pb-1 justify-center">
+    <div className="flex flex-col text-center justify-center align-center py-24   mb-20 mt-10 pb-24 pt-14">
+      <div className="flex flex-col text-center px-24 ">
+        <div className="flex flex-row text-5xl pb-1 justify-center">
           <h1>HOLA,</h1>
           <div className="flex flex-col border-b border-gray-400 mb-2 justify-end mx-5 px-5 ">
-            <h2 className="text-5xl ">{nombre}</h2>
+            <h2 className="text-4xl ">{nombre}</h2>
           </div>
         </div>
         <p className="text-black text-lg ">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
@@ -42,8 +42,8 @@ const Nombrehola: React.FC<NombreholaProps> = ({
               <Image
                 src="/dioses/JUNO.png"
                 alt="midiosfoto"
-                width={83}
-                height={83}
+                width={80}
+                height={80}
                  
                 style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
@@ -54,8 +54,8 @@ const Nombrehola: React.FC<NombreholaProps> = ({
               <Image
                 src="/dioses/MARTE.png"
                 alt="marte"
-                width={99}
-                height={99}
+                width={82}
+                height={82}
                  
                 style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
@@ -169,7 +169,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
           </div>
          </div>
       </div>
-      <div className="mt-5">
+      <div className="mt-1">
         <p className="text-black text-lg">
           ¿CUÁL DE ELLOS TE REPRESENTA MEJOR?
         </p>
