@@ -23,12 +23,12 @@ const Nombrehola: React.FC<NombreholaProps> = ({
   };
 
   return (
-    <div className="flex flex-col text-center justify-center align-center pb-14 px-24">
+    <div className="flex flex-col text-center justify-center align-center pb-14 px-24 mb-6">
       <div className="flex flex-col text-center px-24">
-        <div className="flex flex-row text-7xl pb-1 justify-center">
-          <h1>HOLA,</h1>
+        <div className="flex flex-row text-5xl   justify-center">
+          <h1>GREETINGS,</h1>
           <div className="flex flex-col border-b border-gray-400 mb-2 justify-end mx-5 px-5 ">
-            <h2 className="text-5xl ">{nombre}</h2>
+            <h2 className="text-4xl ">{nombre}</h2>
           </div>
         </div>
         <p className="text-black text-lg ">HERE, THE ROMAN GODS</p>
