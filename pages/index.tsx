@@ -24,15 +24,18 @@ const Home = () => {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error("Credenciales incorrectas");
+          if (response){console.log(response)}
+
+          // if (response){throw new Error("Credenciales incorrectas")}
+          else{throw new Error("No response")}
         }
       })
       .then((response) => {
         // const { accessToken } = response
         // console.log("Token:", accessToken);
-        console.log(response.authToken);
+        // console.log(response.authToken);
 
-        Cookies.set("authvalue", response.authToken, cookieOptions); // Crear cookie con el valor del usuario
+        // Cookies.set("authvalue", response.authToken, cookieOptions); // Crear cookie con el valor del usuario
         router.push("/landing");
       })
       .catch((error) => {
