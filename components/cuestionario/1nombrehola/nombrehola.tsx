@@ -17,160 +17,155 @@ const Nombrehola: React.FC<NombreholaProps> = ({
   };
 
   return (
-    <div className="flex flex-col text-center justify-center align-center py-24   mb-20 mt-10 pb-24 pt-14">
-      <div className="flex flex-col text-center px-24 ">
-        <div className="flex flex-row text-5xl pb-1 justify-center">
-          <h1>HOLA,</h1>
+    <div className="flex flex-col text-center justify-start align-center pt-16 px-10  ">
+      <div className="flex flex-col text-center px-20    pt-2 ">
+        <div className="flex flex-row text-5xl   justify-center">
+          <h1>GREETINGS,</h1>
           <div className="flex flex-col border-b border-gray-400 mb-2 justify-end mx-5 px-5 ">
             <h2 className="text-4xl ">{nombre}</h2>
           </div>
         </div>
         <p className="text-black text-lg ">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
-        <div className="flex flex-col">
-          <div className="flex flex-row  ">
-            <div className="flex flex-col justify-center text-center px-12 py-1">
-            <Image
-                src="/DEUSPOMPEIA/JUPITER.png"
+        <div className="flex flex-col justify-end">
+          <div className="flex flex-row  py-2 ">
+            <div className="flex flex-col justify-center text-center px-8  ">
+                <Image
+                src="/DEUSPOMPEIAENG/JUPITER.png"
                 alt="jupiter"
-                width={95}
-                height={95}
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
-              />
-              <p>JUPITER</p>
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
+
+                />
+               <p>JUPITER</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/BACO.png"
-                alt="BACO"
-                width={80}
-                height={80}
-                 
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                src="/DEUSPOMPEIAENG/BACCHUS.png"
+                alt="BACCHUS"
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
+
               />
               <p>BACO</p>
             </div>
-            {/* Add "layout" property and CSS styles to other Image components similarly */}
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 border  ">
               <Image
-                src="/DEUSPOMPEIA/MARTE.png"
-                alt="marte"
-                width={82}
-                height={82}
-                 
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                src="/DEUSPOMPEIAENG/MARS.png"
+                alt="MARS"
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
+
               />
               <p>MARTE</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/VULCANO.png"
-                alt="VULCANO"
-                width={90}
-                height={90}
-                 
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                src="/DEUSPOMPEIAENG/VULCAN.png"
+                alt="VULCAN"
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
+
               />
               <p>VULCANO</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/VENUS.png"
+                src="/DEUSPOMPEIAENG/VENUS.png"
                 alt="VENUS"
-                width={80}
-                height={80}
-                 
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
+
               />
               <p>VENUS</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/CERES.png"
+                src="/DEUSPOMPEIAENG/CERES.png"
                 alt="ceres"
-                width={105}
-                height={105}
-                 
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
+
               />
               <p>CERES</p>
             </div>
           </div>
-          <div className="flex flex-row ">
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+          <div className="flex flex-row   py-2">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/DIANA.png"
-                alt="diana"
-                width={87}
-                height={87}
-                 
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                src="/DEUSPOMPEIAENG/DIANA.png"
+                alt="DIANA"
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
+
               />
               <p>DIANA</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/PLUTON.png"
-                alt="PLUTON"
-                width={95}
-                height={95}
-                 
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                src="/DEUSPOMPEIAENG/PLUTO.png"
+                alt="PLUTO"
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
+
               />
               <p>PLUTÓN</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/FEBO.png"
-                alt="febo"
-                width={93}
-                height={93}
-                  
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                src="/DEUSPOMPEIAENG/PHOEBUS.png"
+                alt="PHOEBUS"
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
 
               />
               <p>FEBO</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/MINERVA.png"
+                src="/DEUSPOMPEIAENG/MINERVA.png"
                 alt="MINERVA"
-                width={80}
-                height={80}
-                  
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
 
               />
               <p>MINERVA</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/MERCURIO.png"
-                alt="MERCURIO"
-                width={95}
-                height={95}
-                  
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+                src="/DEUSPOMPEIAENG/MERCURY.png"
+                alt="MERCURY"
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
 
               />
               <p>MERCURIO</p>
             </div>
-            <div className="flex flex-col justify-center text-center px-12 py-1">
+            <div className="flex flex-col justify-center text-center px-8 ">
               <Image
-                src="/DEUSPOMPEIA/NEPTUNO.png"
-                alt="NEPTUNO"
-                width={105}
-                height={105}
-                  
-                style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
-
+                src="/DEUSPOMPEIAENG/NEPTUNE.png"
+                alt="NEPTUNE"
+                width={150}
+                height={150}
+                style={{ width: "auto", height: "auto" }}
               />
               <p>NEPTUNO</p>
             </div>
           </div>
          </div>
       </div>
-      <div className="mt-1">
-        <p className="text-black text-lg">
+      <div  >
+      <p className="text-black text-lg">
           ¿CUÁL DE ELLOS TE REPRESENTA MEJOR?
         </p>
         <p className="text-black text-lg">
@@ -179,14 +174,18 @@ const Nombrehola: React.FC<NombreholaProps> = ({
       </div>
       <div className="mx-20">
         <button
-          className="mt-2 px-6 py-1   text-lg text-black bg-cyan-700 rounded bg-opacity-40"
+          className="mt-2 px-6    text-lg text-black bg-cyan-200 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
-          ¡SAPERE AUDE!
-        </button>
+  ¡SAPERE AUDE!        </button>
       </div>
     </div>
   );
 };
 
 export default Nombrehola;
+
+
+
+
+ 
