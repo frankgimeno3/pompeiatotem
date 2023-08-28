@@ -13,7 +13,7 @@ const Home = () => {
     const expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate() + 1);
     const cookieOptions = { expires: expirationDate, secure: true };
-    fetch("http://localhost:5000/auth/login", {
+    fetch("https://pompeiabackend-ntha9xyjc-frankgimeno3.vercel.app/auth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

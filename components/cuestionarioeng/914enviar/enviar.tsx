@@ -16,7 +16,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
   
   const handleSeguirClick = () => {
     let lang = "en"
-    fetch("http://localhost:5000/files/", {
+    fetch("https://pompeiabackend-ntha9xyjc-frankgimeno3.vercel.app/files/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
