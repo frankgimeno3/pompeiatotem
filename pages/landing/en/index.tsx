@@ -188,7 +188,7 @@ const Cuestionario = () => {
 
   return (
     <div
-      className="h-screen flex justify-center text-center"
+      className="h-screen flex justify-center text-center "
       style={{
         backgroundImage: `url("/fondo2.png")`,
         backgroundSize: "cover",
@@ -196,7 +196,7 @@ const Cuestionario = () => {
       }}
     >
       {loadingvisible && (
-        <div className="flex flex-col align-center mt-14 pt-14">
+        <div className="flex flex-col align-center mt-14 pt-14 ">
         <Image
           src="/gif/GIF1.gif"
           alt="loading"
