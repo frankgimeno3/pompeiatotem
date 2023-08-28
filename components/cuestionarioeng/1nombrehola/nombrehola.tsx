@@ -46,13 +46,13 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="//DEUSPOMPEIAENG/BACUS.png"
-                alt="BACUS"
+                src="//DEUSPOMPEIAENG/BACCHUS.png"
+                alt="BACCHUS"
                 width={83}
                 height={83}
                    style={{ width: "auto", height: "auto" }} 
               />
-              <p>BACUS</p>
+              <p>BACCHUS</p>
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
