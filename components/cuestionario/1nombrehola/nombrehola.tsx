@@ -30,7 +30,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
           <div className="flex flex-row  ">
             <div className="flex flex-col justify-center text-center px-12 py-1">
             <Image
-                src="/dioses/JUPITER.png"
+                src="/DEUSPOMPEIA/JUPITER.png"
                 alt="jupiter"
                 width={95}
                 height={95}
@@ -40,19 +40,19 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/JUNO.png"
-                alt="midiosfoto"
+                src="/DEUSPOMPEIA/BACO.png"
+                alt="BACO"
                 width={80}
                 height={80}
                  
                 style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
-              <p>JUNO</p>
+              <p>BACO</p>
             </div>
             {/* Add "layout" property and CSS styles to other Image components similarly */}
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/MARTE.png"
+                src="/DEUSPOMPEIA/MARTE.png"
                 alt="marte"
                 width={82}
                 height={82}
@@ -63,18 +63,18 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/VESTA.png"
-                alt="VESTA"
+                src="/DEUSPOMPEIA/VULCANO.png"
+                alt="VULCANO"
                 width={90}
                 height={90}
                  
                 style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
-              <p>VESTA</p>
+              <p>VULCANO</p>
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/VENUS.png"
+                src="/DEUSPOMPEIA/VENUS.png"
                 alt="VENUS"
                 width={80}
                 height={80}
@@ -85,7 +85,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/CERES.png"
+                src="/DEUSPOMPEIA/CERES.png"
                 alt="ceres"
                 width={105}
                 height={105}
@@ -98,7 +98,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
           <div className="flex flex-row ">
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/DIANA.png"
+                src="/DEUSPOMPEIA/DIANA.png"
                 alt="diana"
                 width={87}
                 height={87}
@@ -109,18 +109,18 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/VULCANO.png"
-                alt="vulcano"
+                src="/DEUSPOMPEIA/PLUTON.png"
+                alt="PLUTON"
                 width={95}
                 height={95}
                  
                 style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
               />
-              <p>VULCANO</p>
+              <p>PLUTÓN</p>
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/FEBO.png"
+                src="/DEUSPOMPEIA/FEBO.png"
                 alt="febo"
                 width={93}
                 height={93}
@@ -132,7 +132,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/MINERVA.png"
+                src="/DEUSPOMPEIA/MINERVA.png"
                 alt="MINERVA"
                 width={80}
                 height={80}
@@ -144,7 +144,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/MERCURIO.png"
+                src="/DEUSPOMPEIA/MERCURIO.png"
                 alt="MERCURIO"
                 width={95}
                 height={95}
@@ -156,7 +156,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             </div>
             <div className="flex flex-col justify-center text-center px-12 py-1">
               <Image
-                src="/dioses/NEPTUNO.png"
+                src="/DEUSPOMPEIA/NEPTUNO.png"
                 alt="NEPTUNO"
                 width={105}
                 height={105}

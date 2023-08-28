@@ -41,41 +41,41 @@ const Resultado: React.FC<ResultadoProps> = ({
 
   function SeleccionarDios({ criterios }: { criterios: string[] }) {
     if (criterios[0] == "PACÍFICO") {
-      if (criterios[1] == "ENAMORADIZO") {
-        if (criterios[2] == "ESTRATEGA") {
-          return "JUPITER";
-        } else {
-          if (criterios[9] == "DIURNO") {
-            return "FEBO";
-          } else {
-            return "VENUS";
-          }
-        }
+      if (criterios[6] == "MALHUMOR" || criterios[9] == "NOCTURNO") {
+        return "PLUTÓN";
       } else {
-        if (criterios[5] == "CAMPO") {
+        if (criterios[5] == "CIUDAD") {
           if (criterios[4] == "TRABAJADOR") {
-            if (criterios[7] == "CREATIVO") {
-              return "VULCANO";
-            } else {
-              return "CERES";
-            }
+            return "VULCANO";
           } else {
             return "MERCURIO";
           }
         } else {
-          if (criterios[3] == "CONFRONTACIÓN") {
-            return "JUNO";
+          if (criterios[4] == "HOLGAZÁN") {
+            return "BACO";
           } else {
-            return "VESTA";
+            return "CERES";
           }
         }
       }
     } else {
       if (criterios[1] == "ENAMORADIZO") {
-        if (criterios[2] == "CAMPO") {
-          return "NEPTUNO";
+        if (criterios[2] == "ESTRATEGA") {
+          if (criterios[5] == "CIUDAD") {
+            return "JUPITER";
+          } else {
+            return "NEPTUNO";
+          }
         } else {
-          return "MARTE";
+          if (criterios[3] == "CONFRONTACIÓN") {
+            if (criterios[9] == "DIURNO") {
+              return "FEBO";
+            } else {
+              return "MARTE";
+            }
+          } else {
+            return "VENUS";
+          }
         }
       } else {
         if (criterios[2] == "ESTRATEGA") {
@@ -86,6 +86,7 @@ const Resultado: React.FC<ResultadoProps> = ({
       }
     }
   }
+
   const springAnimation = useSpring({
     opacity: isVisible ? 1 : 0, // Set the opacity to 1 when isVisible is true, otherwise 0
     config: { duration: 500 }, // Duration of 1 second
@@ -126,7 +127,7 @@ const Resultado: React.FC<ResultadoProps> = ({
     router.push("/landing");
   };
 
-  const imagendios = `/dioses/${tuDios}.png`;
+  const imagendios = `/DEUSPOMPEIA/${tuDios}.png`;
 
   return (
     <animated.div
@@ -135,10 +136,13 @@ const Resultado: React.FC<ResultadoProps> = ({
     >
       <div className="flex flex-row text-center justify-center align-center  px-24 mx-14">
         <div className="flex-1 flex items-center justify-center pl-5">
-          <Image src={imagendios} alt={tuDios} width={200} height={200} 
-                          style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
-
-/>
+          <Image
+            src={imagendios}
+            alt={tuDios}
+            width={200}
+            height={200}
+            style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+          />
         </div>
 
         <div className="flex-1 flex flex-col  align-center">

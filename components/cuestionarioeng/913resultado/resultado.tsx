@@ -23,41 +23,41 @@ interface ResultadoProps {
 
 function SeleccionarDios({ criterios }: { criterios: string[] }) {
   if (criterios[0] == "PACÍFICO") {
-    if (criterios[1] == "ENAMORADIZO") {
-      if (criterios[2] == "ESTRATEGA") {
-        return "JUPITER";
-      } else {
-        if (criterios[9] == "DIURNO") {
-          return "PHOEBUS";
-        } else {
-          return "VENUS";
-        }
-      }
+    if (criterios[6] == "MALHUMOR" || criterios[9] == "NOCTURNO") {
+      return "PLUTO";
     } else {
-      if (criterios[5] == "CAMPO") {
+      if (criterios[5] == "CIUDAD") {
         if (criterios[4] == "TRABAJADOR") {
-          if (criterios[7] == "CREATIVO") {
-            return "VULCAN";
-          } else {
-            return "CERES";
-          }
+          return "VULCAN";
         } else {
           return "MERCURY";
         }
       } else {
-        if (criterios[3] == "CONFRONTACIÓN") {
-          return "JUNO";
+        if (criterios[4] == "HOLGAZÁN") {
+          return "BACCHUS";
         } else {
-          return "VESTA";
+          return "CERES";
         }
       }
     }
   } else {
     if (criterios[1] == "ENAMORADIZO") {
-      if (criterios[2] == "CAMPO") {
-        return "NEPTUNE";
+      if (criterios[2] == "ESTRATEGA") {
+        if (criterios[5] == "CIUDAD") {
+          return "JUPITER";
+        } else {
+          return "NEPTUNE";
+        }
       } else {
-        return "MARS";
+        if (criterios[3] == "CONFRONTACIÓN") {
+          if (criterios[9] == "DIURNO") {
+            return "PHOEBUS";
+          } else {
+            return "MARS";
+          }
+        } else {
+          return "VENUS";
+        }
       }
     } else {
       if (criterios[2] == "ESTRATEGA") {
@@ -68,6 +68,7 @@ function SeleccionarDios({ criterios }: { criterios: string[] }) {
     }
   }
 }
+
 
 const Resultado: React.FC<ResultadoProps> = ({
   setComponenteActual,
@@ -131,7 +132,7 @@ const Resultado: React.FC<ResultadoProps> = ({
     router.push("/landing");
   };
 
-  const imagendios = `/gods/${tuDios}.png`;
+  const imagendios = `/DEUSPOMPEIAENG/${tuDios}.png`;
 
   return (
     <animated.div
