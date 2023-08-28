@@ -9,7 +9,7 @@ export async function middleware(request: NextRequest) {
   const jwt = request.cookies.get("authvalue") as string | undefined;
   if (!jwt) {
     // console.log("esto se activa si middleware NO encuentra cookie");
-    return NextResponse.redirect(new URL("http://localhost:3000", request.url));
+    return NextResponse.redirect(new URL("https://pompeiatotem.vercel.app", request.url));
   }  
 
   try {
@@ -18,7 +18,7 @@ export async function middleware(request: NextRequest) {
       return NextResponse.next();
     }
   } catch (error) {
-    return NextResponse.redirect(new URL("http://localhost:3000/landing", request.url));
+    return NextResponse.redirect(new URL("https://pompeiatotem.vercel.app/landing", request.url));
   }
   
 }
