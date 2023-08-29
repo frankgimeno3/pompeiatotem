@@ -84,7 +84,9 @@ const Cuestionario = () => {
   }, [ReinicioTimer]);
 
   const handleClick = () => {
-    setReinicioTimer(true);
+    setTimeout(() => {
+      setReinicioTimer(true);
+    }, 25000);
   };
 
 
