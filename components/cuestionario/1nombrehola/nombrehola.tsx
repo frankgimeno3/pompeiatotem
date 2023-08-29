@@ -20,7 +20,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
     <div className="flex flex-col text-center justify-start align-center pt-16 px-10  ">
       <div className="flex flex-col text-center px-20    pt-2 ">
         <div className="flex flex-row text-5xl   justify-center">
-          <h1>GREETINGS,</h1>
+          <h1>SALUDOS,</h1>
           <div className="flex flex-col border-b border-gray-400 mb-2 justify-end mx-5 px-5 ">
             <h2 className="text-4xl ">{nombre}</h2>
           </div>
