@@ -19,7 +19,8 @@ import Resultado from "../../../components/cuestionarioeng/913resultado/resultad
 import Enviar from "../../../components/cuestionarioeng/914enviar/enviar";
 import Yapuedes from "../../../components/cuestionarioeng/915yapuedes/yapuedes";
 import Image from "next/image";
-
+import Restart from "../../../components/restart";
+import { useRouter } from "next/router";
 
 const Cuestionario = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");
@@ -36,8 +37,51 @@ const Cuestionario = () => {
   const [horario, setHorario] = useState("");
   const [midios, setmidios] = useState("");
   const [loadingvisible, setloadingvisible] = useState(false);
+  const [isTimerVisible, setIsTimerVisible] = useState(false);
+  const [timer, setTimer] = useState(10);
+  const [ReinicioTimer, setReinicioTimer] = useState(false);  
+  const router = useRouter();
 
+  useEffect(() => {
+    const firstTimer = setTimeout(() => {
+      setIsTimerVisible(true);
+    }, 5000); // 15 segundos
 
+    const interval = setInterval(() => {
+      if (timer > 0 && isTimerVisible) {
+        setTimer(prevTimer => prevTimer - 1);
+      } else if (timer === 0) {
+        handleRestart();
+        setIsTimerVisible(false);
+        clearTimeout(firstTimer);
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    return () => {
+      clearTimeout(firstTimer);
+      clearInterval(interval);
+    };
+  }, [timer, isTimerVisible]);
+  const handleRestart = () => {
+    router.push("/landing");
+  };
+
+  const superFunction = () => {
+    setReinicioTimer(false)
+    setIsTimerVisible(false);
+    setTimer(10);
+    setTimeout(() => {
+      setIsTimerVisible(true);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    if (ReinicioTimer) {  
+      console.log("it happened")
+      superFunction();
+    }
+  }, [ReinicioTimer]);
 
   const renderComponenteActual = () => {
     while(!loadingvisible)
@@ -206,7 +250,12 @@ const Cuestionario = () => {
         />
         </div>
       )}
-      {renderComponenteActual()}
+      <div style={{ zIndex: 1 }}>{renderComponenteActual()}</div>
+      {isTimerVisible && (
+        <div className="absolute top-40 bg-white p-20 flex justify-center items-center z-10 rounded-lg shadow">
+          <Restart timer={timer} setReinicioTimer={setReinicioTimer} />
+        </div>
+      )}
     </div>
   );
 };

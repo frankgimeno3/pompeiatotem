@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 import Nombre from "../../../components/cuestionario/1nombre/nombre";
 import Nombrehola from "../../../components/cuestionario/1nombrehola/nombrehola";
@@ -18,7 +18,8 @@ import Resultado from "../../../components/cuestionario/913resultado/resultado";
 import Enviar from "../../../components/cuestionario/914enviar/enviar";
 import Yapuedes from "../../../components/cuestionario/915yapuedes/yapuedes";
 import Image from "next/image";
-
+import Reinicio from "../../../components/reinicio";
+import { useRouter } from "next/router";
 
 const Cuestionario = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");
@@ -35,132 +36,160 @@ const Cuestionario = () => {
   const [horario, setHorario] = useState("");
   const [midios, setmidios] = useState("");
   const [loadingvisible, setloadingvisible] = useState(false);
+  const [isTimerVisible, setIsTimerVisible] = useState(false);
+  const [timer, setTimer] = useState(20);
+  const router = useRouter();
 
+  useEffect(() => {
+    const firstTimer = setTimeout(() => {
+      setIsTimerVisible(true);
+    }, 15000); // 15 segundos
 
+    const interval = setInterval(() => {
+      if (timer > 0 && isTimerVisible) {
+        setTimer(prevTimer => prevTimer - 1);
+      } else if (timer === 0) {
+        handleRestart();
+        setIsTimerVisible(false);
+        clearTimeout(firstTimer);
+        clearInterval(interval);
+      }
+    }, 1000);
+
+    return () => {
+      clearTimeout(firstTimer);
+      clearInterval(interval);
+    };
+  }, [timer, isTimerVisible]);
+  const handleRestart = () => {
+    router.push("/landing");
+  };
 
   const renderComponenteActual = () => {
-    while(!loadingvisible)
-   
-    {switch (componenteactual) {
-      case "nombre":
-        return (
-          <Nombre
-            setComponenteActual={setComponenteActual}
-            setNombre={setNombre}
-          />
-        );
-      case "nombrehola":
-        return (
-          <Nombrehola
-            setComponenteActual={setComponenteActual}
-            nombre={nombre}
-          />
-        );
-      case "yahora":
-        return <Yahora setComponenteActual={setComponenteActual} />;
-      case "conflicto":
-        return (
-          <Conflicto
-            setComponenteActual={setComponenteActual}
-            setConflicto={setConflicto}
-          />
-        );
-      case "relaciones":
-        return (
-          <Relaciones
-            setComponenteActual={setComponenteActual}
-            setRelaciones={setRelaciones}
-          />
-        );
-      case "estrategia":
-        return (
-          <Estrategia
-            setComponenteActual={setComponenteActual}
-            setEstrategia={setEstrategia}
-          />
-        );
-      case "resolutividad":
-        return (
-          <Resolutividad
-            setComponenteActual={setComponenteActual}
-            setResolutividad={setResolutividad}
-          />
-        );
-      case "trabajo":
-        return (
-          <Trabajo
-            setComponenteActual={setComponenteActual}
-            setTrabajo={setTrabajo}
-          />
-        );
-      case "lugar":
-        return (
-          <Lugar
-            setComponenteActual={setComponenteActual}
-            setLugar={setLugar}
-          />
-        );
-      case "humor":
-        return (
-          <Humor
-            setComponenteActual={setComponenteActual}
-            setHumor={setHumor}
-          />
-        );
-      case "creatividad":
-        return (
-          <Creatividad
-            setComponenteActual={setComponenteActual}
-            setCreatividad={setCreatividad}
-          />
-        );
-      case "juicio":
-        return (
-          <Juicio
-            setComponenteActual={setComponenteActual}
-            setJuicio={setJuicio}
-          />
-        );
-      case "horario":
-        return (
-          <Horario
-            setComponenteActual={setComponenteActual}
-            setHorario={setHorario}
-          />
-        );
-      case "alea":
-        return <Alea setComponenteActual={setComponenteActual} />;
-      case "resultado":
-        return (
-          <Resultado
-            setComponenteActual={setComponenteActual}
-            setmidios={setmidios}
-            nombre={nombre}
-            conflicto={conflicto}
-            relaciones={relaciones}
-            estrategia={estrategia}
-            resolutividad={resolutividad}
-            trabajo={trabajo}
-            lugar={lugar}
-            humor={humor}
-            creatividad={creatividad}
-            juicio={juicio}
-            horario={horario}
-          />
-        );
+    while (!loadingvisible) {
+      switch (componenteactual) {
+        case "nombre":
+          return (
+            <Nombre
+              setComponenteActual={setComponenteActual}
+              setNombre={setNombre}
+            />
+          );
+        case "nombrehola":
+          return (
+            <Nombrehola
+              setComponenteActual={setComponenteActual}
+              nombre={nombre}
+            />
+          );
+        case "yahora":
+          return <Yahora setComponenteActual={setComponenteActual} />;
+        case "conflicto":
+          return (
+            <Conflicto
+              setComponenteActual={setComponenteActual}
+              setConflicto={setConflicto}
+            />
+          );
+        case "relaciones":
+          return (
+            <Relaciones
+              setComponenteActual={setComponenteActual}
+              setRelaciones={setRelaciones}
+            />
+          );
+        case "estrategia":
+          return (
+            <Estrategia
+              setComponenteActual={setComponenteActual}
+              setEstrategia={setEstrategia}
+            />
+          );
+        case "resolutividad":
+          return (
+            <Resolutividad
+              setComponenteActual={setComponenteActual}
+              setResolutividad={setResolutividad}
+            />
+          );
+        case "trabajo":
+          return (
+            <Trabajo
+              setComponenteActual={setComponenteActual}
+              setTrabajo={setTrabajo}
+            />
+          );
+        case "lugar":
+          return (
+            <Lugar
+              setComponenteActual={setComponenteActual}
+              setLugar={setLugar}
+            />
+          );
+        case "humor":
+          return (
+            <Humor
+              setComponenteActual={setComponenteActual}
+              setHumor={setHumor}
+            />
+          );
+        case "creatividad":
+          return (
+            <Creatividad
+              setComponenteActual={setComponenteActual}
+              setCreatividad={setCreatividad}
+            />
+          );
+        case "juicio":
+          return (
+            <Juicio
+              setComponenteActual={setComponenteActual}
+              setJuicio={setJuicio}
+            />
+          );
+        case "horario":
+          return (
+            <Horario
+              setComponenteActual={setComponenteActual}
+              setHorario={setHorario}
+            />
+          );
+        case "alea":
+          return <Alea setComponenteActual={setComponenteActual} />;
+        case "resultado":
+          return (
+            <Resultado
+              setComponenteActual={setComponenteActual}
+              setmidios={setmidios}
+              nombre={nombre}
+              conflicto={conflicto}
+              relaciones={relaciones}
+              estrategia={estrategia}
+              resolutividad={resolutividad}
+              trabajo={trabajo}
+              lugar={lugar}
+              humor={humor}
+              creatividad={creatividad}
+              juicio={juicio}
+              horario={horario}
+            />
+          );
 
-      case "enviar":
-        return (
-          <Enviar
-            setComponenteActual={setComponenteActual}
-            nombre={nombre}
-            midios={midios} lang={""}          />
-        );
-      case "yapuedes":
-        return <Yapuedes setComponenteActual={setComponenteActual} />;
-      default:
-        return null;
-    }}
+        case "enviar":
+          return (
+            <Enviar
+              setComponenteActual={setComponenteActual}
+              nombre={nombre}
+              midios={midios}
+              lang={""}
+            />
+          );
+        case "yapuedes":
+          return <Yapuedes setComponenteActual={setComponenteActual} />;
+        default:
+          return null;
+      }
+    }
   };
 
   const loadingHandler = () => {
@@ -180,14 +209,11 @@ const Cuestionario = () => {
     }, 1100);
 
     // Aquí puedes agregar cualquier otra lógica que desees ejecutar al cambiar componenteactual
-
   }, [componenteactual]);
-
-
 
   return (
     <div
-      className="h-screen flex justify-center text-center"
+      className="h-screen flex justify-center text-center relative" // Añadimos "relative" al estilo del contenedor
       style={{
         backgroundImage: `url("/fondo2.png")`,
         backgroundSize: "cover",
@@ -196,18 +222,24 @@ const Cuestionario = () => {
     >
       {loadingvisible && (
         <div className="flex flex-col align-center mt-14 pt-14">
-        <Image
-          src="/gif/GIF1.gif"
-          alt="loading"
-          width={200}
-          height={50}
-          className={loadingHandler()}
-        />
+          <Image
+            src="/gif/GIF1.gif"
+            alt="loading"
+            width={200}
+            height={50}
+            className={loadingHandler()}
+          />
         </div>
       )}
-      {renderComponenteActual()}
+
+ 
+      <div style={{ zIndex: 1 }}>{renderComponenteActual()}</div>
+      {isTimerVisible && (
+        <div className="absolute top-40 bg-white p-20 flex justify-center items-center z-10 rounded-lg shadow">
+          <Reinicio timer={timer} />
+        </div>
+      )}
     </div>
   );
 };
-
 export default Cuestionario;
