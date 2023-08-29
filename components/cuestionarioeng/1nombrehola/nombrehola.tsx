@@ -26,24 +26,20 @@ const Nombrehola: React.FC<NombreholaProps> = ({
     <div className="flex flex-col text-center justify-start align-center pt-16 px-10  ">
       <div className="flex flex-col text-center px-20    pt-2 ">
         <div className="flex flex-row text-5xl   justify-center">
-          <h1>GREETINGS,</h1>
-          <div className="flex flex-col border-b border-gray-400 mb-2 justify-end mx-5 px-5 ">
-            <h2 className="text-4xl ">{nombre}</h2>
-          </div>
+          <h1>GREETINGS, {nombre}</h1>
         </div>
-        <p className="text-black text-lg ">HERE, THE ROMAN GODS</p>
+        <p className="text-black text-lg ">MEET THE ROMAN GODS</p>
         <div className="flex flex-col justify-end">
           <div className="flex flex-row  py-2 ">
             <div className="flex flex-col justify-center text-center px-8  ">
-                <Image
+              <Image
                 src="/DEUSPOMPEIAENG/JUPITER.png"
                 alt="jupiter"
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
-                />
-               <p>JUPITER</p>
+              />
+              <p>JUPITER</p>
             </div>
             <div className="flex flex-col justify-center text-center px-8 ">
               <Image
@@ -52,7 +48,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>BACCHUS</p>
             </div>
@@ -63,7 +58,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>MARS</p>
             </div>
@@ -74,7 +68,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>VULCAN</p>
             </div>
@@ -85,7 +78,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>VENUS</p>
             </div>
@@ -96,7 +88,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>CERES</p>
             </div>
@@ -109,7 +100,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>DIANA</p>
             </div>
@@ -120,7 +110,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>PLUTO</p>
             </div>
@@ -131,7 +120,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>PHOEBUS</p>
             </div>
@@ -142,7 +130,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>MINERVA</p>
             </div>
@@ -153,7 +140,6 @@ const Nombrehola: React.FC<NombreholaProps> = ({
                 width={150}
                 height={150}
                 style={{ width: "auto", height: "auto" }}
-
               />
               <p>MERCURY</p>
             </div>
@@ -168,26 +154,26 @@ const Nombrehola: React.FC<NombreholaProps> = ({
               <p>NEPTUNE</p>
             </div>
           </div>
-         </div>
+        </div>
       </div>
-      <div  >
-      <p className="text-black text-lg">¿WHICH OF THEM MATCHES BEST WITH YOUR PERSONALITY?</p>
-<p className="text-black text-lg">
-¡DARE TO KNOW! OR AS ROMANS WOULD SAY...
-      </p>
+      <div>
+        <p className="text-black text-lg">
+          ¿WHICH OF THEM MATCHES BEST WITH YOUR PERSONALITY?
+        </p>
+        <p className="text-black text-lg">
+          ¡DARE TO KNOW! OR AS ROMANS WOULD SAY... <span className="font-bold">¡SAPERE AUDE! </span>
+        </p>
       </div>
       <div className="mx-20">
         <button
           className="mt-2 px-6    text-lg text-black bg-cyan-200 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
-  ¡SAPERE AUDE!        </button>
+          START{" "}
+        </button>
       </div>
     </div>
   );
 };
 
 export default Nombrehola;
-
-
- 

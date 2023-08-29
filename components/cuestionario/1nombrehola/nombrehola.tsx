@@ -20,10 +20,8 @@ const Nombrehola: React.FC<NombreholaProps> = ({
     <div className="flex flex-col text-center justify-start align-center pt-16 px-10  ">
       <div className="flex flex-col text-center px-20    pt-2 ">
         <div className="flex flex-row text-5xl   justify-center">
-          <h1>SALUDOS,</h1>
-          <div className="flex flex-col border-b border-gray-400 mb-2 justify-end mx-5 px-5 ">
-            <h2 className="text-4xl ">{nombre}</h2>
-          </div>
+          <h1>SALUDOS, {nombre}</h1>
+           
         </div>
         <p className="text-black text-lg ">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
         <div className="flex flex-col justify-end">
@@ -169,7 +167,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
           ¿CUÁL DE ELLOS TE REPRESENTA MEJOR?
         </p>
         <p className="text-black text-lg">
-          ¡ATRÉVETE A SABER! O COMO DIRÍAN LOS ROMANOS...
+          ¡ATRÉVETE A SABER! O COMO DIRÍAN LOS ROMANOS...  <span className="font-bold">¡SAPERE AUDE! </span> 
         </p>
       </div>
       <div className="mx-20">
@@ -177,7 +175,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
           className="mt-2 px-6    text-lg text-black bg-cyan-200 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
-  ¡SAPERE AUDE!        </button>
+ EMPEZAR       </button>
       </div>
     </div>
   );
