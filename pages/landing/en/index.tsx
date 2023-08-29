@@ -227,7 +227,7 @@ const Cuestionario = () => {
     setTimeout(() => {
       setloadingvisible(false); // Ocultar imagen de carga después de 2 segundos
       loadingHandler(); // Volver a llamar a loadingHandler después de 2 segundos
-    }, 1100);
+    }, 600);
 
     // Aquí puedes agregar cualquier otra lógica que desees ejecutar al cambiar componenteactual
 
@@ -246,7 +246,8 @@ const Cuestionario = () => {
       // onClick={handleClick}
     >
       {loadingvisible && (
-        <div className="flex flex-col align-center mt-14 pt-14 " >
+                <div className="mt-24">
+        <div className="flex flex-col align-center mt-24 pt-14 " >
         <Image
           src="/gif/GIF1.gif"
           alt="loading"
@@ -254,6 +255,7 @@ const Cuestionario = () => {
           height={50}
           className={loadingHandler()}
         />
+        </div>
         </div>
       )}
       <div 

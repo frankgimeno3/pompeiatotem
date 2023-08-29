@@ -34,7 +34,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
 
   return (
     <div className="px-10 py-6 pt-20 mt-20">
-      <div>
+      <div className="mt-24">
         <div className="border-b border-gray-400 mb-2 mx-10">
           <input
             type="text"

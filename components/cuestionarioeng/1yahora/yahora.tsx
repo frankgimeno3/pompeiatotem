@@ -14,6 +14,7 @@ const Yahora: React.FC<YahoraProps> = ({ setComponenteActual }) => {
   };
 
   return (
+    <div  className="mt-24 pt-24">
     <div className="flex flex-col items-center justify-center text-center mb-20">
       <div className="flex items-center justify-center">
         <Image src="/romanohablando.png" alt="romano" width={200} height={200} 
@@ -26,6 +27,7 @@ const Yahora: React.FC<YahoraProps> = ({ setComponenteActual }) => {
       onClick={handleSeguirClick}
             // eslint-disable-next-line react/no-unescaped-entities
       >LET'S GO!      </button>
+    </div>
     </div>
   );
 };
