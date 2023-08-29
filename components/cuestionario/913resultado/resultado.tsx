@@ -131,7 +131,7 @@ const Resultado: React.FC<ResultadoProps> = ({
 
   return (
     <animated.div
-      className="flex flex-col mb-10 text-center justify-center p-24 mx-24 w-screen"
+      className="flex flex-col mb-10 text-center justify-center p-24  w-screen"
       style={springAnimation} // Apply the spring animation style to the component
     >
       <div className="flex flex-row text-center justify-center align-center  px-24 mx-14">
