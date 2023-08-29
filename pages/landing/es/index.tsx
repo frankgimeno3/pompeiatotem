@@ -38,12 +38,13 @@ const Cuestionario = () => {
   const [loadingvisible, setloadingvisible] = useState(false);
   const [isTimerVisible, setIsTimerVisible] = useState(false);
   const [timer, setTimer] = useState(20);
+  const [ReinicioTimer, setReinicioTimer] = useState(false);  
   const router = useRouter();
 
   useEffect(() => {
     const firstTimer = setTimeout(() => {
       setIsTimerVisible(true);
-    }, 15000); // 15 segundos
+    }, 25000); // 15 segundos
 
     const interval = setInterval(() => {
       if (timer > 0 && isTimerVisible) {
@@ -63,6 +64,26 @@ const Cuestionario = () => {
   }, [timer, isTimerVisible]);
   const handleRestart = () => {
     router.push("/landing");
+  };
+
+  const superFunction = () => {
+    setReinicioTimer(false)
+    setIsTimerVisible(false);
+    setTimer(20);
+    setTimeout(() => {
+      setIsTimerVisible(true);
+    }, 5000);
+  };
+
+  useEffect(() => {
+    if (ReinicioTimer) {  
+      console.log("it happened")
+      superFunction();
+    }
+  }, [ReinicioTimer]);
+
+  const handleClick = () => {
+    setReinicioTimer(true);
   };
 
   const renderComponenteActual = () => {
@@ -213,13 +234,14 @@ const Cuestionario = () => {
 
   return (
     <div
-      className="h-screen flex justify-center text-center relative" // Añadimos "relative" al estilo del contenedor
-      style={{
-        backgroundImage: `url("/fondo2.png")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    className="h-screen flex justify-center text-center "
+    style={{
+      backgroundImage: `url("/fondo2.png")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+    onClick={handleClick}
+  >
       {loadingvisible && (
         <div className="flex flex-col align-center mt-14 pt-14">
           <Image
@@ -236,7 +258,7 @@ const Cuestionario = () => {
       <div style={{ zIndex: 1 }}>{renderComponenteActual()}</div>
       {isTimerVisible && (
         <div className="absolute top-40 bg-white p-20 flex justify-center items-center z-10 rounded-lg shadow">
-          <Reinicio timer={timer} />
+          <Reinicio timer={timer} setReinicioTimer={setReinicioTimer}  />
         </div>
       )}
     </div>
