@@ -72,7 +72,7 @@ const Cuestionario = () => {
     setTimer(20);
     setTimeout(() => {
       setIsTimerVisible(true);
-    }, 5000);
+    }, 25000);
   };
 
   useEffect(() => {
@@ -83,10 +83,8 @@ const Cuestionario = () => {
   }, [ReinicioTimer]);
 
   const handleClick = () => {
-    setTimeout(() => {
-      setReinicioTimer(true);
-    }, 25000);
-  };
+       setReinicioTimer(true);
+   };
 
   const renderComponenteActual = () => {
     while (!loadingvisible) {
