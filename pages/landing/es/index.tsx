@@ -67,7 +67,6 @@ const Cuestionario = () => {
   };
 
   const superFunction = () => {
-    setReinicioTimer(false)
     setIsTimerVisible(false);
     setTimer(20);
     setTimeout(() => {
@@ -77,7 +76,7 @@ const Cuestionario = () => {
 
   useEffect(() => {
     if (ReinicioTimer) {  
-      console.log("it happened")
+      setReinicioTimer(false)
       superFunction();
     }
   }, [ReinicioTimer]);
