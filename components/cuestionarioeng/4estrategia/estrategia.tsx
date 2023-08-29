@@ -20,6 +20,8 @@ const Estrategia: React.FC<EstrategiaProps> = ({
  
 
   return (
+    <div  className="mt-24 pt-24">
+    <div  className="mt-24  pt-10">
     <div className="flex flex-col text-center justify-center">
       <h2 className="text-black text-xl">IN MY DAILY LIFE, I AM:</h2>
       <div className="flex flex-row justify-center my-10 text-5xl">
@@ -40,7 +42,8 @@ const Estrategia: React.FC<EstrategiaProps> = ({
           IMPULSIVE
         </button>
       </div>
-      
+      </div>
+        </div> 
     </div>
   );
 };

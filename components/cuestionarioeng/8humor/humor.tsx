@@ -18,6 +18,8 @@ const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
  
 
   return (
+    <div  className="mt-24 pt-24">
+    <div  className="mt-24  pt-10">
     <div className="flex flex-col text-center justify-center">
      <h2 className="text-black text-xl">I AM MORE LIKELY TO BE :</h2>
      <div className="flex flex-row justify-center my-5 text-5xl">
@@ -34,7 +36,8 @@ const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
          IN A BAD MOOD
        </button>
      </div>
-    
+     </div>
+        </div>
    </div>
   );
 };

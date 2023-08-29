@@ -15,6 +15,9 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto
   };
 
   return (
+    <div  className="mt-24 pt-24">
+    <div  className="mt-24  pt-10">
+
     <div className="flex flex-col text-center justify-center">
       <h2 className="text-black text-xl">IN A CONFLICT SITUATION I AM:</h2>
       <div className="flex flex-row justify-center my-10 text-5xl ">
@@ -34,7 +37,9 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto
         >
           WARRIOR
         </button>
-      </div>
+        </div>
+        </div>
+        </div>
     </div>
   );
 };

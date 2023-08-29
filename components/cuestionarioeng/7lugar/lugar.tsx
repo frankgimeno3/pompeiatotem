@@ -17,6 +17,8 @@ const Lugar: React.FC<LugarProps> = ({ setComponenteActual, setLugar }) => {
  
 
   return (
+    <div  className="mt-24 pt-24">
+    <div  className="mt-24  pt-10">
     <div className="flex flex-col text-center justify-center">
      <h2 className="text-black text-xl">I WOULD RATHER LIVE IN:</h2>
      <div className="flex flex-row justify-center my-5 text-5xl">
@@ -33,7 +35,8 @@ const Lugar: React.FC<LugarProps> = ({ setComponenteActual, setLugar }) => {
          A CITY
        </button>
      </div>
-     
+     </div>
+        </div>
    </div>
   );
 };
