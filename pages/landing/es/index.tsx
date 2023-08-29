@@ -39,51 +39,52 @@ const Cuestionario = () => {
   const [isTimerVisible, setIsTimerVisible] = useState(false);
   const [timer, setTimer] = useState(20);
   const [ReinicioTimer, setReinicioTimer] = useState(false);  
+  // const [mainTimer, setMainTimer] = useState(40) 
   const router = useRouter();
 
-  useEffect(() => {
-    const firstTimer = setTimeout(() => {
-      setIsTimerVisible(true);
-    }, 25000); // 15 segundos
+  // useEffect(() => {
+  //   const firstTimer = setTimeout(() => {
+  //     setIsTimerVisible(true);
+  //   }, 25000); // 15 segundos
 
-    const interval = setInterval(() => {
-      if (timer > 0 && isTimerVisible) {
-        setTimer(prevTimer => prevTimer - 1);
-      } else if (timer === 0) {
-        handleRestart();
-        setIsTimerVisible(false);
-        clearTimeout(firstTimer);
-        clearInterval(interval);
-      }
-    }, 1000);
+  //   const interval = setInterval(() => {
+  //     if (timer > 0 && isTimerVisible) {
+  //       setTimer(prevTimer => prevTimer - 1);
+  //     } else if (timer === 0) {
+  //       handleRestart();
+  //       setIsTimerVisible(false);
+  //       clearTimeout(firstTimer);
+  //       clearInterval(interval);
+  //     }
+  //   }, 1000);
 
-    return () => {
-      clearTimeout(firstTimer);
-      clearInterval(interval);
-    };
-  }, [timer, isTimerVisible]);
-  const handleRestart = () => {
-    router.push("/landing");
-  };
+  //   return () => {
+  //     clearTimeout(firstTimer);
+  //     clearInterval(interval);
+  //   };
+  // }, [timer, isTimerVisible]);
+  // const handleRestart = () => {
+  //   router.push("/landing");
+  // };
 
-  const superFunction = () => {
-    setIsTimerVisible(false);
-    setTimer(20);
-    setTimeout(() => {
-      setIsTimerVisible(true);
-    }, 25000);
-  };
+  // const superFunction = () => {
+  //   setIsTimerVisible(false);
+  //   setTimer(20);
+  //   setTimeout(() => {
+  //     setIsTimerVisible(true);
+  //   }, 25000);
+  // };
 
-  useEffect(() => {
-    if (ReinicioTimer) {  
-      setReinicioTimer(false)
-      superFunction();
-    }
-  }, [ReinicioTimer]);
+  // useEffect(() => {
+  //   if (ReinicioTimer) {  
+  //     setReinicioTimer(false)
+  //     superFunction();
+  //   }
+  // }, [ReinicioTimer]);
 
-  const handleClick = () => {
-       setReinicioTimer(true);
-   };
+  // const handleClick = () => {
+  //      setReinicioTimer(true);
+  //  };
 
   const renderComponenteActual = () => {
     while (!loadingvisible) {
@@ -239,7 +240,7 @@ const Cuestionario = () => {
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}
-    onClick={handleClick}
+    // onClick={handleClick}
   >
       {loadingvisible && (
         <div className="flex flex-col align-center mt-14 pt-14">
@@ -254,12 +255,14 @@ const Cuestionario = () => {
       )}
 
  
-      <div style={{ zIndex: 1 }}>{renderComponenteActual()}</div>
-      {isTimerVisible && (
+      <div 
+      // style={{ zIndex: 1 }}
+      >{renderComponenteActual()}</div>
+      {/* {isTimerVisible && (
         <div className="absolute top-40 bg-white p-20 flex justify-center items-center z-10 rounded-lg shadow">
           <Reinicio timer={timer} setReinicioTimer={setReinicioTimer}  />
         </div>
-      )}
+      )} */}
     </div>
   );
 };
