@@ -18,6 +18,8 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
 
 
   return (
+    <div  className="mt-24 pt-24">
+    <div  className="mt-24  pt-10">
     <div className="flex flex-col text-center justify-center">
      <h2 className="text-black text-xl">ME CONSIDERO:</h2>
      <div className="flex flex-row justify-center my-5 text-5xl">
@@ -34,7 +36,8 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
          HOLGAZÁN
        </button>
      </div>
- 
+     </div>
+        </div>
    </div>
  );
 };

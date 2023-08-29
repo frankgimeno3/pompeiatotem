@@ -258,7 +258,7 @@ const Cuestionario = () => {
       )}
       <div 
       // style={{ zIndex: 1 }}
-      >{renderComponenteActual()}</div>
+        >{renderComponenteActual()}</div>
       {/* {isTimerVisible && (
         <div className="absolute top-40 bg-white p-20 flex justify-center items-center z-10 rounded-lg shadow">
           <Restart timer={timer} setReinicioTimer={setReinicioTimer} />

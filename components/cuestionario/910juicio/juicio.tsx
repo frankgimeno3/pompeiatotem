@@ -17,6 +17,8 @@ const Juicio: React.FC<JuicioProps> = ({ setComponenteActual, setJuicio  }) => {
  
 
   return (
+    <div  className="mt-24 pt-24">
+    <div  className="mt-24  pt-10">
     <div className="flex flex-col text-center justify-center">
      <h2 className="text-black text-xl">SI TENGO QUE JUZGAR A UNA PERSONA POR SUS ACTOS:</h2>
      <div className="flex flex-row justify-center my-5 text-5xl">
@@ -33,7 +35,8 @@ const Juicio: React.FC<JuicioProps> = ({ setComponenteActual, setJuicio  }) => {
         ME BASO EN EMOCIONES
        </button>
      </div>
-     
+     </div>
+        </div>
    </div>
   );
 };
