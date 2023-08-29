@@ -19,7 +19,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
   };
 
   const handleSeguirClick = () => {
-    setComponenteActual("yahora");
+    setComponenteActual("conflicto");
   };
 
   return (

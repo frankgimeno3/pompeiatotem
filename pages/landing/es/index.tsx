@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import Nombre from "../../../components/cuestionario/1nombre/nombre";
 import Nombrehola from "../../../components/cuestionario/1nombrehola/nombrehola";
-import Yahora from "../../../components/cuestionario/1yahora/yahora";
 import Conflicto from "../../../components/cuestionario/2conflicto/conflicto";
 import Relaciones from "../../../components/cuestionario/3relaciones/relaciones";
 import Estrategia from "../../../components/cuestionario/4estrategia/estrategia";
@@ -103,8 +102,7 @@ const Cuestionario = () => {
               nombre={nombre}
             />
           );
-        case "yahora":
-          return <Yahora setComponenteActual={setComponenteActual} />;
+
         case "conflicto":
           return (
             <Conflicto

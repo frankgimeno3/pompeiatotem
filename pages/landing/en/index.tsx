@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback } from "react";
 
 import Nombre from "../../../components/cuestionarioeng/1nombre/nombre";
 import Nombrehola from "../../../components/cuestionarioeng/1nombrehola/nombrehola";
-import Yahora from "../../../components/cuestionarioeng/1yahora/yahora";
 import Conflicto from "../../../components/cuestionarioeng/2conflicto/conflicto";
 import Relaciones from "../../../components/cuestionarioeng/3relaciones/relaciones";
 import Estrategia from "../../../components/cuestionarioeng/4estrategia/estrategia";
@@ -106,8 +105,7 @@ const Cuestionario = () => {
             nombre={nombre}
           />
         );
-      case "yahora":
-        return <Yahora setComponenteActual={setComponenteActual} />;
+
       case "conflicto":
         return (
           <Conflicto
