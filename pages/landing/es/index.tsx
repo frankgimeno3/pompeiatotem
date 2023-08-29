@@ -18,7 +18,7 @@ import Resultado from "../../../components/cuestionario/913resultado/resultado";
 import Enviar from "../../../components/cuestionario/914enviar/enviar";
 import Yapuedes from "../../../components/cuestionario/915yapuedes/yapuedes";
 import Image from "next/image";
-import Reinicio from "../../../components/reinicio";
+import Reinicio from "../../../components/Reinicio";
 import { useRouter } from "next/router";
 
 const Cuestionario = () => {

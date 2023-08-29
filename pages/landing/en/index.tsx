@@ -19,7 +19,7 @@ import Resultado from "../../../components/cuestionarioeng/913resultado/resultad
 import Enviar from "../../../components/cuestionarioeng/914enviar/enviar";
 import Yapuedes from "../../../components/cuestionarioeng/915yapuedes/yapuedes";
 import Image from "next/image";
-import Restart from "../../../components/restart";
+import Restart from "../../../components/Restart";
 import { useRouter } from "next/router";
 
 const Cuestionario = () => {
@@ -38,14 +38,14 @@ const Cuestionario = () => {
   const [midios, setmidios] = useState("");
   const [loadingvisible, setloadingvisible] = useState(false);
   const [isTimerVisible, setIsTimerVisible] = useState(false);
-  const [timer, setTimer] = useState(10);
+  const [timer, setTimer] = useState(20);
   const [ReinicioTimer, setReinicioTimer] = useState(false);  
   const router = useRouter();
 
   useEffect(() => {
     const firstTimer = setTimeout(() => {
       setIsTimerVisible(true);
-    }, 5000); // 15 segundos
+    }, 25000); // 15 segundos
 
     const interval = setInterval(() => {
       if (timer > 0 && isTimerVisible) {
@@ -70,7 +70,7 @@ const Cuestionario = () => {
   const superFunction = () => {
     setReinicioTimer(false)
     setIsTimerVisible(false);
-    setTimer(10);
+    setTimer(20);
     setTimeout(() => {
       setIsTimerVisible(true);
     }, 5000);
@@ -82,6 +82,11 @@ const Cuestionario = () => {
       superFunction();
     }
   }, [ReinicioTimer]);
+
+  const handleClick = () => {
+    setReinicioTimer(true);
+  };
+
 
   const renderComponenteActual = () => {
     while(!loadingvisible)
@@ -238,9 +243,10 @@ const Cuestionario = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
+      onClick={handleClick}
     >
       {loadingvisible && (
-        <div className="flex flex-col align-center mt-14 pt-14 ">
+        <div className="flex flex-col align-center mt-14 pt-14 " >
         <Image
           src="/gif/GIF1.gif"
           alt="loading"
