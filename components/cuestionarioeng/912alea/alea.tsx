@@ -31,7 +31,7 @@ const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
     >
          <div  className="mt-24 pt-24">
     <div  className="mt-24  pt-10"></div>
-      <h2 className="text-6xl">¡ALEA IACTA EST!</h2>
+      <h2 className="text-6xl mt-14">¡ALEA IACTA EST!</h2>
       <h2 className="text-6xl mb-20">THE DIE IS CAST!</h2>
 
       <div className="mx-20">
