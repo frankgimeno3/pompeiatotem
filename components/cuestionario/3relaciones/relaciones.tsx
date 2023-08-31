@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Restartbutton from "./../../Restartbutton";
 
 interface RelacionesProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -47,7 +48,9 @@ const Relaciones: React.FC<RelacionesProps> = ({
       </div>
       </div>
       </div>
-
+      <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
     </div>
   );
 };

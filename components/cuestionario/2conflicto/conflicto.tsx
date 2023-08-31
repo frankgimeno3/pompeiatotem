@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Restartbutton from "./../../Restartbutton";
 
 interface ConflictoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -48,6 +49,9 @@ const Conflicto: React.FC<ConflictoProps> = ({
 
         </div>
         </div>
+        <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
     </div>
   );
 };

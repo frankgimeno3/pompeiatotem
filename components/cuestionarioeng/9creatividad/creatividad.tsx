@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Restartbutton from "./../../Restartbutton";
 
 interface CreatividadProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -38,6 +39,9 @@ const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual, setCreat
      </div>
      </div>
         </div>
+        <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
    </div>
   );
 };

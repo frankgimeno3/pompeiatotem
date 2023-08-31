@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Restartbutton from "./../../Restartbutton";
 
 interface YapuedesProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -25,6 +26,9 @@ const Yapuedes: React.FC<YapuedesProps> = ({ setComponenteActual }) => {
       <div className="mx-20 text-3xl">
         <button className="mt-2 px-8 py-2 shadow-lg text-md text-black bg-cyan-700 rounded bg-opacity-40" onClick={handleRestart}>VUELVE A JUGAR</button>
       </div>
+      <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
     </div>
   );
 };

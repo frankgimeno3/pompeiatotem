@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Restartbutton from "./../../Restartbutton";
 
 interface NombreProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -224,12 +225,17 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
           </button>
         </div>
       </div>
-      <button
-        className="mt-2 px-10 py-4   text-3xl text-black bg-cyan-700 rounded bg-opacity-40"
-        onClick={handleSeguirClick}
-      >
-        CONTINUE
-      </button>
+      <div className="flex flex-row mt-5 justify-center text-center align-center">
+          <button
+            className="mt-2 px-8 py-4    text-3xl shadow-lg text-black bg-cyan-200 rounded bg-opacity-40"
+            onClick={handleSeguirClick}
+          >
+          CONTINUE{" "}
+          </button>
+          <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
+      </div>
     </div>
   );
 };

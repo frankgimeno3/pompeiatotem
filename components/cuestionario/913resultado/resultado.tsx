@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Contenido from "../../../lib/slogans.json";
 import { useSpring, animated } from "react-spring";
+import Restartbutton from "./../../Restartbutton";
 
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -175,6 +176,9 @@ const Resultado: React.FC<ResultadoProps> = ({
             </button>
           </div>
         </div>
+        <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
       </div>
     </animated.div>
   );

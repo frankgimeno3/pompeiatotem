@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Restartbutton from "./../../Restartbutton";
 
 interface LugarProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -37,6 +38,9 @@ const Lugar: React.FC<LugarProps> = ({ setComponenteActual, setLugar }) => {
      </div>
      </div>
         </div>
+        <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
    </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Restartbutton from "./../../Restartbutton";
 
 interface EstrategiaProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -45,7 +46,9 @@ const Estrategia: React.FC<EstrategiaProps> = ({
       </div>
       </div>
       </div>
-
+      <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
     </div>
   );
 };

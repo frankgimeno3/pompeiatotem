@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Restartbutton from "./../../Restartbutton";
 
 interface ResolutividadProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -37,6 +38,9 @@ const Resolutividad: React.FC<ResolutividadProps> = ({ setComponenteActual, setR
       </div>
       </div>
         </div>
+        <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
     </div>
   );
 };

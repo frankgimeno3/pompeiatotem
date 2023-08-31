@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
+import Restartbutton from "./../../Restartbutton";
 
 interface AleaProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -42,6 +43,9 @@ const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
           SEE RESULTS
         </button>
         </div>
+        <button className="mt-3 ml-3">
+            <Restartbutton />
+          </button>
         </div>
     </animated.div>
   );
