@@ -54,13 +54,13 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
 
       <div className="flex flex-row text-center justify-center">
         <button
-          className="mt-11 px-2 py-1 mr-10 text-lg text-black bg-cyan-700 rounded bg-opacity-40"
+          className="mt-11 px-8 py-4 mr-10 text-3xl text-black bg-cyan-700 rounded bg-opacity-40 shadow-lg"
           onClick={handleSeguirClick}
         >
           CONFIRMAR Y RECOGER
         </button>
         <button
-          className="mt-11 px-2 py-1 text-lg text-black bg-green-700  rounded bg-opacity-30 "
+          className="mt-11 px-8 py-4 text-3xl text-black bg-green-700  rounded bg-opacity-30  shadow-lg"
           onClick={handleRestart}
         >
           COMENZAR DE NUEVO

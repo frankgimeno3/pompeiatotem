@@ -33,25 +33,22 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
   };
 
   return (
-    <div className="px-10 py-6 pt-20 mt-20">
-      <div className="mt-24">
+    <div className="px-10 py-6 pt-16 mt-20">
         <div className="border-b border-gray-400 mb-2 mx-10">
           <input
             type="text"
             value={inputValue}
             readOnly
-            className=" px-3 mt-5 text-center bg-transparent text-black text-2xl"
+            className=" px-3 mt-5 text-center bg-transparent text-black text-5xl"
           />
         </div>
-        <h2 className="text-black text-2xl">Type your name here</h2>
+        <h2 className="text-black text-4xl">Type your name here</h2>
         {characterCount < 10 && (
-          <p className="text-black text-sm font-light">(10 CHARACTERS MAX)</p>
+          <p className="text-black text-xl font-light">(10 CHARACTERS MAX)</p>
         )}
         {characterCount === 10 && (
-          <p className="text-red-500 text-xs font-bold">(10 CHARACTERS MAX)</p>
-        )}
-      </div>
-      <div className="mx-15 my-7 text-7xl ">
+          <p className="text-red-500 text-xl font-bold">(10 CHARACTERS MAX)</p>
+        )}      <div className="mx-15 my-7 text-9xl ">
         <div>
           <button
             onClick={() => handleButtonClick("Q")}
@@ -228,7 +225,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
         </div>
       </div>
       <button
-        className="mt-2 px-10 py-1   text-lg text-black bg-cyan-700 rounded bg-opacity-40"
+        className="mt-2 px-10 py-4   text-3xl text-black bg-cyan-700 rounded bg-opacity-40"
         onClick={handleSeguirClick}
       >
         CONTINUE
