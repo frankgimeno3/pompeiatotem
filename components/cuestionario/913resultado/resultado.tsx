@@ -138,7 +138,7 @@ const Resultado: React.FC<ResultadoProps> = ({
         <div className="flex flex-row text-left justify-center align-center  px-20 pr-24 mx-14 py- border border-green-500">
           
 
-          <div className="flex-1 flex flex-col border border-blue-400 ml-10 pt-10">
+          <div className="flex-1 flex flex-col border border-blue-400 ml-14 pt-10">
             <h1 className="text-7xl mt-10 ">{nombre}</h1>
             <p className="text-black text-lg mt-2 mb-20   text-black">TU DIOS ES</p>
             <h2 className="text-black  text-7xl  mb-5   ">{tuDios}</h2>
