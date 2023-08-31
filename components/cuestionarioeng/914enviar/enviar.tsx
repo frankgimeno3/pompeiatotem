@@ -43,14 +43,14 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
   
 
   return (
-    <div className="flex flex-col text-center  items-center justify-center">
-      <p className="mb-8 text-black text-xl">
+    <div className="flex flex-col text-center  items-center justify-center mt-10 pt-24">
+    <p className="mb-8 text-black text-4xl">
       DO YOU WANT TO TAKE YOUR GOD AS A SOUVENIR?
       </p>
       <Image src="/PortfolioDiseño.png" alt="PortfolioDiseño" width={600} height={600} />
 
-      <p className="mt-6 text-black text-lg">ASK FOR YOUR COPY AT RECEPTION</p>
-      <p className="mt-2 text-black text-lg">SELLING PRICE 6€</p>
+      <p className="mt-6 text-black text-3xl">ASK FOR YOUR COPY AT RECEPTION</p>
+      <p className="mt-2 text-black text-2xl">SELLING PRICE 6€</p>
 
       <div className="flex flex-row text-center justify-center">
         <button

@@ -22,8 +22,8 @@ const Relaciones: React.FC<RelacionesProps> = ({
     <div  className="mt-24  pt-10">
 
     <div className="flex flex-col text-center justify-center">
-      <h2 className="text-black text-xl">EN LAS RELACIONES AMOROSAS SOY:</h2>
-      <div className="flex flex-row justify-center my-10 text-5xl ">
+    <h2 className="text-black text-3xl mt-14">EN LAS RELACIONES AMOROSAS SOY:</h2>
+    <div className="flex flex-row justify-center my-10 text-8xl ">
         <button
           className={`mr-10 px-5 py-2 ${
             selectedOption === "ENAMORADIZO"
@@ -40,8 +40,8 @@ const Relaciones: React.FC<RelacionesProps> = ({
               ? "bg-white bg-opacity-40 rounded-full"
               : ""
           }`}
-          onClick={() => handleOptionClick("FIEL")}
-        >
+          onClick={() => handleOptionClick("FIEL")}   
+        >                                                                                  
           COMPROMETIDO
         </button>
       </div>

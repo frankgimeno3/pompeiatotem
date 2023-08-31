@@ -31,15 +31,15 @@ const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
     >
          <div  className="mt-24 pt-24">
     <div  className="mt-24  pt-10"></div>
-      <h2 className="text-6xl mt-14">¡ALEA IACTA EST!</h2>
-      <h2 className="text-6xl mb-20">THE DIE IS CAST!</h2>
+      <h2 className="text-7xl mt-14">¡ALEA IACTA EST!</h2>
+      <h2 className="text-7xl mb-20">THE DIE IS CAST!</h2>
 
       <div className="mx-20">
         <button
-          className="mt-2 px-6 py-1   text-lg text-black bg-cyan-700 rounded bg-opacity-40"
+          className="mt-2 px-8 py-4 shadow-lg text-3xl text-black bg-cyan-700 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
-          FIND OUT
+          SEE RESULTS
         </button>
         </div>
         </div>
