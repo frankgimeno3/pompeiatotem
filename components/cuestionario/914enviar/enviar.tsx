@@ -43,11 +43,11 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
   
 
   return (
-    <div className="flex flex-col text-center  items-center justify-center">
+    <div className="flex flex-col text-center  items-center justify-center mt-24 pt-24">
       <p className="mb-8 text-black text-xl">
         ¿QUIERES LLEVARTE A TU DIOS DE RECUERDO?
       </p>
-      <Image src="/miniatura.png" alt="miniatura" width={250} height={250} />
+      <Image src="/PortfolioDiseño.png" alt="PortfolioDiseño" width={600} height={600} />
 
       <p className="mt-6 text-black text-lg">PIDE TU COPIA EN RECEPCIÓN</p>
       <p className="mt-2 text-black text-lg">PRECIO DE VENTA 6€</p>

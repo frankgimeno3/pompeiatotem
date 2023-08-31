@@ -47,7 +47,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
       <p className="mb-8 text-black text-xl">
       DO YOU WANT TO TAKE YOUR GOD AS A SOUVENIR?
       </p>
-      <Image src="/miniatura.png" alt="miniatura" width={250} height={250} />
+      <Image src="/PortfolioDiseño.png" alt="PortfolioDiseño" width={600} height={600} />
 
       <p className="mt-6 text-black text-lg">ASK FOR YOUR COPY AT RECEPTION</p>
       <p className="mt-2 text-black text-lg">SELLING PRICE 6€</p>
