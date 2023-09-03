@@ -36,7 +36,6 @@ const Cuestionario = () => {
   const [fondo, setFondo] = useState(`url("/fondo2.png")`);
  
    
-
   const renderComponenteActual = () => {
     while (!loadingvisible) {
       switch (componenteactual) {

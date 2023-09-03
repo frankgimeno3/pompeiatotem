@@ -40,52 +40,8 @@ const Cuestionario = () => {
   const [timer, setTimer] = useState(20);
   const [ReinicioTimer, setReinicioTimer] = useState(false);  
   const router = useRouter();
-
-  // useEffect(() => {
-  //   const firstTimer = setTimeout(() => {
-  //     setIsTimerVisible(true);
-  //   }, 25000); // 15 segundos
-
-  //   const interval = setInterval(() => {
-  //     if (timer > 0 && isTimerVisible) {
-  //       setTimer(prevTimer => prevTimer - 1);
-  //     } else if (timer === 0) {
-  //       handleRestart();
-  //       setIsTimerVisible(false);
-  //       clearTimeout(firstTimer);
-  //       clearInterval(interval);
-  //     }
-  //   }, 1000);
-
-  //   return () => {
-  //     clearTimeout(firstTimer);
-  //     clearInterval(interval);
-  //   };
-  // }, [timer, isTimerVisible]);
-  // const handleRestart = () => {
-  //   router.push("/landing");
-  // };
-
-  // const superFunction = () => {
-  //   setReinicioTimer(false)
-  //   setIsTimerVisible(false);
-  //   setTimer(20);
-  //   setTimeout(() => {
-  //     setIsTimerVisible(true);
-  //   }, 25000);
-  // };
-
-  // useEffect(() => {
-  //   if (ReinicioTimer) {  
-  //     console.log("it happened")
-  //     superFunction();
-  //   }
-  // }, [ReinicioTimer]);
-
-  // const handleClick = () => {
-  //      setReinicioTimer(true);
-  //  };
-
+  const [fondo, setFondo] = useState(`url("/fondo2.png")`);
+ 
 
   const renderComponenteActual = () => {
     while(!loadingvisible)
@@ -210,26 +166,64 @@ const Cuestionario = () => {
         return null;
     }}
   };
-
+  useEffect(() => {
+    switch (componenteactual) {
+      case "conflicto":
+        setFondo(`url("/preguntas/en/1.png")`);
+        break;
+      case "relaciones":
+        setFondo(`url("/preguntas/en/2.png")`);
+        break;
+      case "estrategia":
+        setFondo(`url("/preguntas/en/3.png")`);
+        break;
+      case "resolutividad":
+        setFondo(`url("/preguntas/en/4.png")`);
+        break;
+      case "trabajo":
+        setFondo(`url("/preguntas/en/5.png")`);
+        break;
+      case "lugar":
+        setFondo(`url("/preguntas/en/6.png")`);
+        break;
+      case "humor":
+        setFondo(`url("/preguntas/en/7.png")`);
+        break;
+      case "creatividad":
+        setFondo(`url("/preguntas/en/8.png")`);
+        break;
+      case "juicio":
+        setFondo(`url("/preguntas/en/9.png")`);
+        break;
+      case "horario":
+        setFondo(`url("/preguntas/en/910.png")`);
+        break;
+      case "resultado":
+        setFondo(`url("/PortfolioEnvio.png")`);
+        break;
+      default:
+        setFondo(`url("/fondo2.png")`);
+        break;
+    }
+  }, [componenteactual]);
+ 
   const loadingHandler = () => {
     if (!loadingvisible || componenteactual === "resultado") {
-      return "hidden"; // Clase CSS para ocultar la imagen
+      return "hidden";  
     } else {
-      return "text-center mt-20 pt-20"; // Clase CSS para agregar sombra
+      return "text-center mt-20 pt-20";  
     }
   };
 
   useEffect(() => {
-    setloadingvisible(true); // Mostrar imagen de carga al cambiar componenteactual
+    setloadingvisible(true);  
 
     setTimeout(() => {
-      setloadingvisible(false); // Ocultar imagen de carga después de 2 segundos
-      loadingHandler(); // Volver a llamar a loadingHandler después de 2 segundos
+      setloadingvisible(false);  
+      loadingHandler();  
     }, 600);
 
-    // Aquí puedes agregar cualquier otra lógica que desees ejecutar al cambiar componenteactual
-
-  }, [componenteactual]);
+   }, [componenteactual]);
 
 
 
@@ -237,12 +231,11 @@ const Cuestionario = () => {
     <div
       className="h-screen flex justify-center text-center "
       style={{
-        backgroundImage: `url("/fondo2.png")`,
+        backgroundImage: fondo,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      // onClick={handleClick}
-    >
+     >
       {loadingvisible && (
                 <div className="mt-24">
         <div className="flex flex-col align-center mt-24 pt-14 " >

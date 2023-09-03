@@ -19,30 +19,29 @@ const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
  
 
   return (
-    <div  className="mt-24 pt-24">
-    <div  className="mt-24  pt-10">
-    <div className="flex flex-col text-center justify-center">
-     <h2 className="text-black text-3xl">I AM MORE LIKELY TO BE :</h2>
-     <div className="flex flex-row justify-center my-5 text-8xl">
-       <button
-         className={`mr-10 px-5 py-2  ${selectedOption === "BUENHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
+    <div className="flex flex-col mt-24 pt-24 justify-right mr-24 pr-24 ">
+    <div className=" flex flex-col mt-24 mr-24 pr-24 pt-10 justify-start text-8xl ">
+      <div className="pr-24 flex flex-col mt-14">
+        <button
+          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24 ${
+            selectedOption === "BUENHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("BUENHUMOR")}
        >
          IN A GOOD MOOD
        </button>
        <button
-         className={`ml-10 px-5 py-2  ${selectedOption === "MALHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
+            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
+              selectedOption === "MALHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("MALHUMOR")}
        >
          IN A BAD MOOD
-       </button>
-     </div>
-     </div>
+         </button>
         </div>
-        <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
-   </div>
+      </div>
+      <button className="mt-20 mr-24">
+        <Restartbutton />
+      </button>
+    </div>
   );
 };
 

@@ -20,9 +20,9 @@ const Conflicto: React.FC<ConflictoProps> = ({
 
   return (
     <div className="flex flex-col mt-24 pt-24 justify-right ml-24 pl-24 ">
-      <div className=" flex flex-col mt-24 ml-24 pl-24 pt-10 justify-end text-8xl ">
-        <button
-          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
+    <div className=" flex flex-col mt-24 ml-24 pl-24 pt-10 justify-end text-8xl ">
+      <button
+        className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
                 selectedOption === "PACÍFICO"
                   ? "bg-white bg-opacity-40 rounded-full"
                   : ""

@@ -6,7 +6,10 @@ interface TrabajoProps {
   setTrabajo: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => {
+const Trabajo: React.FC<TrabajoProps> = ({
+  setComponenteActual,
+  setTrabajo,
+}) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
 
@@ -16,34 +19,37 @@ const Trabajo: React.FC<TrabajoProps> = ({ setComponenteActual, setTrabajo}) => 
     setComponenteActual("lugar");
   };
 
-
-
   return (
-    <div  className="mt-24 pt-24">
-    <div  className="mt-24  pt-10">
-    <div className="flex flex-col text-center justify-center">
-     <h2 className="text-black text-3xl">ME CONSIDERO:</h2>
-     <div className="flex flex-row justify-center my-5 text-8xl">
-       <button
-         className={`mr-10 px-5 py-2  ${selectedOption === "TRABAJADOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
-         onClick={() => handleOptionClick("TRABAJADOR")}
-       >
-         TRABAJADOR
-       </button>
-       <button
-         className={`ml-10 px-5 py-2  ${selectedOption === "HOLGAZÁN" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
-         onClick={() => handleOptionClick("HOLGAZÁN")}
-       >
-         HOLGAZÁN
-       </button>
-     </div>
-     </div>
-        </div>
-        <button className="mt-3 ml-3">
-            <Restartbutton />
+    <div className="flex flex-col mt-24 pt-24 justify-right mr-24 pr-24 ">
+      <div className=" flex flex-col mt-24 mr-24 pr-24 pt-10 justify-start text-8xl ">
+        <div className="pr-24 flex flex-col">
+          <button
+            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24 ${
+              selectedOption === "TRABAJADOR"
+                ? "bg-white bg-opacity-40 rounded-full"
+                : ""
+            }`}
+            onClick={() => handleOptionClick("TRABAJADOR")}
+          >
+            TRABAJADOR
           </button>
-   </div>
- );
+          <button
+            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
+              selectedOption === "HOLGAZÁN"
+                ? "bg-white bg-opacity-40 rounded-full"
+                : ""
+            }`}
+            onClick={() => handleOptionClick("HOLGAZÁN")}
+          >
+            HOLGAZÁN
+          </button>
+        </div>
+      </div>
+      <button className="mt-20 mr-24">
+        <Restartbutton />
+      </button>
+    </div>
+  );
 };
 
 export default Trabajo;

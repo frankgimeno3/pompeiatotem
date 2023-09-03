@@ -19,30 +19,30 @@ const Creatividad: React.FC<CreatividadProps> = ({ setComponenteActual, setCreat
  
 
   return (
-    <div  className="mt-24 pt-24">
-    <div  className="mt-24  pt-10">
-    <div className="flex flex-col text-center justify-center">
-     <h2 className="text-black text-3xl">ME CONSIDERO:</h2>
-     <div className="flex flex-row justify-center my-5 text-8xl">
-       <button
-         className={`mr-10 px-5 py-2  ${selectedOption === "CREATIVO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
+    <div className="flex flex-col mt-24 pt-24 justify-right ml-24 pl-24 ">
+      <div className=" flex flex-col mt-24 ml-24 pl-24 pt-10 justify-end text-8xl ">
+        <div className="pl-24 flex flex-col">
+        <button
+        className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
+          selectedOption === "CREATIVO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("CREATIVO")}
        >
         CREATIVO
        </button>
        <button
-         className={`ml-10 px-5 py-2  ${selectedOption === "RACIONAL" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
+                 className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24${
+
+                  selectedOption === "RACIONAL" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("RACIONAL")}
        >
         RACIONAL
-       </button>
-     </div>
-     </div>
-        </div>
-        <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
-   </div>
+        </button>
+      </div>
+      </div>
+      <button className="mt-20 ml-24">
+        <Restartbutton />
+      </button>
+    </div>
   );
 };
 

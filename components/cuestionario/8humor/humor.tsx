@@ -4,45 +4,47 @@ import Restartbutton from "./../../Restartbutton";
 interface HumorProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
   setHumor: React.Dispatch<React.SetStateAction<string>>;
-
 }
 
 const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
   const [selectedOption, setSelectedOption] = useState("");
- 
+
   const handleOptionClick = (option: string) => {
     setSelectedOption(option);
     setHumor(option);
     setComponenteActual("creatividad");
-
   };
- 
 
   return (
-    <div  className="mt-24 pt-24">
-    <div  className="mt-24  pt-10">
-    <div className="flex flex-col text-center justify-center">
-     <h2 className="text-black text-3xl">ME GUSTA MÁS VIVIR EN:</h2>
-     <div className="flex flex-row justify-center my-5 text-8xl">
-       <button
-         className={`mr-10 px-5 py-2  ${selectedOption === "BUENHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
-         onClick={() => handleOptionClick("BUENHUMOR")}
-       >
-         BUEN HUMOR
-       </button>
-       <button
-         className={`ml-10 px-5 py-2  ${selectedOption === "MALHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
-         onClick={() => handleOptionClick("MALHUMOR")}
-       >
-         MAL HUMOR
-       </button>
-     </div>
-     </div>
-        </div>
-        <button className="mt-3 ml-3">
-            <Restartbutton />
+    <div className="flex flex-col mt-24 pt-24 justify-right mr-24 pr-24 ">
+      <div className=" flex flex-col mt-24 mr-24 pr-24 pt-10 justify-start text-8xl ">
+        <div className="pr-24 flex flex-col mt-10">
+          <button
+            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24 ${
+              selectedOption === "BUENHUMOR"
+                ? "bg-white bg-opacity-40 rounded-full"
+                : ""
+            }`}
+            onClick={() => handleOptionClick("BUENHUMOR")}
+          >
+            BUEN HUMOR
           </button>
-   </div>
+          <button
+            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
+              selectedOption === "MALHUMOR"
+                ? "bg-white bg-opacity-40 rounded-full"
+                : ""
+            }`}
+            onClick={() => handleOptionClick("MALHUMOR")}
+          >
+            MAL HUMOR
+          </button>
+        </div>
+      </div>
+      <button className="mt-20 mr-24">
+        <Restartbutton />
+      </button>
+    </div>
   );
 };
 
