@@ -6,7 +6,10 @@ interface ConflictoProps {
   setConflicto: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto }) => {
+const Conflicto: React.FC<ConflictoProps> = ({
+  setComponenteActual,
+  setConflicto,
+}) => {
   const [selectedOption, setSelectedOption] = useState("");
 
   const handleOptionClick = (option: string) => {
@@ -16,34 +19,32 @@ const Conflicto: React.FC<ConflictoProps> = ({ setComponenteActual, setConflicto
   };
 
   return (
-    <div  className="mt-24 pt-24">
-    <div  className="mt-24  pt-10">
-
-    <div className="flex flex-col text-center justify-center">
-      <h2 className="text-black text-3xl">IN A CONFLICT SITUATION I AM:</h2>
-      <div className="flex flex-row justify-center my-10 text-8xl ">
+    <div className="flex flex-col mt-24 pt-24 justify-right ml-24 pl-24 ">
+      <div className=" flex flex-col mt-24 ml-24 pl-24 pt-10 justify-end text-8xl ">
         <button
-          className={`mr-20 px-5 py-2 ${
-            selectedOption === "PACÍFICO" ? "bg-white bg-opacity-40 rounded-full" : ""
-          }`}
-          onClick={() => handleOptionClick("PACÍFICO")}
-        >
-          PACIFIC
-        </button>
-        <button
-          className={`ml-20 px-5 py-2 ${
-            selectedOption === "GUERRERO" ? "bg-white bg-opacity-40 rounded-full" : ""
-          }`}
-          onClick={() => handleOptionClick("GUERRERO")}
-        >
-          WARRIOR
-        </button>
-        </div>
-        </div>
-        </div>
-        <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
+          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
+                selectedOption === "PACÍFICO"
+                  ? "bg-white bg-opacity-40 rounded-full"
+                  : ""
+              }`}
+              onClick={() => handleOptionClick("PACÍFICO")}
+            >
+              PACIFIC
+            </button>
+            <button
+          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24${
+            selectedOption === "GUERRERO"
+                  ? "bg-white bg-opacity-40 rounded-full"
+                  : ""
+              }`}
+              onClick={() => handleOptionClick("GUERRERO")}
+            >
+              WARRIOR
+              </button>
+      </div>
+      <button className="mt-20 ml-24">
+        <Restartbutton />
+      </button>
     </div>
   );
 };
