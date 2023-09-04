@@ -23,7 +23,7 @@ const Yapuedes: React.FC<YapuedesProps> = ({ setComponenteActual }) => {
       <Image src="/tick.png" alt="tick" width={400} height={400} />
       </div>
 
-      <div className="mx-20 text-5xl">
+      <div className="mx-20 text-4xl">
         <button className="mt-2 px-8 py-2 shadow-lg text-md text-black bg-cyan-700 rounded bg-opacity-40" onClick={handleRestart}>VUELVE A JUGAR</button>
       </div> 
     </div>

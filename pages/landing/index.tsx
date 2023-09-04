@@ -16,7 +16,7 @@ const Landing = () => {
       <h1 className="pt-4 text-6xl mb-5 mx-20">TE REPRESENTA?</h1>
       <p className="text-3xl text-black">UNA AVENTURA QUE NOS ENSEÑA LAS CUALIDADES DE CADA DIOS ROMANO</p>
       <Link href="/landing/es">
-        <button className="mt-11 px-8 py-4 mr-10 text-3xl text-black bg-cyan-700 rounded bg-opacity-40 shadow-3xl">
+        <button className="mt-11 px-8 py-4 mr-10 text-4xl text-black bg-cyan-700 rounded bg-opacity-40 shadow-3xl">
           JUGAR
         </button>
       </Link>
@@ -26,7 +26,7 @@ const Landing = () => {
             <div className="rounded-full overflow-hidden">
               <Image src="/icon/flor.png" alt="flor" width={50} height={50} />
             </div>
-            <button className="text-2xl">EN</button>
+            <button className="text-3xl">EN</button>
           </div>
         </Link>
         <Link href="/landing/es">
@@ -34,7 +34,7 @@ const Landing = () => {
             <div className="rounded-full overflow-hidden">
               <Image src="/icon/flor.png" alt="flor" width={50} height={50} />
             </div>
-            <button className="text-2xl">ES</button>
+            <button className="text-3xl">ES</button>
           </div>
         </Link>
       </div>

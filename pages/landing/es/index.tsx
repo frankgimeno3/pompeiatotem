@@ -167,67 +167,67 @@ const Cuestionario = () => {
         setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/1.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "relaciones":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/2.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "estrategia":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/3.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "resolutividad":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/4.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "trabajo":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/5.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "lugar":
         setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/6.png")`);
-        }, 1000); 
+        }, 600); 
         break;
       case "humor":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/7.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "creatividad":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/8.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "juicio":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/9.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "horario":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/preguntas/es/910.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       case "resultado":
                 setFondo(`url("/fondo2.png")`);
         setTimeout(() => {
           setFondo(`url("/PortfolioEnvio.png")`);
-        }, 1000);  
+        }, 600);  
         break;
       default:
         setFondo(`url("/fondo2.png")`);
@@ -253,7 +253,15 @@ const Cuestionario = () => {
 
   return (
     <div
-      className="h-screen flex flex-col justify-center text-center relative"
+    className="h-screen  transition-opacity duration-1000 opacity-100"
+    style={{
+      backgroundImage: `url("/fondo2.png")`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    <div
+      className="h-screen flex flex-col justify-center text-center relative transition-opacity duration-1000 opacity-100"
       style={{
         backgroundImage: fondo,
         backgroundSize: "cover",
@@ -278,6 +286,7 @@ const Cuestionario = () => {
         <Restartbutton />
       </div>
       <div>{renderComponenteActual()}</div>
+    </div>
     </div>
   );
 };
