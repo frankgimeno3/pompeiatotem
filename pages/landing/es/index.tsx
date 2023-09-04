@@ -17,7 +17,8 @@ import Resultado from "../../../components/cuestionario/913resultado/resultado";
 import Enviar from "../../../components/cuestionario/914enviar/enviar";
 import Yapuedes from "../../../components/cuestionario/915yapuedes/yapuedes";
 import Image from "next/image";
- 
+import Restartbutton from "../../../components/Restartbutton";
+
 const Cuestionario = () => {
   const [componenteactual, setComponenteActual] = useState("nombre");
   const [nombre, setNombre] = useState("");
@@ -34,8 +35,7 @@ const Cuestionario = () => {
   const [midios, setmidios] = useState("");
   const [loadingvisible, setloadingvisible] = useState(false);
   const [fondo, setFondo] = useState(`url("/fondo2.png")`);
- 
-   
+
   const renderComponenteActual = () => {
     while (!loadingvisible) {
       switch (componenteactual) {
@@ -55,21 +55,21 @@ const Cuestionario = () => {
           );
 
         case "conflicto":
-           return (
+          return (
             <Conflicto
               setComponenteActual={setComponenteActual}
               setConflicto={setConflicto}
             />
           );
         case "relaciones":
-           return (
+          return (
             <Relaciones
               setComponenteActual={setComponenteActual}
               setRelaciones={setRelaciones}
             />
           );
         case "estrategia":
-           return (
+          return (
             <Estrategia
               setComponenteActual={setComponenteActual}
               setEstrategia={setEstrategia}
@@ -164,37 +164,70 @@ const Cuestionario = () => {
   useEffect(() => {
     switch (componenteactual) {
       case "conflicto":
-        setFondo(`url("/preguntas/es/1.png")`);
+        setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/1.png")`);
+        }, 1000);  
         break;
       case "relaciones":
-        setFondo(`url("/preguntas/es/2.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/2.png")`);
+        }, 1000);  
         break;
       case "estrategia":
-        setFondo(`url("/preguntas/es/3.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/3.png")`);
+        }, 1000);  
         break;
       case "resolutividad":
-        setFondo(`url("/preguntas/es/4.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/4.png")`);
+        }, 1000);  
         break;
       case "trabajo":
-        setFondo(`url("/preguntas/es/5.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/5.png")`);
+        }, 1000);  
         break;
       case "lugar":
-        setFondo(`url("/preguntas/es/6.png")`);
+        setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/6.png")`);
+        }, 1000); 
         break;
       case "humor":
-        setFondo(`url("/preguntas/es/7.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/7.png")`);
+        }, 1000);  
         break;
       case "creatividad":
-        setFondo(`url("/preguntas/es/8.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/8.png")`);
+        }, 1000);  
         break;
       case "juicio":
-        setFondo(`url("/preguntas/es/9.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/9.png")`);
+        }, 1000);  
         break;
       case "horario":
-        setFondo(`url("/preguntas/es/910.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/es/910.png")`);
+        }, 1000);  
         break;
       case "resultado":
-        setFondo(`url("/PortfolioEnvio.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/PortfolioEnvio.png")`);
+        }, 1000);  
         break;
       default:
         setFondo(`url("/fondo2.png")`);
@@ -203,49 +236,48 @@ const Cuestionario = () => {
   }, [componenteactual]);
   const loadingHandler = () => {
     if (!loadingvisible || componenteactual === "resultado") {
-      return "hidden";  
+      return "hidden";
     } else {
-      return "text-center mt-20 pt-20";  
+      return "text-center     mx-auto";
     }
   };
 
   useEffect(() => {
-    setloadingvisible(true);  
+    setloadingvisible(true);
 
     setTimeout(() => {
-      setloadingvisible(false);  
-      loadingHandler();  
+      setloadingvisible(false);
+      loadingHandler();
     }, 600);
-
-   }, [componenteactual]);
+  }, [componenteactual]);
 
   return (
     <div
-    className="h-screen flex justify-center text-center "
-    style={{
-      backgroundImage: fondo,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}
-   >
+      className="h-screen flex flex-col justify-center text-center relative"
+      style={{
+        backgroundImage: fondo,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {loadingvisible && (
-                <div className="mt-24">
-                <div className="flex flex-col align-center mt-14 pt-14">
-        <Image
-            src="/gif/GIF1.gif"
-            alt="loading"
-            width={200}
-            height={50}
-            className={loadingHandler()}
-          />
-        </div>
+        <div className=" ">
+          <div className="flex flex-col align-center  ">
+            <Image
+              src="/gif/GIF1.gif"
+              alt="loading"
+              width={200}
+              height={50}
+              className={loadingHandler()}
+            />
+          </div>
         </div>
       )}
 
- 
-      <div 
-        >{renderComponenteActual()}</div>
- 
+      <div className="absolute top-10 right-10 m-4">
+        <Restartbutton />
+      </div>
+      <div>{renderComponenteActual()}</div>
     </div>
   );
 };

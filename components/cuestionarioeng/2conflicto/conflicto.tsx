@@ -19,9 +19,10 @@ const Conflicto: React.FC<ConflictoProps> = ({
   };
 
   return (
-    <div className="flex flex-col mt-24 pt-24 justify-right ml-24 pl-24 ">
-    <div className=" flex flex-col mt-24 ml-24 pl-24 pt-10 justify-end text-8xl ">
-      <button
+    <div className="flex flex-col mt-14 pt-14 justify-right ml-24 pl-24 ">
+      <div className=" flex flex-col   ml-24 pl-24  justify-end text-8xl ">
+        <div className=" flex flex-col pl-24 mx-auto">
+        <button
         className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
                 selectedOption === "PACÍFICO"
                   ? "bg-white bg-opacity-40 rounded-full"
@@ -41,10 +42,8 @@ const Conflicto: React.FC<ConflictoProps> = ({
             >
               WARRIOR
               </button>
-      </div>
-      <button className="mt-20 ml-24">
-        <Restartbutton />
-      </button>
+      </div> 
+    </div>
     </div>
   );
 };

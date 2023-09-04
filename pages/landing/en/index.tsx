@@ -18,7 +18,7 @@ import Resultado from "../../../components/cuestionarioeng/913resultado/resultad
 import Enviar from "../../../components/cuestionarioeng/914enviar/enviar";
 import Yapuedes from "../../../components/cuestionarioeng/915yapuedes/yapuedes";
 import Image from "next/image";
-import Restart from "../../../components/Restart";
+import Restartbutton from "../../../components/Restartbutton";
 import { useRouter } from "next/router";
 
 const Cuestionario = () => {
@@ -169,37 +169,70 @@ const Cuestionario = () => {
   useEffect(() => {
     switch (componenteactual) {
       case "conflicto":
-        setFondo(`url("/preguntas/en/1.png")`);
+        setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/1.png")`);
+        }, 1000);  
         break;
       case "relaciones":
-        setFondo(`url("/preguntas/en/2.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/2.png")`);
+        }, 1000);  
         break;
       case "estrategia":
-        setFondo(`url("/preguntas/en/3.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/3.png")`);
+        }, 1000);  
         break;
       case "resolutividad":
-        setFondo(`url("/preguntas/en/4.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/4.png")`);
+        }, 1000);  
         break;
       case "trabajo":
-        setFondo(`url("/preguntas/en/5.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/5.png")`);
+        }, 1000);  
         break;
       case "lugar":
-        setFondo(`url("/preguntas/en/6.png")`);
+        setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/6.png")`);
+        }, 1000); 
         break;
       case "humor":
-        setFondo(`url("/preguntas/en/7.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/7.png")`);
+        }, 1000);  
         break;
       case "creatividad":
-        setFondo(`url("/preguntas/en/8.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/8.png")`);
+        }, 1000);  
         break;
       case "juicio":
-        setFondo(`url("/preguntas/en/9.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/9.png")`);
+        }, 1000);  
         break;
       case "horario":
-        setFondo(`url("/preguntas/en/910.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/preguntas/en/910.png")`);
+        }, 1000);  
         break;
       case "resultado":
-        setFondo(`url("/PortfolioEnvio.png")`);
+                setFondo(`url("/fondo2.png")`);
+        setTimeout(() => {
+          setFondo(`url("/PortfolioEnvio.png")`);
+        }, 1000);  
         break;
       default:
         setFondo(`url("/fondo2.png")`);
@@ -211,7 +244,7 @@ const Cuestionario = () => {
     if (!loadingvisible || componenteactual === "resultado") {
       return "hidden";  
     } else {
-      return "text-center mt-20 pt-20";  
+      return "text-center     mx-auto";
     }
   };
 
@@ -229,35 +262,32 @@ const Cuestionario = () => {
 
   return (
     <div
-      className="h-screen flex justify-center text-center "
-      style={{
-        backgroundImage: fondo,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-     >
-      {loadingvisible && (
-                <div className="mt-24">
-        <div className="flex flex-col align-center mt-24 pt-14 " >
-        <Image
-          src="/gif/GIF1.gif"
-          alt="loading"
-          width={200}
-          height={50}
-          className={loadingHandler()}
-        />
+    className="h-screen flex flex-col justify-center text-center relative"
+    style={{
+      backgroundImage: fondo,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  >
+    {loadingvisible && (
+        <div className=" ">
+        <div className="flex flex-col align-center  ">
+          <Image
+            src="/gif/GIF1.gif"
+            alt="loading"
+            width={200}
+            height={50}
+            className={loadingHandler()}
+          />
         </div>
-        </div>
-      )}
-      <div 
-      // style={{ zIndex: 1 }}
-        >{renderComponenteActual()}</div>
-      {/* {isTimerVisible && (
-        <div className="absolute top-40 bg-white p-20 flex justify-center items-center z-10 rounded-lg shadow">
-          <Restart timer={timer} setReinicioTimer={setReinicioTimer} />
-        </div>
-      )} */}
+      </div>
+    )}
+
+    <div className="absolute top-10 right-10 m-4">
+      <Restartbutton />
     </div>
+    <div>{renderComponenteActual()}</div>
+  </div>
   );
 };
 

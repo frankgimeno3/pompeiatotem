@@ -44,8 +44,8 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
   
 
   return (
-    <div className="flex flex-col text-center  items-center justify-center mt-10 pt-24">
-    <p className="mb-8 text-black text-4xl">
+    <div className="flex flex-col text-center  items-center  mb-24">
+    <p className="mb-7 text-black text-4xl">
       DO YOU WANT TO TAKE YOUR GOD AS A SOUVENIR?
       </p>
       <Image src="/PortfolioDiseño.png" alt="PortfolioDiseño" width={600} height={600} />
@@ -66,10 +66,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
         >
           START AGAIN
         </button>
-      </div>
-      <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
+      </div> 
     </div>
   );
 };

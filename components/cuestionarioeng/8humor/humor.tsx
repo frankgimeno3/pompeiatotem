@@ -19,28 +19,25 @@ const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
  
 
   return (
-    <div className="flex flex-col mt-24 pt-24 justify-right mr-24 pr-24 ">
-    <div className=" flex flex-col mt-24 mr-24 pr-24 pt-10 justify-start text-8xl ">
-      <div className="pr-24 flex flex-col mt-14">
-        <button
-          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24 ${
+    <div className="flex flex-col  pt-24 justify-right mr-24 pr-24 ">
+      <div className=" flex flex-col  mr-24 pr-24  justify-start text-8xl ">
+        <div className="pr-24 flex flex-col  mx-auto">
+          <button
+            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10  mr-24 ${
             selectedOption === "BUENHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("BUENHUMOR")}
        >
-         IN A GOOD MOOD
+         HAPPY
        </button>
        <button
             className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
               selectedOption === "MALHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("MALHUMOR")}
        >
-         IN A BAD MOOD
+        MOODY
          </button>
         </div>
-      </div>
-      <button className="mt-20 mr-24">
-        <Restartbutton />
-      </button>
+      </div> 
     </div>
   );
 };

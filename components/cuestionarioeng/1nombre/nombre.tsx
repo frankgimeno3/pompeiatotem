@@ -34,7 +34,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
   };
 
   return (
-    <div className="px-10 py-6 pt-16 mt-20">
+    <div className="px-10 pb-20   ">
         <div className="border-b border-gray-400 mb-2 mx-10">
           <input
             type="text"
@@ -232,9 +232,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
           >
           CONTINUE{" "}
           </button>
-          <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
+   
       </div>
     </div>
   );

@@ -135,19 +135,21 @@ const Resultado: React.FC<ResultadoProps> = ({
       className="flex flex-col mb-10 text-center justify-center p-24  w-screen"
       style={springAnimation} // Apply the spring animation style to the component
     >
-      <div className="mt-14 pt-8 border border-red-400 px-20">
-        <div className="flex flex-row text-left justify-center align-center  px-20 pr-24 mx-14 py- border border-green-500">
-          
-
-          <div className="flex-1 flex flex-col border border-blue-400 ml-14 pt-10">
-            <h1 className="text-7xl mt-10 ">{nombre}</h1>
-            <p className="text-black text-2xl mt-2 mb-20   text-black">TU DIOS ES</p>
-            <h2 className="text-black  text-7xl  mb-5   ">{tuDios}</h2>
-            <div className="text-black">
-              <div className="text-2xl mb-10 pr-5">{Contenido[tuDios]}</div>
+      <div className="mt-14 pt-8  px-20">
+        <div className="flex flex-row text-left justify-center align-center  px-20 pr-24 mx-14">
+          <div className="flex-1 flex flex-col  ml-16 pt-10">
+            <div className="pl-24 ml-14">
+              <h1 className="text-7xl mt-10 ">{nombre}</h1>
+              <p className="text-black text-2xl mt-2 mb-16   text-black">
+                TU DIOS ES
+              </p>
+              <h2 className="text-black  text-7xl  mb-5   ">{tuDios}</h2>
+              <div className="text-black">
+                <div className="text-2xl mb-10 pr-5">{Contenido[tuDios]}</div>
+              </div>
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center  border border-black">
+          <div className="flex-1 flex items-center justify-center  ">
             <Image
               src={imagendios}
               alt={tuDios}
@@ -169,16 +171,13 @@ const Resultado: React.FC<ResultadoProps> = ({
           </div>
           <div className="flex-1">
             <button
-              className="px-8 py-4 shadow-lg py-0.5 text-3xl text-black bg-cyan-700 rounded bg-opacity-40 ml-4"
+              className="px-8 py-4 shadow-lg py-0.5 text-3xl text-black bg-cyan-700 rounded bg-opacity-40 ml-4 mt-2"
               onClick={handleRestart}
             >
               FINALIZAR SIN IMPRIMIR
             </button>
           </div>
-        </div>
-        <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
+        </div> 
       </div>
     </animated.div>
   );

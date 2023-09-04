@@ -30,9 +30,7 @@ const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
       style={springAnimation}
       className="flex flex-col text-center justify-center"
     >
-         <div  className="mt-24 pt-24">
-    <div  className="mt-24  pt-10"></div>
-      <h2 className="text-7xl mt-14">¡ALEA IACTA EST!</h2>
+       <h2 className="text-7xl  ">¡ALEA IACTA EST!</h2>
       <h2 className="text-7xl mb-20">THE DIE IS CAST!</h2>
 
       <div className="mx-20">
@@ -42,12 +40,8 @@ const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
         >
           SEE RESULTS
         </button>
-        </div>
-        <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
-        </div>
-    </animated.div>
+        </div> 
+     </animated.div>
   );
 };
 

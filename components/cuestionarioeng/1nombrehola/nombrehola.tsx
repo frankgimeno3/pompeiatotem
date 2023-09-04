@@ -24,14 +24,14 @@ const Nombrehola: React.FC<NombreholaProps> = ({
   };
 
   return (
-    <div className="flex flex-col text-center justify-start align-center pt-16 px-10  ">
-    <div className="flex flex-col text-center px-20   pt-6 ">
-      <div className="flex flex-row text-6xl   justify-center">
+    <div className="flex flex-col text-center justify-start align-center px-10 mb-24">
+      <div className="flex flex-col text-center px-20  ">
+        <div className="flex flex-row text-6xl   justify-center">
           <h1>GREETINGS, {nombre}</h1>
         </div>
         <p className="text-black text-2xl ">MEET THE ROMAN GODS</p>
 
-        <div className="flex flex-col justify-center text-center">
+        <div className="flex flex-col justify-center items-center text-center  ">
           <Image src="/Stickers.png" alt="Gods" width={600} height={600} />
         </div>
       </div>
@@ -49,10 +49,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
             onClick={handleSeguirClick}
           >
           START{" "}
-          </button>
-          <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
+          </button> 
       </div>
     </div>
   );

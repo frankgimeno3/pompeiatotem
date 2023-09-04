@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Restartbutton from "./../../Restartbutton";
-
+ 
 interface NombreProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
   setNombre: React.Dispatch<React.SetStateAction<string>>;
@@ -35,7 +34,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
   };
 
   return (
-    <div className="px-10 py-6 pt-16 mt-20">
+    <div className="px-10 pb-20   ">
         <div className="border-b border-gray-400 mb-2 mx-10">
           <input
             type="text"
@@ -234,9 +233,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
           >
             SEGUIR
           </button>
-          <button className="mt-3 ml-3">
-            <Restartbutton />
-          </button>
+ 
       </div>
     </div>
   );

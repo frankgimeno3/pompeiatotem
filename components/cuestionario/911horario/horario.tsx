@@ -18,26 +18,25 @@ const Horario: React.FC<HorarioProps> = ({ setComponenteActual, setHorario }) =>
 
    
   return (
-    <div className="flex flex-col mt-24 pt-24 justify-right ml-24 pl-24 ">
-      <div className=" flex flex-col mt-24 ml-24 pl-24 pt-10 justify-end text-8xl ">
+    <div className="flex flex-col  justify-right ml-14 pl-14 ">
+    <div className=" flex flex-col   ml-24 pl-24 text-8xl ">
+      <div className="pr-24 flex flex-col   mx-auto">
         <button
-          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
-            selectedOption === "DIURNO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
+        className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
+          selectedOption === "DIURNO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("DIURNO")}
        >
         DIURNO
        </button>
        <button
-                   className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24${
-                    selectedOption === "NOCTURNO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
+          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24${
+            selectedOption === "NOCTURNO" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
          onClick={() => handleOptionClick("NOCTURNO")}
        >
         NOCTURNO
         </button>
-      </div>
-      <button className="mt-20 ml-24">
-        <Restartbutton />
-      </button>
+        </div>
+      </div> 
     </div>
   );
 };

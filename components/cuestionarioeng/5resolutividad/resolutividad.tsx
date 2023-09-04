@@ -19,12 +19,11 @@ const Resolutividad: React.FC<ResolutividadProps> = ({
   };
 
   return (
-    <div className="flex flex-col mt-24 pt-24 justify-right ml-24 pl-24 ">
-      <div className=" flex flex-col mt-24 ml-24 pl-24 pt-10 justify-end text-8xl ">
-        <div className="pl-24 pt-10 flex flex-col">
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 
-          ${
+    <div className="flex flex-col pt-14 justify-right ml-24 pl-24 ">
+    <div className=" flex flex-col mt-24 ml-24 pl-24  justify-end text-8xl ">
+      <div className="flex flex-col pl-24  mx-auto">
+        <button
+          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
               selectedOption === "CONFRONTACIÓN"
                 ? "bg-white bg-opacity-40 rounded-full"
                 : ""
@@ -44,10 +43,7 @@ const Resolutividad: React.FC<ResolutividadProps> = ({
             NEGOTIATE
           </button>
         </div>
-      </div>
-      <button className="mt-20 mr-24">
-        <Restartbutton />
-      </button>
+      </div> 
     </div>
   );
 };
