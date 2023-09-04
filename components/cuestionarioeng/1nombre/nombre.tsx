@@ -227,7 +227,7 @@ const Nombre: React.FC<NombreProps> = ({ setComponenteActual, setNombre }) => {
       </div>
       <div className="flex flex-row mt-5 justify-center text-center align-center">
           <button
-            className="mt-2 px-8 py-4    text-3xl shadow-lg text-black bg-cyan-200 rounded bg-opacity-40"
+            className="mt-2 px-8 py-4    text-5xl shadow-lg text-black bg-cyan-200 rounded bg-opacity-40"
             onClick={handleSeguirClick}
           >
           CONTINUE{" "}

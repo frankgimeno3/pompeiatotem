@@ -30,12 +30,12 @@ const Alea: React.FC<AleaProps> = ({ setComponenteActual }) => {
       style={springAnimation}
       className="flex flex-col text-center justify-center"
     >
-       <h2 className="text-7xl  ">¡ALEA IACTA EST!</h2>
-      <h2 className="text-7xl mb-20">¡LA SUERTE ESTÁ ECHADA!</h2>
+       <h2 className="text-8xl  ">¡ALEA IACTA EST!</h2>
+      <h2 className="text-8xl mb-20">¡LA SUERTE ESTÁ ECHADA!</h2>
 
       <div className="mx-20">
         <button
-          className="mt-2 px-8 py-4 shadow-lg text-3xl text-black bg-cyan-700 rounded bg-opacity-40"
+          className="mt-2 px-8 py-4 shadow-lg text-5xl text-black bg-cyan-700 rounded bg-opacity-40"
           onClick={handleSeguirClick}
         >
           VER RESULTADOS

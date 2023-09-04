@@ -21,22 +21,22 @@ const Nombrehola: React.FC<NombreholaProps> = ({
         <div className="flex flex-row text-6xl   justify-center">
           <h1>SALUDOS, {nombre}</h1>
         </div>
-        <p className="text-black text-2xl ">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
+        <p className="text-black text-3xl ">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
         <div className="flex flex-col justify-center items-center text-center  ">
           <Image src="/Stickers.png" alt="Gods" width={600} height={600} />
         </div>
       </div>
       <div>
-        <p className="text-black text-2xl">
+        <p className="text-black text-3xl">
           ¿CUÁL DE ELLOS TE REPRESENTA MEJOR?
         </p>
-        <p className="text-black text-2xl">
+        <p className="text-black text-3xl">
           ¡ATRÉVETE A SABER! O COMO DIRÍAN LOS ROMANOS... ¡SAPERE AUDE!
         </p>
       </div>
       <div className="flex flex-row mt-5 justify-center text-center align-center">
           <button
-            className="mt-1 px-8 py-4    text-3xl shadow-lg text-black bg-cyan-200 rounded bg-opacity-40"
+            className="mt-1 px-8 py-4    text-4xl shadow-lg text-black bg-cyan-200 rounded bg-opacity-40"
             onClick={handleSeguirClick}
           >
             EMPEZAR

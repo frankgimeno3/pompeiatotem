@@ -161,7 +161,7 @@ const Resultado: React.FC<ResultadoProps> = ({
           </div>
         </div>
         <div className="flex flex-row justify-center px-24 mx-16">
-          <div className="flex-1 ml-5">
+          <div className="flex-1 mr-22">
             <button
               className="mt-2 px-8 py-4 shadow-lg py-0.5 text-3xl text-black bg-cyan-700 rounded bg-opacity-40 mr-4"
               onClick={handleSeguirClick}
