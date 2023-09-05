@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import Contenido from "../../../lib/slogans.json";
 import { useSpring, animated } from "react-spring";
-import Restartbutton from "./../../Restartbutton";
 
 interface ResultadoProps {
   setComponenteActual: React.Dispatch<React.SetStateAction<string>>;
@@ -89,10 +88,9 @@ const Resultado: React.FC<ResultadoProps> = ({
   }
 
   const springAnimation = useSpring({
-    opacity: isVisible ? 1 : 0, // Set the opacity to 1 when isVisible is true, otherwise 0
-    config: { duration: 500 }, // Duration of 1 second
+    opacity: isVisible ? 1 : 0,
+    config: { duration: 500 },
     onRest: () => {
-      // After the animation ends, set isVisible to true to display the content
       if (!isVisible) {
         setIsVisible(true);
       }
@@ -100,7 +98,6 @@ const Resultado: React.FC<ResultadoProps> = ({
   });
 
   useEffect(() => {
-    // Once the component is mounted, set isVisible to true to start the animation
     setIsVisible(true);
   }, []);
 
@@ -133,11 +130,11 @@ const Resultado: React.FC<ResultadoProps> = ({
   return (
     <animated.div
       className="flex flex-col mb-10 text-center justify-center p-24  w-screen"
-      style={springAnimation} // Apply the spring animation style to the component
+      style={springAnimation}
     >
-      <div className="mt-14 pt-8  px-20">
-        <div className="flex flex-row text-left justify-center align-center  px-20 pr-24 mx-14">
-          <div className="flex-1 flex flex-col  ml-16 pt-10">
+      <div className="mt-14 pt-8 px-20">
+        <div className="flex flex-row text-left justify-center align-center  px-20 pr-24 mx-14 ">
+          <div className="flex-1 flex flex-col ml-16 pt-10">
             <div className="pl-24 ml-14">
               <h1 className="text-7xl mt-10 ">{nombre}</h1>
               <p className="text-black text-2xl mt-2 mb-16   text-black">
@@ -149,21 +146,22 @@ const Resultado: React.FC<ResultadoProps> = ({
               </div>
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center  ">
+
+          <div className="flex-1 flex items-center justify-center ">
             <Image
               src={imagendios}
               alt={tuDios}
               width={400}
               height={400}
-              style={{ width: "auto", height: "auto" }} // Add CSS styles to maintain aspect ratio
+              style={{ width: "auto", height: "auto" }}
               className="px-20"
             />
           </div>
         </div>
         <div className="flex flex-row justify-center px-24 mx-16">
-          <div className="flex-1 mr-22">
+          <div className="flex-1 mr-24">
             <button
-              className="mt-2 px-8 py-4 shadow-lg py-0.5 text-3xl text-black bg-cyan-700 rounded bg-opacity-40 mr-4"
+              className="mt-2 px-8 py-4 shadow-lg text-3xl text-black bg-cyan-700 rounded bg-opacity-40 mr-4"
               onClick={handleSeguirClick}
             >
               IMPRIMIR
@@ -177,7 +175,7 @@ const Resultado: React.FC<ResultadoProps> = ({
               FINALIZAR SIN IMPRIMIR
             </button>
           </div>
-        </div> 
+        </div>
       </div>
     </animated.div>
   );

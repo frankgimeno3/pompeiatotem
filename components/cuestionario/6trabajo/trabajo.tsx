@@ -38,28 +38,27 @@ const Trabajo: React.FC<TrabajoProps> = ({
           : "  opacity-0"
       }`}
     >
-      <div className=" flex flex-col   mr-24 pr-24 justify-start text-8xl ">
-        <div className="pr-24 flex flex-col mx-auto">
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24 ${
-              selectedOption === "TRABAJADOR"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("TRABAJADOR")}
-          >
-            TRABAJADOR
-          </button>
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
-              selectedOption === "HOLGAZÁN"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("HOLGAZÁN")}
-          >
-            HOLGAZÁN
-          </button>
+      <div className="flex flex-col mr-16 mt-24 pr-16 justify-end text-7xl">
+        <div className="pr-24 flex flex-col mx-24  ">
+          <div className=" ">
+            <button
+              className="w-600  h-200 px-16 py-8   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("TRABAJADOR")}
+            >
+              TRABAJADOR
+            </button>
+          </div>
+
+          <div className=" ">
+            <button
+              className="w-600  h-200 px-24 py-8   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("HOLGAZÁN")}
+            >
+              HOLGAZÁN
+            </button>
+          </div>
         </div>
       </div>
     </div>

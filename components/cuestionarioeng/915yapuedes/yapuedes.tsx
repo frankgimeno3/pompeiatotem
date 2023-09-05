@@ -19,7 +19,6 @@ const Yapuedes: React.FC<YapuedesProps> = ({ setComponenteActual }) => {
     <div className="flex flex-col text-center align-center justify-center text-7xl mb-24 ">
       <h1 className="text-7xl">YOUR COPY IS READY TO BE COLLECTED!</h1>
       <div className="mx-auto my-10">
-
       <Image src="/tick.png" alt="tick" width={400} height={400} />
       </div>
 

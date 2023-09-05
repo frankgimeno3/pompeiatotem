@@ -33,30 +33,31 @@ const Juicio: React.FC<JuicioProps> = ({ setComponenteActual, setJuicio }) => {
         ? "transition-opacity duration-1000 opacity-100"
         : "  opacity-0"
     }`}
-  >    <div className=" flex flex-col   mr-24 pr-24   justify-start text-8xl ">
-      <div className="pr-24 flex flex-col   mx-auto">
-        <button
-          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24 ${
-              selectedOption === "JUSTO"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("JUSTO")}
-          >
+  >    
+  
+      <div className="flex flex-col mr-24 mt-10 pr-24 justify-end ">
+        <div className="pr-24 flex flex-col mr-24 ">
+          <div className=" mr-24 pr-24">
+            <button
+              className="w-600 text-6xl h-200 px-24 py-10   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("JUSTO")}
+            >
             EMPIRICALLY
-          </button>
+            </button>
+          </div>
+
+          <div className="  pr-24 mr-24 ">
           <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
-              selectedOption === "INJUSTO"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("INJUSTO")}
-          >
+              className="w-600 text-6xl h-200 px-20 py-10   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("INJUSTO")}
+            >
             EMOTIONALLY
-          </button>
+            </button>
+          </div>
+          </div>
         </div>
-      </div> 
     </div>
   );
 };

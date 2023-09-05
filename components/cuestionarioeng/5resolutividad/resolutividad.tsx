@@ -38,30 +38,29 @@ const Resolutividad: React.FC<ResolutividadProps> = ({
         ? "transition-opacity duration-1000 opacity-100"
         : "  opacity-0"
     }`}
-  >    <div className=" flex flex-col mt-24 ml-24 pl-24  justify-end text-8xl ">
-      <div className="flex flex-col pl-24  mx-auto">
-        <button
-          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
-              selectedOption === "CONFRONTACIÓN"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
+  >     
+
+      <div className="pl-24 flex flex-col mx-24  ">
+        <div className=" ml-24 pl-24">
+          <button
+            className="w-600 text-7xl h-200 px-16 py-10   ml-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+            style={{ backgroundImage: 'url("/buttonB.png")' }}
             onClick={() => handleOptionClick("CONFRONTACIÓN")}
           >
             CONFRONT
           </button>
+        </div>
+
+        <div className=" ml-24 pl-24">
           <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
-              selectedOption === "NEGOCIACIÓN"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
+            className="w-600 text-7xl h-200 px-16 py-10   ml-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+            style={{ backgroundImage: 'url("/buttonB.png")' }}
             onClick={() => handleOptionClick("NEGOCIACIÓN")}
           >
             NEGOTIATE
           </button>
         </div>
-      </div> 
+      </div>
     </div>
   );
 };

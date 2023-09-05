@@ -31,36 +31,38 @@ const Trabajo: React.FC<TrabajoProps> = ({
   };
 
   return (
-  <div
+    <div
       className={`flex flex-col   justify-right mr-24 pr-24      ${
         isVisible
           ? "transition-opacity duration-1000 opacity-100"
           : "  opacity-0"
       }`}
-    >      <div className=" flex flex-col   mr-24 pr-24 justify-start text-8xl ">
-        <div className="pr-24 flex flex-col mx-auto">
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24 ${
-              selectedOption === "TRABAJADOR"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("TRABAJADOR")}
-          >
-            A HARDWORKER
-          </button>
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
-              selectedOption === "HOLGAZÁN"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("HOLGAZÁN")}
-          >
-            AN IDLER
-          </button>
+    >
+      <div className="flex flex-col mr-16 mt-24 pr-16 justify-end ">
+        <div className="pr-24 flex flex-col mx-24 ">
+          <div className=" mr-24 pr-24">
+            <button
+              className="w-600 text-6xl h-200 px-16 py-10   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("ESTRATEGA")}
+            >
+              A  HARDWORKER
+            </button>
+          </div>
+
+          <div className="  pr-24 mr-24 ">
+            <div className="mx-24 px-14">
+            <div
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              className=" text-6xl h-200   py-9    mt-24 mr-24  ml-24 bg-cover bg-center rounded-3xl"
+              onClick={() => handleOptionClick("IMPULSIVO")}
+            >
+              AN IDLER
+            </div>
+            </div>
+          </div>
         </div>
-      </div> 
+      </div>
     </div>
   );
 };

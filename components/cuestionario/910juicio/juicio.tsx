@@ -33,29 +33,28 @@ const Juicio: React.FC<JuicioProps> = ({ setComponenteActual, setJuicio }) => {
           ? "transition-opacity duration-1000 opacity-100"
           : "  opacity-0"
       }`}
-    >
-      <div className=" flex flex-col   mr-24 pr-24   justify-start text-7xl ">
-        <div className="pr-24 flex flex-col   mx-auto">
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24 ${
-              selectedOption === "JUSTO"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("JUSTO")}
-          >
-            ME BASO EN HECHOS
-          </button>
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
-              selectedOption === "INJUSTO"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("INJUSTO")}
-          >
-            ME BASO EN EMOCIONES
-          </button>
+    > 
+     <div className="flex flex-col mr-16 mt-24 pr-24 justify-end text-6xl">
+        <div className="pr-24 flex flex-col mx-24  ">
+          <div className=" ">
+            <button
+              className="w-600  h-200 px-24 py-8   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("JUSTO")}
+            >
+              ME BASO EN HECHOS
+            </button>
+          </div>
+
+          <div className=" ">
+            <button
+              className="w-600  h-200 px-10 py-8   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("INJUSTO")}
+            >
+             ME BASO EN EMOCIONES
+            </button>
+          </div>
         </div>
       </div>
     </div>

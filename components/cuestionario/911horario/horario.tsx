@@ -38,28 +38,27 @@ const Horario: React.FC<HorarioProps> = ({
           : "  opacity-0"
       }`}
     >
-      <div className=" flex flex-col   ml-24 pl-24 text-8xl ">
-        <div className="pr-24 flex flex-col   mx-auto">
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
-              selectedOption === "DIURNO"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("DIURNO")}
-          >
-            DIURNO
-          </button>
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24${
-              selectedOption === "NOCTURNO"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("NOCTURNO")}
-          >
-            NOCTURNO
-          </button>
+      <div className="flex flex-col ml-24 pl-24 justify-end ">
+        <div className="pl-24 flex flex-col mx-24 mt-24 ">
+          <div className="">
+            <button
+              className="w-600 text-7xl h-200 px-24 py-9   ml-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("DIURNO")}
+            >
+              DIURNO
+            </button>
+          </div>
+
+          <div className="">
+            <button
+              className="w-600 text-6xl h-200 px-16 py-12 ml-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("NOCTURNO")}
+            >
+              NOCTURNO
+            </button>
+          </div>
         </div>
       </div>
     </div>

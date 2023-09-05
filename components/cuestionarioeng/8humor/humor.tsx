@@ -36,24 +36,29 @@ const Humor: React.FC<HumorProps> = ({ setComponenteActual, setHumor }) => {
           : "  opacity-0"
       }`}
     >
-            <div className=" flex flex-col  mr-24 pr-24  justify-start text-8xl ">
-        <div className="pr-24 flex flex-col  mx-auto">
+      <div className="flex flex-col mr-16 mt-24 pr-16 justify-end ">
+        <div className="pr-24 flex flex-col mx-24 ">
+          <div className=" mr-24 pr-24">
+            <button
+              className="w-600 text-7xl h-200 px-24 py-10   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("BUENHUMOR")}
+            >
+            HAPPY
+            </button>
+          </div>
+
+          <div className="  pr-24 mr-24 ">
           <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10  mr-24 ${
-            selectedOption === "BUENHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
-         onClick={() => handleOptionClick("BUENHUMOR")}
-       >
-         HAPPY
-       </button>
-       <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 mr-24${
-              selectedOption === "MALHUMOR" ? "bg-white bg-opacity-40 rounded-full" : ""}`}
-         onClick={() => handleOptionClick("MALHUMOR")}
-       >
-        MOODY
-         </button>
+              className="w-600 text-7xl h-200 px-20 py-10   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("MALHUMOR")}
+            >
+            MOODY
+            </button>
+          </div>
+          </div>
         </div>
-      </div> 
     </div>
   );
 };

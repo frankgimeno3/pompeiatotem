@@ -30,38 +30,37 @@ const Relaciones: React.FC<RelacionesProps> = ({
     setComponenteActual("estrategia");
   };
 
- 
-   return (
+  return (
     <div
-    className={`flex flex-col mt-14 pt-14 justify-right ml-24 pl-24 ${
-      isVisible
-        ? "transition-opacity duration-1000 opacity-100"
-        : "  opacity-0"
-    }`}
-  >
-        <div className=" flex flex-col   ml-24 pl-24  justify-end text-8xl ">
-        <div className="pl-24  flex flex-col mx-auto">
-        <button
-        className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
-            selectedOption === "ENAMORADIZO"
-              ? "bg-white bg-opacity-40 rounded-full"
-              : ""
-          }`}
-          onClick={() => handleOptionClick("ENAMORADIZO")}
-        >
-          POLIAMOROUS
-        </button>
-        <button
-          className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24${
-            selectedOption === "FIEL"
-              ? "bg-white bg-opacity-40 rounded-full"
-              : ""
-          }`}
-          onClick={() => handleOptionClick("FIEL")}
-        >
-          MONOGAMOUS
-          </button>
-      </div>
+      className={`flex flex-col mt-14 pt-14 justify-right ml-24 pl-24 ${
+        isVisible
+          ? "transition-opacity duration-1000 opacity-100"
+          : "  opacity-0"
+      }`}
+    >
+ 
+      <div className="flex flex-col ml-24 pl-24 justify-end ">
+        <div className="pl-24 flex flex-col mx-24  ">
+          <div className=" ml-24 pl-24">
+            <button
+              className="w-600 text-7xl h-200 px-24 py-10   ml-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("ENAMORADIZO")}
+            >
+              POLIAMOROUS
+            </button>
+          </div>
+
+          <div className=" ml-24 pl-24">
+            <button
+              className="w-600 text-7xl h-200 px-20 py-10   ml-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("FIEL")}
+            >
+              MONOGAMOUS
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

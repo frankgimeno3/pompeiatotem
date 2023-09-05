@@ -38,28 +38,27 @@ const Relaciones: React.FC<RelacionesProps> = ({
           : "  opacity-0"
       }`}
     >
-      <div className="flex flex-col ml-24 pl-24 justify-end text-8xl">
-        <div className="pl-24 flex flex-col mx-auto">
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
-              selectedOption === "ENAMORADIZO"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("ENAMORADIZO")}
-          >
-            ENAMORADIZO
-          </button>
-          <button
-            className={`px-5 py-3 rounded-xl bg-amber-950 bg-opacity-10 mt-24 ml-24 ${
-              selectedOption === "FIEL"
-                ? "bg-white bg-opacity-40 rounded-full"
-                : ""
-            }`}
-            onClick={() => handleOptionClick("FIEL")}
-          >
-            COMPROMETIDO
-          </button>
+      <div className="flex flex-col ml-24 pl-24 justify-end text-7xl">
+        <div className="pl-24 flex flex-col mx-24  ">
+          <div className=" ml-24 pl-24">
+            <button
+              className="w-600  h-200 px-24 py-10   ml-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("ENAMORADIZO")}
+            >
+              ENAMORADIZO
+            </button>
+          </div>
+
+          <div className=" ml-24 pl-24">
+            <button
+              className="w-600  h-200 px-20 py-10   ml-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
+              style={{ backgroundImage: 'url("/buttonB.png")' }}
+              onClick={() => handleOptionClick("COMPROMETIDO")}
+            >
+              COMPROMETIDO
+            </button>
+          </div>
         </div>
       </div>
     </div>
