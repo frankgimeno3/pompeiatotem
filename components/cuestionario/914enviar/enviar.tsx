@@ -51,7 +51,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
       <Image src="/PortfolioDiseño.png" alt="PortfolioDiseño" width={600} height={600} />
 
       <p className="mt-6 text-black text-3xl">PIDE TU COPIA EN RECEPCIÓN</p>
-      <p className="mt-2 text-black text-2xl">PRECIO DE VENTA 6€</p>
+      <p className="mt-2 text-black text-2xl">PRECIO DE VENTA 5€</p>
 
       <div className="flex flex-row text-center justify-center">
         <button
