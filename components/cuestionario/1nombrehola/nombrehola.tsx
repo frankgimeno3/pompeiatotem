@@ -21,7 +21,7 @@ const Nombrehola: React.FC<NombreholaProps> = ({
         <div className="flex flex-row text-6xl   justify-center">
           <h1>SALUDOS, {nombre}</h1>
         </div>
-        <p className="text-black text-3xl ">HE AQUÍ TODOS LOS DIOSES ROMANOS</p>
+        <p className="text-black text-3xl ">BIENVENIDOS AL OLIMPO</p>
         <div className="flex flex-col justify-center items-center text-center  ">
           <Image src="/Stickers.png" alt="Gods" width={600} height={600} />
         </div>
