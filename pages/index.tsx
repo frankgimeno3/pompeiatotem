@@ -26,22 +26,16 @@ const Home = () => {
         } else {
           if (response){console.log(response)}
 
-          // if (response){throw new Error("Credenciales incorrectas")}
-          else{throw new Error("No response")}
+           else{throw new Error("No response")}
         }
       })
       .then((response) => {
-        // const { accessToken } = response
-        // console.log("Token:", accessToken);
-        // console.log(response.authToken);
-
-        // Cookies.set("authvalue", response.authToken, cookieOptions); // Crear cookie con el valor del usuario
+         
         router.push("/landing");
       })
       .catch((error) => {
         console.error("Ha ocurrido un error:", error);
-        // Maneja el error de conexión o cualquier otro error
-      });
+       });
   };
 
   return (
