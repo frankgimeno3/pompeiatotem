@@ -15,8 +15,11 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const router = useRouter();
   let lang = "es"
+  const [botonPulsado, setBotonPulsado] = useState(false); // Estado botonPulsado inicializado en false
 
   const handleSeguirClick = () => {
+    setBotonPulsado(true)
+    
     fetch("https://pompeiabackend-ntha9xyjc-frankgimeno3.vercel.app/files/", {
       method: "POST",
       headers: {
@@ -41,7 +44,11 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
     router.push("/landing");
   };
 
-  
+  useEffect(() => {
+    // Este efecto se ejecutará una vez que el componente se haya renderizado
+    setBotonPulsado(false); // Establece botonPulsado en false
+  }, []); // El segundo argumento del useEffect es un array vacío, lo que significa que se ejecutará una vez después del montaje inicial
+
 
   return (
     <div className="flex flex-col text-center  items-center  mb-24 ">
@@ -57,6 +64,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
         <button
           className="mt-11 px-8 py-4 mr-10 text-3xl text-black bg-cyan-700 rounded bg-opacity-40 shadow-lg"
           onClick={handleSeguirClick}
+          disabled={botonPulsado}
         >
           CONFIRMAR Y RECOGER
         </button>
@@ -64,7 +72,7 @@ const Enviar: React.FC<EnviarProps> = ({ setComponenteActual, nombre, midios }) 
           className="mt-11 px-8 py-4 text-3xl text-black bg-green-700  rounded bg-opacity-30  shadow-lg"
           onClick={handleRestart}
         >
-          COMENZAR DE NUEVO
+          COMENZAR DE NUEVO 
         </button>
       </div> 
     </div>
