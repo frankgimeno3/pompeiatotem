@@ -107,7 +107,7 @@ const Enviar: React.FC<EnviarProps> = ({
           padding: "20px", // Ajusta el espacio interior según lo necesario
           borderRadius: "10px", // Añade bordes redondeados según lo necesario
         }}
-      >
+      >  
         <div className="flex-1 flex flex-col ml-24  mx-24 px-10  pr-20  ">
           <div className=" text-left mx-24 px-24 ">
             <h1 className="text-md mt-10 ">{nombre}</h1>
