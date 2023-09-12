@@ -158,7 +158,9 @@ const Cuestionario = () => {
           <Enviar
             setComponenteActual={setComponenteActual}
             nombre={nombre}
-            midios={midios}            />
+            midios={midios} 
+            lang={""}
+            />
         );
       case "yapuedes":
         return <Yapuedes setComponenteActual={setComponenteActual} />;
