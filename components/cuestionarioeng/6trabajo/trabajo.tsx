@@ -44,7 +44,7 @@ const Trabajo: React.FC<TrabajoProps> = ({
             <button
               className="w-600 text-6xl h-200 px-16 py-10   mr-24 mt-24 mx-24 bg-cover bg-center rounded-3xl"
               style={{ backgroundImage: 'url("/buttonB.png")' }}
-              onClick={() => handleOptionClick("ESTRATEGA")}
+              onClick={() => handleOptionClick("TRABAJADOR")}
             >
               A  HARDWORKER
             </button>
@@ -55,7 +55,7 @@ const Trabajo: React.FC<TrabajoProps> = ({
             <div
               style={{ backgroundImage: 'url("/buttonB.png")' }}
               className=" text-6xl h-200   py-9    mt-24 mr-24  ml-24 bg-cover bg-center rounded-3xl"
-              onClick={() => handleOptionClick("IMPULSIVO")}
+              onClick={() => handleOptionClick("HOLGAZÁN")}
             >
               AN IDLER
             </div>
