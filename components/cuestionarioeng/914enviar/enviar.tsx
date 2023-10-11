@@ -18,7 +18,7 @@ const Enviar: React.FC<EnviarProps> = ({
   const [selectedOption, setSelectedOption] = useState("");
   const [showErrorMessage, setShowErrorMessage] = useState(false);
   const router = useRouter();
-  let lang = "es";
+  let lang = "en";
   const [botonPulsado, setBotonPulsado] = useState(false); // Estado botonPulsado inicializado en false
 
   const handleSeguirClick = () => {
